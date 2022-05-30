@@ -18,15 +18,15 @@ puts " Creating Users"
 user_1 = User.create(
   user_name: "lucasvittaz",
   email: 'lucas@gmail.com',
-  phone: '0777777777',
   password: "123456"
 )
 user_2 = User.create(
   user_name: "anthonygouvrillon",
   email: 'anto@gmail.com',
-  phone: '0777777776',
   password: "123456"
 )
+puts " Creating Plants 1"
+
 plant_1 = Plant.create(
   name: "Kentia Palm",
   specie: "Howea Forsteriana",
@@ -38,6 +38,8 @@ plant_1 = Plant.create(
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941775/development/kentiapalm_kgfbz9.webp")
 plant_1.photo.attach(io: file, filename: 'kentiapalm.jpg', content_type: 'image/jpg')
+
+puts " Creating Plants 1"
 
 plant_2 = Plant.create(
   name: "Bamboo Orchid",
@@ -51,6 +53,8 @@ plant_2 = Plant.create(
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941899/development/orchid_celue6.webp")
 plant_2.photo.attach(io: file, filename: 'bambooorchid.jpg', content_type: 'image/jpg')
 
+puts " Creating Plants 2"
+
 plant_3 = Plant.create(
   name: "Swiss cheese plant",
   specie: "Monstera Deliciosa",
@@ -62,6 +66,8 @@ plant_3 = Plant.create(
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653942050/development/monstera_ggq4pp.webp")
 plant_3.photo.attach(io: file, filename: 'monstera.jpg', content_type: 'image/jpg')
+
+puts " Creating Plants 3"
 
 plant_4 = Plant.create(
   name: "Aloe Vera",
@@ -75,6 +81,8 @@ plant_4 = Plant.create(
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941767/development/aloevera_utvt74.webp")
 plant_4.photo.attach(io: file, filename: 'aloevera.jpg', content_type: 'image/jpg')
 
+puts " Creating Plants 4"
+
 plant_5 = Plant.create(
   name: "Calathea ornata",
   specie: "Marantaceae",
@@ -86,6 +94,8 @@ plant_5 = Plant.create(
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941853/development/calathea_jh8csh.webp")
 plant_5.photo.attach(io: file, filename: 'calatha.jpg', content_type: 'image/jpg')
+
+puts " Creating Plants 5"
 
 plant_6 = Plant.create(
   name: "Cider Gum",
@@ -99,6 +109,8 @@ plant_6 = Plant.create(
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941859/development/eucalyptus_nk6jhi.webp")
 plant_6.photo.attach(io: file, filename: 'cidergum.jpg', content_type: 'image/jpg')
 
+puts " Creating Plants 6"
+
 plant_7 = Plant.create(
   name: "Anthurium",
   specie: "Araceae",
@@ -110,6 +122,8 @@ plant_7 = Plant.create(
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941782/development/anthurium_qa16s7.webp")
 plant_7.photo.attach(io: file, filename: 'anthurium.jpg', content_type: 'image/jpg')
+
+puts " Creating Plants 7"
 
 plant_8 = Plant.create(
   name: "Bird of Paradise",
@@ -123,6 +137,8 @@ plant_8 = Plant.create(
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937977/development/Bird_Strelizia_mztnng.webp")
 plant_8.photo.attach(io: file, filename: '', content_type: 'image/jpg')
 
+puts " Creating Plants 8"
+
 plant_9 = Plant.create(
   name: "Calathea triostar",
   specie: "Calathea",
@@ -134,6 +150,8 @@ plant_9 = Plant.create(
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937977/development/Calathea_Triostar_rrln5e.webp")
 plant_9.photo.attach(io: file, filename: '', content_type: 'image/jpg')
+
+puts " Creating Plants 9"
 
 plant_10 = Plant.create(
   name: "Orchid Phalaenopsis",
@@ -147,6 +165,8 @@ plant_10 = Plant.create(
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937977/development/Orchidee_Phalaenopsis_sibphz.webp")
 plant_10.photo.attach(io: file, filename: '', content_type: 'image/jpg')
 
+puts " Creating Plants 10"
+
 plant_11 = Plant.create(
   name: "Philodendron Monstera Deliciosa",
   specie: "Monstera Deliciosa",
@@ -158,6 +178,8 @@ plant_11 = Plant.create(
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937978/development/Philodendron_Monstera_wlazop.webp")
 plant_11.photo.attach(io: file, filename: '', content_type: 'image/jpg')
+
+puts " Creating Plants 11"
 
 plant_12 = Plant.create(
   name: "Dracaena Marginata",
@@ -171,6 +193,8 @@ plant_12 = Plant.create(
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937977/development/Dracaena_Marginata_wocecp.webp")
 plant_12.photo.attach(io: file, filename: '', content_type: 'image/jpg')
 
+puts " Creating Plants 12"
+
 plant_13 = Plant.create(
   name: "Snake plant",
   specie: "Sansevieria Laurentii",
@@ -182,6 +206,8 @@ plant_13 = Plant.create(
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937978/development/Snake_Sanseviera_qyusot.webp")
 plant_13.photo.attach(io: file, filename: '', content_type: 'image/jpg')
+
+puts " Creating Plants 13"
 
 plant_14 = Plant.create(
   name: "Orange tree",
@@ -195,6 +221,8 @@ plant_14 = Plant.create(
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937978/development/Orange_tree_rq5kme.webp")
 plant_14.photo.attach(io: file, filename: '', content_type: 'image/jpg')
 
+puts " Creating Plants 14"
+
 plant_15 = Plant.create(
   name: "Banana tree",
   specie: "Musa Dwarf Cavendish",
@@ -206,6 +234,8 @@ plant_15 = Plant.create(
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Bananier_kg4daa.webp")
 plant_15.photo.attach(io: file, filename: 'Bananatree_zgtl5y', content_type: 'image/jpg')
+
+puts " Creating Plants 15"
 
 plant_16 = Plant.create(
   name: "Elephant Ear",
@@ -220,6 +250,8 @@ plant_16 = Plant.create(
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Potodora_d4fkui.webp")
 plant_16.photo.attach(io: file, filename: 'elephant_ears_sizl7y', content_type: 'image/jpg')
 
+puts " Creating Plants 16"
+
 plant_17 = Plant.create(
   name: "Ficus",
   specie: "Ficus Altissima XL",
@@ -232,6 +264,8 @@ plant_17 = Plant.create(
 
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Altissima_pzarma.webp")
 plant_17.photo.attach(io: file, filename: 'ficus_yoeug9', content_type: 'image/jpg')
+
+puts " Creating Plants 17"
 
 plant_18 = Plant.create(
   name: "Pachiras",
@@ -246,6 +280,8 @@ plant_18 = Plant.create(
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Pachiraaquatiqua_oathel.webp")
 plant_18.photo.attach(io: file, filename: 'Pachiraaquatiqua_myp80p', content_type: 'image/jpg')
 
+puts " Creating Plants 18"
+
 plant_19 = Plant.create(
   name: "Rosemary",
   specie: "Salvia rosmarinus",
@@ -258,6 +294,8 @@ plant_19 = Plant.create(
 
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Romarin_dagj6l.webp")
 plant_19.photo.attach(io: file, filename: 'Romarin_ki6k3k', content_type: 'image/jpg')
+
+puts " Creating Plants 19"
 
 plant_20 = Plant.create(
   name: "Pothos",
@@ -272,6 +310,8 @@ plant_20 = Plant.create(
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Pothos_ze9ale.webp")
 plant_20.photo.attach(io: file, filename: 'Pothos_dumg86', content_type: 'image/jpg')
 
+puts " Creating Plants 20"
+
 plant_21 = Plant.create(
   name: "Spider plant",
   specie: "Chlorophytum Bonnie",
@@ -284,3 +324,5 @@ plant_21 = Plant.create(
 
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Bonnie_iqjao1.webp")
 plant_21.photo.attach(io: file, filename: 'Bonnie_r3sf1e', content_type: 'image/jpg')
+
+puts " Creating Plants 21"
