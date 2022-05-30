@@ -23,85 +23,85 @@ User.create(
 )
 
 plant_1 = Plant.create(
-  name: "",
-  specie: "",
-  description: "",
-  baseline_hygrometry: 500,
-  temperature: "",
-  light_level: "",
-  care_level: ""
+  name: "Kentia Palm",
+  specie: "Howea Forsteriana",
+  description: "The Howea Forsteriana palm, native to Lord Howe Island in Australia, is known for its elegant appearance, its pollution-removing properties and its long dark green leaves.",
+  baseline_hygrometry: 400,
+  temperature: "15°C to 25°C",
+  light_level: "medium",
+  care_level: "beginner"
 )
-file = URI.open("")
-plant_1.photo.attach(io: file, filename: '', content_type: 'image/jpg')
+file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653934678/development/Palmier_zzis6q.jpg")
+plant_1.photo.attach(io: file, filename: 'kentiapalm.jpg', content_type: 'image/jpg')
 
 plant_2 = Plant.create(
-  name: "",
-  specie: "",
-  description: "",
-  baseline_hygrometry: 500,
-  temperature: "",
-  light_level: "",
-  care_level: ""
+  name: "Bamboo Orchid",
+  specie: "Arundina graminifolia",
+  description: "This mystical bamboo orchid grows on rocks and trees in Asia. It is highly valued for its beauty but also for its many virtues used in traditional Chinese medicine.",
+  baseline_hygrometry: 550,
+  temperature: "16°C to 27°C",
+  light_level: "high",
+  care_level: "beginner"
 )
-file = URI.open("")
-plant_2.photo.attach(io: file, filename: '', content_type: 'image/jpg')
+file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653934677/development/orchidee-bamboo_p2cqab.jpg")
+plant_2.photo.attach(io: file, filename: 'bambooorchid.jpg', content_type: 'image/jpg')
 
 plant_3 = Plant.create(
-  name: "",
-  specie: "",
-  description: "",
-  baseline_hygrometry: 500,
-  temperature: "",
-  light_level: "",
-  care_level: ""
+  name: "Swiss cheese plant",
+  specie: "Monstera Deliciosa",
+  description: "The monstera deliciosa is one of the most coveted houseplants for its large, atypical leaves. If you want a green plant that is easy to live with and striking in its size, the Monstera should be on your list.",
+  baseline_hygrometry: 400,
+  temperature: "16°C to 25°C",
+  light_level: "medium",
+  care_level: "beginner"
 )
-file = URI.open("")
-plant_3.photo.attach(io: file, filename: '', content_type: 'image/jpg')
+file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653934677/development/Monstera_lyoptw.jpg")
+plant_3.photo.attach(io: file, filename: 'monstera.jpg', content_type: 'image/jpg')
 
 plant_4 = Plant.create(
-  name: "",
+  name: "Aloe Vera",
   specie: "",
-  description: "",
-  baseline_hygrometry: 500,
-  temperature: "",
-  light_level: "",
-  care_level: ""
+  description: "Aloe vera is an ancient plant from the Arabian Peninsula. Popularized for its therapeutic virtues, it's a resistant plant that requires little attention to thrive. It's a perfect plant for beginners.",
+  baseline_hygrometry: 450,
+  temperature: "13°C and 27°C",
+  light_level: "medium",
+  care_level: "beginner"
 )
-file = URI.open("")
-plant_4.photo.attach(io: file, filename: '', content_type: 'image/jpg')
+file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653934677/development/Aloevera_olu2ag.jpg")
+plant_4.photo.attach(io: file, filename: 'aloevera.jpg', content_type: 'image/jpg')
 
 plant_5 = Plant.create(
-  name: "",
-  specie: "",
-  description: "",
+  name: "Calathea ornata",
+  specie: "Marantaceae",
+  description: "The Calathea ornata can be recognised by its beautiful dark black leaves with contrasting pale pink veins.",
   baseline_hygrometry: 500,
-  temperature: "",
-  light_level: "",
-  care_level: ""
+  temperature: "15°C to 24°C",
+  light_level: "low",
+  care_level: "beginner"
 )
-file = URI.open("")
-plant_5.photo.attach(io: file, filename: '', content_type: 'image/jpg')
+file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653934678/development/Calathea_xsrmyf.jpg")
+plant_5.photo.attach(io: file, filename: 'calatha.jpg', content_type: 'image/jpg')
 
 plant_6 = Plant.create(
-  name: "",
-  specie: "",
-  description: "",
-  baseline_hygrometry: 500,
-  temperature: "",
-  light_level: "",
-  care_level: ""
+  name: "Cider Gum",
+  specie: "Eucalyptus Gunnii",
+  description: "Eucalyptus gunnii brings a simple, fragrant and Mediterranean touch to your home. Easy to care for, accommodating, this plant adapts very quickly and can also be placed on your balcony or in your garden.",
+  baseline_hygrometry: 600,
+  temperature: "-10°C to 24°C",
+  light_level: "high",
+  care_level: "beginner"
 )
-file = URI.open("")
-plant_6.photo.attach(io: file, filename: '', content_type: 'image/jpg')
+file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653934677/development/Eucalyptus_i6rhce.jpg")
+plant_6.photo.attach(io: file, filename: 'cidergum.jpg', content_type: 'image/jpg')
 
 plant_7 = Plant.create(
-  name: "",
-  specie: "",
-  description: "",
-  baseline_hygrometry: 500,
-  temperature: "",
-  light_level: "",
-  care_level: ""
+  name: "Anthurium",
+  specie: "Araceae",
+  description: "Anthuriums are making a comeback and are back in fashion! The anthurium pink has the ability to remain in bloom all year round, enough to make its friends the orchids jealous. ",
+  baseline_hygrometry: 550,
+  temperature: "15°C to 20°",
+  light_level: "medium",
+  care_level: "beginner"
 )
-file = URI.open("")
-plant_7.photo.attach(io: file, filename: '', content_type: 'image/jpg')
+file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653934678/development/Anthurium_r94rwl.jpg")
+plant_7.photo.attach(io: file, filename: 'anthurium.jpg', content_type: 'image/jpg')
