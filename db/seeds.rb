@@ -119,9 +119,9 @@ plant_15 = Plant.create(
   baseline_hygrometry: 500,
   temperature: "15 - 27°C",
   light_level: "High",
-  care_level: "Beginner "
+  care_level: "Beginner"
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937791/development/Bananatree_zgtl5y.webp")
+file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Bananier_kg4daa.webp")
 plant_15.photo.attach(io: file, filename: 'Bananatree_zgtl5y', content_type: 'image/jpg')
 
 plant_16 = Plant.create(
@@ -133,7 +133,8 @@ plant_16 = Plant.create(
   light_level: "Low",
   care_level: "Intermediate "
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937791/development/elephant_ears_sizl7y.webp")
+
+file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Potodora_d4fkui.webp")
 plant_16.photo.attach(io: file, filename: 'elephant_ears_sizl7y', content_type: 'image/jpg')
 
 plant_17 = Plant.create(
@@ -145,7 +146,8 @@ plant_17 = Plant.create(
   light_level: "Medium",
   care_level: "Beginner"
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937791/development/ficus_yoeug9.webp")
+
+file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Altissima_pzarma.webp")
 plant_17.photo.attach(io: file, filename: 'ficus_yoeug9', content_type: 'image/jpg')
 
 plant_18 = Plant.create(
@@ -157,7 +159,8 @@ plant_18 = Plant.create(
   light_level: "Medium",
   care_level: "Beginner"
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937791/development/Pachiraaquatiqua_myp80p.webp")
+
+file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Pachiraaquatiqua_oathel.webp")
 plant_18.photo.attach(io: file, filename: 'Pachiraaquatiqua_myp80p', content_type: 'image/jpg')
 
 plant_19 = Plant.create(
@@ -169,7 +172,8 @@ plant_19 = Plant.create(
   light_level: "High",
   care_level: "Beginner"
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937792/development/Romarin_ki6k3k.webp")
+
+file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Romarin_dagj6l.webp")
 plant_19.photo.attach(io: file, filename: 'Romarin_ki6k3k', content_type: 'image/jpg')
 
 plant_20 = Plant.create(
@@ -181,7 +185,8 @@ plant_20 = Plant.create(
   light_level: "Medium",
   care_level: "Beginner"
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937791/development/Pothos_dumg86.webp")
+
+file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Pothos_ze9ale.webp")
 plant_20.photo.attach(io: file, filename: 'Pothos_dumg86', content_type: 'image/jpg')
 
 plant_21 = Plant.create(
@@ -193,5 +198,6 @@ plant_21 = Plant.create(
   light_level: "Low",
   care_level: "Beginner"
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653938005/development/Bonnie_r3sf1e.webp")
+
+file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Bonnie_iqjao1.webp")
 plant_21.photo.attach(io: file, filename: 'Bonnie_r3sf1e', content_type: 'image/jpg')
