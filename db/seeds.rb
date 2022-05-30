@@ -31,7 +31,7 @@ plant_8 = Plant.create(
   light_level: "medium",
   care_level: "intermediate"
 )
-file = URI.open("https://cdn.shopify.com/s/files/1/0061/6389/0289/products/StreliziaWG_x700.jpg?v=1651662095")
+file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937977/development/Bird_Strelizia_mztnng.webp")
 plant_8.photo.attach(io: file, filename: '', content_type: 'image/jpg')
 
 plant_9 = Plant.create(
@@ -43,7 +43,7 @@ plant_9 = Plant.create(
   light_level: "hight",
   care_level: "beginner"
 )
-file = URI.open("https://cdn.shopify.com/s/files/1/0061/6389/0289/products/CalatheaStromantheTriostarminiWhiteGrey_6910047c-c4d1-4b93-8ad9-8b66da983993_x700.jpg?v=1616557555")
+file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937977/development/Calathea_Triostar_rrln5e.webp")
 plant_9.photo.attach(io: file, filename: '', content_type: 'image/jpg')
 
 plant_10 = Plant.create(
@@ -55,7 +55,7 @@ plant_10 = Plant.create(
   light_level: "medium",
   care_level: "beginner"
 )
-file = URI.open("https://cdn.shopify.com/s/files/1/0061/6389/0289/products/OrchideePhalaenopsismultifloraroseWhiteGrey_c31a871a-03cd-4b08-9ac4-1d7878d2909d_x700.jpg?v=1616558279")
+file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937977/development/Orchidee_Phalaenopsis_sibphz.webp")
 plant_10.photo.attach(io: file, filename: '', content_type: 'image/jpg')
 
 plant_11 = Plant.create(
@@ -67,7 +67,7 @@ plant_11 = Plant.create(
   light_level: "hight",
   care_level: "beginner"
 )
-file = URI.open("https://cdn.shopify.com/s/files/1/0061/6389/0289/products/PhilodendronMonsteraDeliciasaWhiteGrey_7f445433-fcb6-4e89-9a0e-1a0c5a0eba1e_x700.jpg?v=1616558491")
+file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937978/development/Philodendron_Monstera_wlazop.webp")
 plant_12.photo.attach(io: file, filename: '', content_type: 'image/jpg')
 
 plant_13 = Plant.create(
@@ -79,7 +79,7 @@ plant_13 = Plant.create(
   light_level: "hight",
   care_level: "beginner"
 )
-file = URI.open("https://cdn.shopify.com/s/files/1/0061/6389/0289/products/DracaenaMarginataWhiteGrey_x700.jpg?v=1616558857")
+file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937977/development/Dracaena_Marginata_wocecp.webp")
 plant_13.photo.attach(io: file, filename: '', content_type: 'image/jpg')
 
 plant_14 = Plant.create(
@@ -91,7 +91,7 @@ plant_14 = Plant.create(
   light_level: "hight",
   care_level: "beginner"
 )
-file = URI.open("https://cdn.shopify.com/s/files/1/0061/6389/0289/products/SansevierialaurentiilanguedebellemereWhiteGrey_75485f47-3093-4e83-a2d8-2e487afff273_x700.jpg?v=1616559045")
+file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937978/development/Snake_Sanseviera_qyusot.webp")
 plant_14.photo.attach(io: file, filename: '', content_type: 'image/jpg')
 
 plant_15 = Plant.create(
@@ -103,5 +103,5 @@ plant_15 = Plant.create(
   light_level: "hight",
   care_level: "medium"
 )
-file = URI.open("https://cdn.shopify.com/s/files/1/0061/6389/0289/products/CalamondinCalamasiOrangerd_interieurWhiteGrey_39e3def0-0926-41cf-8de5-5789834326d0_x700.jpg?v=1616559295")
+file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937978/development/Orange_tree_rq5kme.webp")
 plant_16.photo.attach(io: file, filename: '', content_type: 'image/jpg')
