@@ -56,14 +56,14 @@ ActiveRecord::Schema.define(version: 2022_05_30_210032) do
   end
 
   create_table "user_plants", force: :cascade do |t|
-    t.bigint "users_id", null: false
-    t.bigint "plants_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "plant_id", null: false
     t.integer "hygrometry"
     t.string "room"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["plants_id"], name: "index_user_plants_on_plants_id"
-    t.index ["users_id"], name: "index_user_plants_on_users_id"
+    t.index ["plant_id"], name: "index_user_plants_on_plant_id"
+    t.index ["user_id"], name: "index_user_plants_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -81,6 +81,6 @@ ActiveRecord::Schema.define(version: 2022_05_30_210032) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "user_plants", "plants", column: "plants_id"
-  add_foreign_key "user_plants", "users", column: "users_id"
+  add_foreign_key "user_plants", "plants"
+  add_foreign_key "user_plants", "users"
 end

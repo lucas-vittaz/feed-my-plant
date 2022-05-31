@@ -287,7 +287,7 @@ plant_19 = Plant.create(
   specie: "Salvia rosmarinus",
   description: "Rosemary is a sumptuous plant, frequently filling your home with its beautiful, delicate purple blooms. Offering a magnificent scent all year round, it is a beautiful and soothing outdoor plant.",
   baseline_hygrometry: 500,
-  temperature: "-10 - 25°C",
+  temperature: "10 - 25°C",
   light_level: "High",
   care_level: "Beginner"
 )
@@ -325,4 +325,18 @@ plant_21 = Plant.create(
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Bonnie_iqjao1.webp")
 plant_21.photo.attach(io: file, filename: 'Bonnie_r3sf1e', content_type: 'image/jpg')
 
-puts " Creating Plants 21"
+puts " Creating user plant"
+
+user_plant1 = UserPlant.create!(
+  user: user_1,
+  plant: plant_2,
+  hygrometry: 50,
+  room: "Kitchen"
+)
+
+user_plant2 = UserPlant.create(
+  user: user_1,
+  plant: plant_1,
+  hygrometry: 70,
+  room: "Garden"
+)
