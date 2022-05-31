@@ -1,0 +1,8 @@
+<h1>Search</h1>
+
+<ul>
+<% @plants.each do |plant| %>
+  <li><%= plant.name %> <%= plant.description %></li>
+  <%= cl_image_tag plant.photo.key %>
+<% end %>
+</ul>
