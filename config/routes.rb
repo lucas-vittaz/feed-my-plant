@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  resources :plants, only: [:index]
+  resources :plants, only: [:index, :show]
   namespace :my_garden do
     resources :user_plants, only: [:create, :index, :show, :destroy ] do
       collection do
