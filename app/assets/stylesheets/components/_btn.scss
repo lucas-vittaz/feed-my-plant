@@ -21,6 +21,9 @@
 
   cursor: pointer;
 }
+.dark-btn:hover {
+  color: #fff!important;
+}
 
 .light-btn {
   display: inline-flex;
@@ -38,4 +41,7 @@
   font-family: 'Jost', sans-serif;
   font-weight: Bold;
   font-size: 16px;
+}
+.light-btn:hover {
+  color: #fff!important;
 }
