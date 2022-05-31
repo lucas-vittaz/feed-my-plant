@@ -1,0 +1,41 @@
+.dark-btn {
+
+  margin-top: 175px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 254px;
+  height: 51px;
+
+  background-color: #EEA063;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 47px;
+  text-align: center;
+  vertical-align: middle;
+
+  font-family: 'Jost', sans-serif;
+  font-weight: Bold;
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+.light-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 254px;
+  height: 51px;
+
+  background-color: #fff;
+  color: #EEA063;
+  border: 1px solid transparent;
+  border-radius: 47px;
+
+
+  font-family: 'Jost', sans-serif;
+  font-weight: Bold;
+  font-size: 16px;
+}
