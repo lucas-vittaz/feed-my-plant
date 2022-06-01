@@ -17,10 +17,10 @@
   <a type="button"> Add to my garden </a>
 </form>
 
-
 <div class="modal-body">
-  <form action="POST">
-  <%= simple_form_for([:my_garden, @user_plants]) do |f| %>
+  <%= simple_form_for([:my_garden, @plant, @user_plant]) do |f| %>
+    <%= hidden_field_tag "user_plant[user_id]", current_user.id %>
+    <%= hidden_field_tag "user_plant[plant_id]", @plant.id %>
     <%= f.input :room, collection: UserPlant::ROOMS, as: :radio_buttons  %>
     <%= f.button :submit %>
     <% end %>
