@@ -1,18 +1,53 @@
-<div class="header">
-  <%= link_to "Log out", destroy_user_session_path, method: :delete, data: {:confirm => 'Are you sure you want to log out?'} %>
+<% if user_signed_in? %>
+<div id="home-sign-in">
+
 </div>
+  <div class="wrapper">
+    <div class="header">
+      <%= link_to "Log out", destroy_user_session_path, method: :delete, data: {:confirm => 'Are you sure you want to log out?'} %>
+    </div>
 
 
-<h1>Find your plants and add them to your garden </h1>
+    <h1>Find your plants and add them to your garden </h1>
 
-<form action="/plants" accept-charset="UTF-8" method="get">
-  <input type="text" name="plant_name" id="plant_name" class="form_control" placeholder="Look up a plant">
-  <input type="submit" name="commit" value="search" class="btn btn-primary" data-disable-with="Search">
-</form>
+    <form action="/plants" accept-charset="UTF-8" method="get">
+      <input type="text" name="plant_name" id="plant_name" class="form_control" placeholder="Look up a plant">
+      <input type="submit" name="commit" value="search" class="btn btn-primary" data-disable-with="Search">
+    </form>
 
-<p>Find popular plants, apply filters and more</p>
+    <p>Find popular plants, apply filters and more</p>
 
 
-<%= link_to "My alerts", needing_attention_my_garden_user_plants_path %>
-<%= link_to "Search", plants_path %>
-<%= link_to "My garden", my_garden_user_plants_path %>
+    <%= link_to "My alerts", needing_attention_my_garden_user_plants_path %>
+    <%= link_to "Search", plants_path %>
+    <%= link_to "My garden", my_garden_user_plants_path %>
+  </div>
+<% else %>
+  <div id="home-visitor">
+    <div class="wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <h1>Feed my plant</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h2>Stop your plants<br>from dying</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col d-flex justify-content-center">
+            <a href="/users/sign_in" class="dark-btn text-decoration-none">Log In</a>
+          </div>
+        </div>
+        <div class="row my-4">
+          <div class="col d-flex justify-content-center">
+            <a href="/users/sign_up" class="light-btn text-decoration-none">Sign up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<% end %>
