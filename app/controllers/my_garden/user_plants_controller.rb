@@ -10,11 +10,12 @@ class MyGarden::UserPlantsController < ApplicationController
 
   def create
     @user_plant = UserPlant.new(user_plant_params)
-    @user_plant.plant_id = @plant
-    @user_plant.user_id = current_user.id
-    @userplant.save
-    # Flash notice // Your added thisplant to your garden
-    redirect_to user_plants_path
+    if @user_plant.save
+      # Flash notice // Your added thisplant to your garden
+      redirect_to my_garden_user_plants_path
+    else
+      render plant_path
+    end
   end
 
   def destroy
@@ -24,6 +25,6 @@ class MyGarden::UserPlantsController < ApplicationController
   private
 
   def user_plant_params
-    params.require(:user_plant).permit(:plant_id, :user_id)
+    params.require(:user_plant).permit(:plant_id, :user_id, :room, :latest_hygrometry)
   end
 end
