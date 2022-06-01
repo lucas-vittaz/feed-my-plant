@@ -1,13 +1,28 @@
 <%= cl_image_tag @plant.photo.key, width: 300, height: 300, crop: :fill %>
-<p><%= @plant.name %></p>
-<p><%= @plant.specie %></p>
+
+<h1><%= @plant.name %></h1>
+
+<h2><%= @plant.scientific_name %></h2>
 <ul>
   <li><%= @plant.baseline_hygrometry%></li>
-  <li><%= @plant.temperature%></li>
+  <li><%= @plant.min_baseline_temperature%></li>
+    <li><%= @plant.max_baseline_temperature%></li>
   <li><%= @plant.light_level%></li>
   <li><%= @plant.care_level%></li>
 </ul>
 
 <p><%= @plant.description%></p>
 
-<button type="button"> Add to my garden </button>
+<form action="GET">
+  <a type="button"> Add to my garden </a>
+</form>
+
+
+<div class="modal-body">
+  <form action="POST">
+  <%= simple_form_for([:my_garden, @user_plants]) do |f| %>
+    <%= f.input :room, collection: UserPlant::ROOMS, as: :radio_buttons  %>
+    <%= f.button :submit %>
+    <% end %>
+  </form>
+</div>

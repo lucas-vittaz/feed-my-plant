@@ -1,14 +1,18 @@
-
+<br>
+<br><br>
 <%= link_to "<", root_path  %>
 <h1>My garden</h1>
 
 <ul>
-<% @user_plants.each do |plant| %>
-  <li><%=  plant.room  %></li>
+<% UserPlant::ROOMS.each do |room| %>
+   <li><%= link_to room, my_garden_user_plants_path(room: room)  %></li>
 <% end %>
 </ul>
 
-
-<%# <% @user_plants.each do |plant| %>
-  <%# <%= link_to "plant", my_garden_user_plant(plant) %>
-  <%# <% end %>
+<ul>
+<% @user_plants.each do |user_plant| %>
+  <li>
+    <%= user_plant.plant.name     %>
+  </li>
+<% end %>
+</ul>
