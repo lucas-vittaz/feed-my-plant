@@ -1,0 +1,13 @@
+<%= cl_image_tag @plant.photo.key, width: 300, height: 300, crop: :fill %>
+<p><%= @plant.name %></p>
+<p><%= @plant.specie %></p>
+<ul>
+  <li><%= @plant.baseline_hygrometry%></li>
+  <li><%= @plant.temperature%></li>
+  <li><%= @plant.light_level%></li>
+  <li><%= @plant.care_level%></li>
+</ul>
+
+<p><%= @plant.description%></p>
+
+<button type="button"> Add to my garden </button>

@@ -1,0 +1,20 @@
+<%= link_to "<", root_path %>
+<h1>Search</h1>
+
+<form action="/plants" accept-charset="UTF-8" method="get">
+  <input type="text" name="plant_name" id="plant_name" class="form_control" placeholder="Look up a plant">
+  <input type="submit" name="commit" value="search" class="btn btn-primary" data-disable-with="Search">
+</form>
+
+<ul>
+<% @plants.each do |plant| %>
+  <div class="plant_card">
+    <%= cl_image_tag plant.photo.key, width: 150, height: 150, crop: :fill%>
+    <div>
+      <strong><%= plant.name %></strong>
+      <br>
+      <%= plant.description %>
+    </div>
+  </div>
+<% end %>
+</ul>

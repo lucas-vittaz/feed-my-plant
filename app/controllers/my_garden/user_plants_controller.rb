@@ -1,4 +1,4 @@
-class Mygarden::UserPlantsController < ApplicationController
+class MyGarden::UserPlantsController < ApplicationController
   def index
     @user_plants = UserPlant.all
   end
