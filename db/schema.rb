@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_30_210032) do
+ActiveRecord::Schema.define(version: 2022_06_01_093408) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,7 +45,6 @@ ActiveRecord::Schema.define(version: 2022_05_30_210032) do
 
   create_table "plants", force: :cascade do |t|
     t.string "name"
-    t.string "specie"
     t.integer "baseline_hygrometry"
     t.string "temperature"
     t.string "light_level"
@@ -53,15 +52,18 @@ ActiveRecord::Schema.define(version: 2022_05_30_210032) do
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "scientific_name"
+    t.integer "min_baseline_temperature"
+    t.integer "max_baseline_temperature"
   end
 
   create_table "user_plants", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "plant_id", null: false
-    t.integer "hygrometry"
     t.string "room"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "latest_hygrometry"
     t.index ["plant_id"], name: "index_user_plants_on_plant_id"
     t.index ["user_id"], name: "index_user_plants_on_user_id"
   end
