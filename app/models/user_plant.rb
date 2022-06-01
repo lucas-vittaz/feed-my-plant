@@ -3,8 +3,9 @@ class UserPlant < ApplicationRecord
   belongs_to :plant
 
   ROOMS = [
-    ""
-
+    "Kitchen",
+    "Bedroom",
+    "Living Room"
   ]
 
   def needing_attention
