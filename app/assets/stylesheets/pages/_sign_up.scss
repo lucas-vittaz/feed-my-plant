@@ -1,0 +1,51 @@
+#sign-up{
+
+  background-color: $main-bg;
+
+  .header-img{
+    background: url('https://res.cloudinary.com/lucas-vittaz/image/upload/v1654117576/development/Header_vwebch.png')  no-repeat center ;
+    background-size: cover;
+    height: 230px;
+    width: 100%;
+    z-index: -2;
+  }
+  h1{
+    color: white;
+
+    font-family:$headers-font;
+    font-weight: bolder;
+    font-size: 50px;
+
+    z-index: 2;
+
+    padding-top: 30px;
+    padding-left: 15px;
+    }
+  .dark-h1{
+    color: black;
+  }
+
+  h2{
+  color: white;
+
+  font-family: "Butler", sans-serif;
+  font-weight: normal;
+  font-size: 38px;
+
+  z-index: 2;
+
+  padding-top: 15px;
+  padding-left: 15px;
+  }
+
+  .form-inputs{
+    margin-top: 20px;
+    .input{
+      border-radius: 7px!important;
+    }
+  }
+  .dark-btn{
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+}
