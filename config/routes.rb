@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :plants, only: [:index, :show]
   namespace :my_garden do
-    resources :user_plants, only: [:create, :index, :show, :destroy ] do
+    resources :plants, only: [] do
+      resources :user_plants, only: [:create]
+    end
+
+    resources :user_plants, only: [:index, :show, :destroy] do
       collection do
         get :needing_attention
       end
