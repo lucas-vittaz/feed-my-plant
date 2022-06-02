@@ -2,9 +2,45 @@
 
   <% if user_signed_in? %>
   <div id="home-sign-in">
-    <br>
-    <br>
-    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="header-img">
+
+          </div>
+        </div>
+        <div class="meteo" data-controller="meteo">
+          <span data-target="injectMeteo" data-action="click->meteo#update">meteo</span>
+        </div>
+            <span><i class="far fa-user-circle"></i></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+          <h1>Find your plants and add them to your garden</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+            <%= form_tag plants_path, method: :get, :class => 'd-flex search-bar input' do %>
+                <%= text_field_tag :query,
+                    params[:query],
+                    class: "form-control",
+                    placeholder: "Look for a plant"%>
+
+                  <button type="submit" class="search-btn">
+                    <i class="fas fa-search"></i>
+                  </button>
+              <% end %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+          <p>Find popular plants, apply filters and more</p>
+        </div>
+      </div>
+    </div>
+    <%= render 'shared/tapbar' %>
   </div>
 
   <div class="wrapper">
@@ -12,24 +48,8 @@
       <%= link_to "Log out", destroy_user_session_path, method: :delete, data: {:confirm => 'Are you sure you want to log out?'} %>
     </div>
 
-    <h1>Find your plants and add them to your garden </h1>
-      <%= form_tag plants_path, method: :get, :class => 'd-flex search-bar input' do %>
-          <%= text_field_tag :query,
-              params[:query],
-              class: "form-control",
-              placeholder: "Look for a plant"%>
-
-         <button type="submit" class="search-btn">
-            <i class="fas fa-search"></i>
-          </button>
-        <% end %>
-
-    <p>Find popular plants, apply filters and more</p>
 
 
-    <%= link_to "My alerts", needing_attention_my_garden_user_plants_path %>
-    <%= link_to "Search", plants_path %>
-    <%= link_to "My garden", my_garden_user_plants_path %>
   </div>
 <% else %>
   <div id="home-visitor">
