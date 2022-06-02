@@ -45,3 +45,16 @@
 .light-btn:hover {
   color: #EEA063!important;
 }
+
+.search-btn {
+  display: grid;
+  place-content: center;
+  width: 40px;
+  height: 36px;
+  text-align: center;
+  border: 1px solid $terracotta;
+  background: $terracotta;
+  color: #fff;
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+}
