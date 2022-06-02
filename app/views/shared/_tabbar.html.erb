@@ -1,19 +1,20 @@
-<div class="tabbar-container">
+<div class="tabbar-container" data-controller="tabbar">
   <nav class="tabbar">
     <div>
-      <input id="menu-1" type="radio" name="menu" checked>
+      <input id="menu-1" type="radio" name="menu" checked data-tabbar-target="alert" data-action="click->tabbar#redirectToAlertPage">
       <label for="menu-1">
         <i class="fas fa-bell"></i>
         <span>My alerts</span>
       </label>
 
-      <input id="menu-2" type="radio" name="menu">
+      <input id="menu-2" type="radio" name="menu" data-action="click->tabbar#redirectToSearchPage" data-tabbar-target="search">
       <label for="menu-2">
         <i class="fas fa-search"></i>
         <span>Search</span>
       </label>
 
-      <input id="menu-3" type="radio" name="menu">
+      <input id="menu-3" type="radio" name="menu"
+      data-action="click->tabbar#redirectToGardenPage" data-tabbar-target="garden">
       <label for="menu-3">
         <i class="fas fa-leaf"></i>
         <span>My garden</span>
@@ -22,7 +23,4 @@
       <span></span>
     </div>
   </nav>
-
-  <!-- dribbble -->
-  <a class="dribbble" href="https://dribbble.com/shots/6612066-Tab-Bar-active-animation" target="_blank"><img src="https://cdn.dribbble.com/assets/dribbble-ball-mark-2bd45f09c2fb58dbbfb44766d5d1d07c5a12972d602ef8b32204d28fa3dda554.svg" alt=""></a>
 </div>
