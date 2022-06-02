@@ -35,7 +35,8 @@ plant_1 = Plant.create(
   min_baseline_temperature: 15,
   max_baseline_temperature: 25,
   light_level: "medium",
-  care_level: "beginner"
+  care_level: "beginner",
+  water_need:"low"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941775/development/kentiapalm_kgfbz9.webp")
 plant_1.photo.attach(io: file, filename: 'kentiapalm.jpg', content_type: 'image/jpg')
@@ -50,7 +51,8 @@ plant_2 = Plant.create(
   min_baseline_temperature: 16,
   max_baseline_temperature: 27,
   light_level: "high",
-  care_level: "beginner"
+  care_level: "beginner",
+  water_need:"low"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941899/development/orchid_celue6.webp")
 plant_2.photo.attach(io: file, filename: 'bambooorchid.jpg', content_type: 'image/jpg')
@@ -65,7 +67,8 @@ plant_3 = Plant.create(
   min_baseline_temperature: 16,
   max_baseline_temperature: 25,
   light_level: "medium",
-  care_level: "beginner"
+  care_level: "beginner",
+  water_need:"low"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653942050/development/monstera_ggq4pp.webp")
 plant_3.photo.attach(io: file, filename: 'monstera.jpg', content_type: 'image/jpg')
@@ -80,7 +83,8 @@ plant_4 = Plant.create(
   min_baseline_temperature: 13,
   max_baseline_temperature: 27,
   light_level: "medium",
-  care_level: "beginner"
+  care_level: "beginner",
+  water_need:"low"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941767/development/aloevera_utvt74.webp")
 plant_4.photo.attach(io: file, filename: 'aloevera.jpg', content_type: 'image/jpg')
@@ -95,7 +99,8 @@ plant_5 = Plant.create(
   min_baseline_temperature: 15,
   max_baseline_temperature: 24,
   light_level: "low",
-  care_level: "beginner"
+  care_level: "beginner",
+  water_need:"low"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941853/development/calathea_jh8csh.webp")
 plant_5.photo.attach(io: file, filename: 'calatha.jpg', content_type: 'image/jpg')
@@ -110,7 +115,8 @@ plant_6 = Plant.create(
   min_baseline_temperature: -10,
   max_baseline_temperature: 24,
   light_level: "high",
-  care_level: "beginner"
+  care_level: "beginner",
+  water_need:"low"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941859/development/eucalyptus_nk6jhi.webp")
 plant_6.photo.attach(io: file, filename: 'cidergum.jpg', content_type: 'image/jpg')
@@ -125,7 +131,8 @@ plant_7 = Plant.create(
   min_baseline_temperature: 15,
   max_baseline_temperature: 20,
   light_level: "medium",
-  care_level: "beginner"
+  care_level: "beginner",
+  water_need:"low"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941782/development/anthurium_qa16s7.webp")
 plant_7.photo.attach(io: file, filename: 'anthurium.jpg', content_type: 'image/jpg')
@@ -140,7 +147,8 @@ plant_8 = Plant.create(
   min_baseline_temperature: 18,
   max_baseline_temperature: 22,
   light_level: "medium",
-  care_level: "intermediate"
+  care_level: "intermediate",
+  water_need:"medium"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937977/development/Bird_Strelizia_mztnng.webp")
 plant_8.photo.attach(io: file, filename: '', content_type: 'image/jpg')
@@ -155,7 +163,8 @@ plant_9 = Plant.create(
   min_baseline_temperature: 14,
   max_baseline_temperature: 30,
   light_level: "hight",
-  care_level: "beginner"
+  care_level: "beginner",
+  water_need:"medium"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937977/development/Calathea_Triostar_rrln5e.webp")
 plant_9.photo.attach(io: file, filename: '', content_type: 'image/jpg')
@@ -170,7 +179,8 @@ plant_10 = Plant.create(
   min_baseline_temperature: 15,
   max_baseline_temperature: 29,
   light_level: "medium",
-  care_level: "beginner"
+  care_level: "beginner",
+  water_need:"medium"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937977/development/Orchidee_Phalaenopsis_sibphz.webp")
 plant_10.photo.attach(io: file, filename: '', content_type: 'image/jpg')
@@ -185,7 +195,8 @@ plant_11 = Plant.create(
   min_baseline_temperature: 20,
   max_baseline_temperature: 25,
   light_level: "hight",
-  care_level: "beginner"
+  care_level: "beginner",
+  water_need:"medium"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937978/development/Philodendron_Monstera_wlazop.webp")
 plant_11.photo.attach(io: file, filename: '', content_type: 'image/jpg')
@@ -200,7 +211,8 @@ plant_12 = Plant.create(
   min_baseline_temperature: 15,
   max_baseline_temperature: 27,
   light_level: "hight",
-  care_level: "beginner"
+  care_level: "beginner",
+  water_need:"medium"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937977/development/Dracaena_Marginata_wocecp.webp")
 plant_12.photo.attach(io: file, filename: '', content_type: 'image/jpg')
@@ -215,7 +227,8 @@ plant_13 = Plant.create(
   min_baseline_temperature: 10,
   max_baseline_temperature: 27,
   light_level: "hight",
-  care_level: "beginner"
+  care_level: "beginner",
+  water_need:"medium"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937978/development/Snake_Sanseviera_qyusot.webp")
 plant_13.photo.attach(io: file, filename: '', content_type: 'image/jpg')
@@ -230,7 +243,8 @@ plant_14 = Plant.create(
   min_baseline_temperature: 17,
   max_baseline_temperature: 25,
   light_level: "hight",
-  care_level: "medium"
+  care_level: "medium",
+  water_need:"medium"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937978/development/Orange_tree_rq5kme.webp")
 plant_14.photo.attach(io: file, filename: '', content_type: 'image/jpg')
@@ -245,7 +259,8 @@ plant_15 = Plant.create(
   min_baseline_temperature: 15,
   max_baseline_temperature: 27,
   light_level: "High",
-  care_level: "Beginner"
+  care_level: "Beginner",
+  water_need:"hight"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Bananier_kg4daa.webp")
 plant_15.photo.attach(io: file, filename: 'Bananatree_zgtl5y', content_type: 'image/jpg')
@@ -260,7 +275,8 @@ plant_16 = Plant.create(
   min_baseline_temperature: 18,
   max_baseline_temperature: 27,
   light_level: "Low",
-  care_level: "Intermediate "
+  care_level: "Intermediate",
+  water_need:"hight"
 )
 
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Potodora_d4fkui.webp")
@@ -276,7 +292,8 @@ plant_17 = Plant.create(
   min_baseline_temperature: 16,
   max_baseline_temperature: 25,
   light_level: "Medium",
-  care_level: "Beginner"
+  care_level: "Beginner",
+  water_need:"hight"
 )
 
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Altissima_pzarma.webp")
@@ -292,7 +309,8 @@ plant_18 = Plant.create(
   min_baseline_temperature: 16,
   max_baseline_temperature: 24,
   light_level: "Medium",
-  care_level: "Beginner"
+  care_level: "Beginner",
+  water_need:"hight"
 )
 
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Pachiraaquatiqua_oathel.webp")
@@ -308,7 +326,8 @@ plant_19 = Plant.create(
   min_baseline_temperature: 10,
   max_baseline_temperature: 25,
   light_level: "High",
-  care_level: "Beginner"
+  care_level: "Beginner",
+  water_need:"hight"
 )
 
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Romarin_dagj6l.webp")
@@ -324,7 +343,8 @@ plant_20 = Plant.create(
   min_baseline_temperature: 10,
   max_baseline_temperature: 25,
   light_level: "Medium",
-  care_level: "Beginner"
+  care_level: "Beginner",
+  water_need:"hight"
 )
 
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Pothos_ze9ale.webp")
@@ -340,7 +360,8 @@ plant_21 = Plant.create(
   min_baseline_temperature: 5,
   max_baseline_temperature: 30,
   light_level: "Low",
-  care_level: "Beginner"
+  care_level: "Beginner",
+  water_need:"hight"
 )
 
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Bonnie_iqjao1.webp")
