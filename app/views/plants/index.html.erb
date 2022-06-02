@@ -1,32 +1,26 @@
 <%= link_to "<", root_path %>
 <h1>Search</h1>
-<div>
-  <%= form_tag plants_path, method: :get, class: 'd-flex' do %>
-      <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Search a plant"%>
-      <%= submit_tag "Search", class: "dark-btn " %>
-  <% end %>
-</div>
+<div data-controller="search-plants">
+  <div class="container" >
+    <div class="row">
+      <div class="col" >
+        <%= form_with url: plants_path, method: :get, html: { class:
+      'mb-4', data: { search_plants_target: 'form' } } do |f| %>
+      <%= f.text_field :query,
+                      class: "form-control",
+                      placeholder: 'Search a plant',
+                      value: params[:query],
+                      data: { search_plants_target: 'input',
+                      action: 'keyup->search-plants#update'
+                      } %>
 
 
-
-<div class="container">
-  <div class="row">
-    <% @plants.each do |plant| %>
-      <div class="col-sm-12" >
-        <div class="plant-cards">
-          <a href="<%= plant_path(plant)%>", class="link-dark text-decoration-none">
-            <div class="plant-card-single">
-              <%= cl_image_tag plant.photo.key, width: 150, height: 150, crop: :fill, :style => "border-radius: 10px"%>
-              <div class="plant-infos">
-                <h2><strong><%= plant.name %></strong></h2>
-                <p><%= plant.description %></p>
-              </div>
-            </div>
-        </div>
+        <% end %>
       </div>
-    <% end %>
+    </div>
+  </div>
+
+  <div class="container">
+    <%= render "list", plants: @plants %>
   </div>
 </div>

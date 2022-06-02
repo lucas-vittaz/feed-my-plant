@@ -20,9 +20,10 @@
   font-size: 12px;
   height: 150px;
   overflow: hidden;
+  align-items: center;
 
   h2 {
-    font-family: $headers-font;
+    font-family: $body-font;
     font-size: 16px;
     }
 
