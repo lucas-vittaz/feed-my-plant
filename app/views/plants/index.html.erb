@@ -6,15 +6,23 @@
   <input type="submit" name="commit" value="search" class="btn btn-primary" data-disable-with="Search">
 </form>
 
-<ul>
-<% @plants.each do |plant| %>
-  <div class="plant_card">
-    <%= cl_image_tag plant.photo.key, width: 150, height: 150, crop: :fill%>
-    <div>
-      <strong><%= plant.name %></strong>
-      <br>
-      <%= plant.description %>
-    </div>
+
+
+<div class="container">
+  <div class="row">
+    <% @plants.each do |plant| %>
+      <div class="col-sm-12">
+        <div class="plant-cards">
+          <a href="<%= plant_path(plant)%>", class="link-dark text-decoration-none">
+            <div class="plant-card-single">
+              <%= cl_image_tag plant.photo.key, width: 150, height: 150, crop: :fill, :style => "border-radius: 10px"%>
+              <div class="plant-infos">
+                <h2><strong><%= plant.name %></strong></h2>
+                <p><%= plant.description %></p>
+              </div>
+            </div>
+        </div>
+      </div>
+    <% end %>
   </div>
-<% end %>
-</ul>
+</div>
