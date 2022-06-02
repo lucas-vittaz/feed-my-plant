@@ -9,10 +9,7 @@ class PlantsController < ApplicationController
       end
     else
       @plants = Plant.all
-
-      @plants = Plant.filter_by_water_need(params[:water_need]) if params[:water_need].present?
-      @plants = Plant.filter_by_care_levels(params[:care_level]) if params[:care_level].present?
-      @plants = Plant.filter_by_light_levels(params[:light_level]) if params[:light_level].present?
+      define_plants
     end
   end
 
@@ -21,4 +18,62 @@ class PlantsController < ApplicationController
     @user_plant = UserPlant.new
     @user_plant = UserPlant.create
   end
+
+  private
+
+  def define_plants
+    @plants = filter_by_water_level + filter_by_care_levels + filter_by_light_levels
+  end
+
+  def filter_by_water_level
+    define_water_level_params.any? ? @water_level = Plant.where(water_need: define_water_level_params) : @water_level = []
+    @water_level
+  end
+
+  def filter_by_light_levels
+    define_light_level_params.any? ? @light_level = Plant.where(light_level: define_light_level_params) : @light_level = []
+    @water_level
+  end
+
+  def filter_by_care_levels
+    define_care_level_params.any? ? @care_level = Plant.where(care_level: define_care_level_params) : @care_level = []
+    @care_level
+  end
+
+  def define_care_level_params
+    params_care_level = []
+    params_care_level << "beginner" if params["care_level_beginner"] == "true"
+    params_care_level << "intermediate" if params["care_level_intermediate"] == "true"
+    params_care_level << "advanced" if params["care_level_beginner"] == "true"
+    params_care_level
+  end
+
+  def define_light_level_params
+    params_care_level = []
+    params_care_level << "low" if params["care_level_low"] == "true"
+    params_care_level << "medium" if params["care_level_medium"] == "true"
+    params_care_level << "high" if params["care_level_high"] == "true"
+    params_care_level
+  end
+
+  def define_water_level_params
+    params_water_level = []
+    params_water_level << "low" if params["water_level_low"] == "true"
+    params_water_level << "medium" if params["water_level_medium"] == "true"
+    params_water_level << "high" if params["water_level_high"] == "true"
+    params_water_level
+  end
+
+
+  # def filter_params_care_level
+  #   @plants = Plant.where(care_level: "beginner") if params["care_level_low"] == "true"
+  #   @plants = Plant.where(care_level: "medium") if params["care_level_medium"] == "true"
+  #   @plants = Plant.where(care_level: "high") if params["care_level_high"] == "true"
+  # end
+
+  # def filter_params_light_level
+  #   @plants = Plant.where(light_level: "low") if params["light_level_low"] == "true"
+  #   @plants = Plant.where(light_level: "medium") if params["light_level_medium"] == "true"
+  #   @plants = Plant.where(light_level: "high") if params["light_level_high"] == "true"
+  # end
 end
