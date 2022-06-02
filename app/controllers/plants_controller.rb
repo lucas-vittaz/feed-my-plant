@@ -1,11 +1,19 @@
 class PlantsController < ApplicationController
   def index
+    if params[:query].present?
+      sql_query = "name ILIKE :query OR scientific_name ILIKE :query"
+      @plants = Plant.where(sql_query, query: "%#{params[:query]}%")
+      respond_to do |format|
+        format.html # Follow regular flow of Rails
+        format.text { render partial: "plants/list", locals: { plants: @plants }, formats: [:html] }
+      end
+    else
+      @plants = Plant.all
 
-    @plants = Plant.all
-
-    @plants = Plant.filter_by_water_need(params[:water_need]) if params[:water_need].present?
-    @plants = Plant.filter_by_care_levels(params[:care_level]) if params[:care_level].present?
-    @plants = Plant.filter_by_light_levels(params[:light_level]) if params[:light_level].present?
+      @plants = Plant.filter_by_water_need(params[:water_need]) if params[:water_need].present?
+      @plants = Plant.filter_by_care_levels(params[:care_level]) if params[:care_level].present?
+      @plants = Plant.filter_by_light_levels(params[:light_level]) if params[:light_level].present?
+    end
   end
 
   def show
@@ -13,5 +21,4 @@ class PlantsController < ApplicationController
     @user_plant = UserPlant.new
     @user_plant = UserPlant.create
   end
-
 end
