@@ -5,7 +5,10 @@ class UserPlant < ApplicationRecord
   ROOMS = [
     "Kitchen",
     "Bedroom",
-    "Living Room"
+    "Living Room",
+    "Patio",
+    "Parental Room",
+    "Shower Room"
   ]
 
   def needing_attention
