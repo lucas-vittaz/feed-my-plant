@@ -9,7 +9,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   margin: 15px auto;
-  background-color: #D8EECC;
+  background-color: $light-green;
   padding: 10px;
   height: 170px;
 
@@ -20,9 +20,10 @@
   font-size: 12px;
   height: 150px;
   overflow: hidden;
+  align-items: center;
 
   h2 {
-    font-family: $headers-font;
+    font-family: $body-font;
     font-size: 16px;
     }
 
