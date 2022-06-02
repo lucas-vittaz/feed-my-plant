@@ -1,17 +1,21 @@
 <%= link_to "<", root_path %>
 <h1>Search</h1>
-
-<form action="/plants" accept-charset="UTF-8" method="get">
-  <input type="text" name="plant_name" id="plant_name" class="form_control" placeholder="Look up a plant">
-  <input type="submit" name="commit" value="search" class="btn btn-primary" data-disable-with="Search">
-</form>
+<div>
+  <%= form_tag plants_path, method: :get, class: 'd-flex' do %>
+      <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Search a plant"%>
+      <%= submit_tag "Search", class: "dark-btn " %>
+  <% end %>
+</div>
 
 
 
 <div class="container">
   <div class="row">
     <% @plants.each do |plant| %>
-      <div class="col-sm-12">
+      <div class="col-sm-12" >
         <div class="plant-cards">
           <a href="<%= plant_path(plant)%>", class="link-dark text-decoration-none">
             <div class="plant-card-single">
