@@ -42,25 +42,25 @@ class PlantsController < ApplicationController
 
   def define_care_level_params
     params_care_level = []
-    params_care_level << "beginner" if params["care_level_beginner"] == "true"
-    params_care_level << "intermediate" if params["care_level_intermediate"] == "true"
-    params_care_level << "advanced" if params["care_level_beginner"] == "true"
+    params_care_level << "Beginner" if params["care_level_beginner"] == "true"
+    params_care_level << "Intermediate" if params["care_level_intermediate"] == "true"
+    params_care_level << "Advanced" if params["care_level_beginner"] == "true"
     params_care_level
   end
 
   def define_light_level_params
-    params_care_level = []
-    params_care_level << "low" if params["care_level_low"] == "true"
-    params_care_level << "medium" if params["care_level_medium"] == "true"
-    params_care_level << "high" if params["care_level_high"] == "true"
-    params_care_level
+    params_light_level = []
+    params_light_level << "Low" if params["care_level_low"] == "true"
+    params_light_level << "Medium" if params["care_level_medium"] == "true"
+    params_light_level << "High" if params["care_level_high"] == "true"
+    params_light_level
   end
 
   def define_water_level_params
     params_water_level = []
-    params_water_level << "low" if params["water_level_low"] == "true"
-    params_water_level << "medium" if params["water_level_medium"] == "true"
-    params_water_level << "high" if params["water_level_high"] == "true"
+    params_water_level << "Low" if params["water_level_low"] == "true"
+    params_water_level << "Medium" if params["water_level_medium"] == "true"
+    params_water_level << "High" if params["water_level_high"] == "true"
     params_water_level
   end
 

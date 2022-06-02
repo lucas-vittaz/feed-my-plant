@@ -127,9 +127,9 @@ plant_8 = Plant.create(
   baseline_hygrometry: 500,
   min_baseline_temperature: 18,
   max_baseline_temperature: 22,
-  light_level: "medium",
-  care_level: "intermediate",
-  water_need:"medium"
+  light_level: "Medium",
+  care_level: "Intermediate",
+  water_need:"Medium"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937977/development/Bird_Strelizia_mztnng.webp")
 plant_8.photo.attach(io: file, filename: '', content_type: 'image/jpg')
@@ -141,9 +141,9 @@ plant_9 = Plant.create(
   baseline_hygrometry: 500,
   min_baseline_temperature: 14,
   max_baseline_temperature: 30,
-  light_level: "hight",
-  care_level: "beginner",
-  water_need:"medium"
+  light_level: "Hight",
+  care_level: "Beginner",
+  water_need:"Medium"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937977/development/Calathea_Triostar_rrln5e.webp")
 plant_9.photo.attach(io: file, filename: '', content_type: 'image/jpg')
