@@ -320,40 +320,64 @@ user_plant1 = UserPlant.create!(
   user: user_1,
   plant: plant_2,
   latest_hygrometry: 500,
-  room: "Kitchen"
+  room: :kitchen
 )
 puts " Creating user plant 2"
 user_plant2 = UserPlant.create(
   user: user_1,
   plant: plant_1,
   latest_hygrometry: 700,
-  room: "Garden"
+  room: :garden
 )
 puts " Creating user plant 3"
 user_plant3 = UserPlant.create!(
   user: user_1,
   plant: plant_13,
   latest_hygrometry: 500,
-  room: "Bedroom"
+  room: :bedroom
 )
 puts " Creating user plant 4"
 user_plant4 = UserPlant.create(
   user: user_1,
   plant: plant_20,
   latest_hygrometry: 700,
-  room: "Living Room"
+  room: :living_room
 )
 puts " Creating user plant 5"
 user_plant5 = UserPlant.create!(
   user: user_1,
   plant: plant_17,
   latest_hygrometry: 500,
-  room: "Bedroom"
+  room: :bedroom
 )
 puts " Creating user plant 6"
 user_plant6 = UserPlant.create(
   user: user_1,
   plant: plant_12,
   latest_hygrometry: 700,
-  room: "Kitchen"
+  room: :kitchen
+)
+
+puts " Creating user plant 7"
+user_plant7 = UserPlant.create(
+  user: user_1,
+  plant: plant_5,
+  latest_hygrometry: 700,
+  room: :shower_room
+)
+
+puts " Creating user plant 8"
+user_plant8 = UserPlant.create(
+  user: user_1,
+  plant: plant_2,
+  latest_hygrometry: 700,
+  room: :parent_room
+)
+
+puts " Creating user plant 9"
+user_plant9 = UserPlant.create(
+  user: user_1,
+  plant: plant_10,
+  latest_hygrometry: 700,
+  room: :patio
 )

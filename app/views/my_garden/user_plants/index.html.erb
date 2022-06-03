@@ -1,18 +1,37 @@
 <br>
-<br><br>
+<br>
+<br>
 <%= link_to "<", root_path  %>
 <h1>My garden</h1>
 
-<ul>
-<% UserPlant::ROOMS.each do |room| %>
-   <li><%= link_to room, my_garden_user_plants_path(room: room)  %></li>
-<% end %>
-</ul>
+<div class="container-room-scroll" data-controller="scroll-bar" data-action="click->scroll-bar#highlight">
+  <% UserPlant::ROOMS.each do |room| %>
 
-<ul>
-<% @user_plants.each do |user_plant| %>
-  <li>
-    <%= user_plant.plant.name     %>
-  </li>
-<% end %>
-</ul>
+    <%= link_to my_garden_user_plants_path(room: room) do %>
+      <div class="room-card <%= (params[:room].present?) && params[:room] == room.to_s ? 'active' : '' %>" data-scroll-bar-target="room">
+        <div>
+            <%= image_tag("#{room.to_s}.png", :width=>50, :height=>50) %>
+        </div>
+      </div>
+    <% end%>
+  <% end %>
+</div>
+
+
+<div class="row">
+  <% @user_plants.each do |user_plant| %>
+    <div class="col">
+      <div class="plant-cards">
+        <%= link_to plant_path(user_plant), class: "link-dark text-decoration-none" do %>
+          <div class="plant-card-single">
+            <%= cl_image_tag user_plant.plant.photo.key, width: 150, height: 150, crop: :fill, :style => "border-radius: 10px"%>
+            <div class="plant-infos">
+              <h2><strong><%= user_plant.plant.name %></strong></h2>
+              <p><%= user_plant.plant.description %></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
