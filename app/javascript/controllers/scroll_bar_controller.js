@@ -1,15 +1,17 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = ["room"]
+  static targets = ["room", "home"]
 
   connect() {
-    console.log(this.roomTarget)
+
   }
 
   highlight(event) {
     let active_cards = document.querySelectorAll(".active");
 
+    console.log(event.currentTarget)
+    console.log(event.currentTarget === this.homeTarget)
     active_cards.forEach(function(card){
       card.classList.remove("active")
     })

@@ -1,17 +1,12 @@
 
-
-
-  <div class="header-garden" style="background-image: url(https://res.cloudinary.com/lucas-vittaz/image/upload/v1654261599/development/header-garden-linear-gradient.png)">
-    <%= link_to "<", root_path, class:"link-header"  %>
-    My Garden
-  </div>
-
-
-
+<div class="header-garden" style="background-image: url(https://res.cloudinary.com/lucas-vittaz/image/upload/v1654261599/development/header-garden-linear-gradient.png)">
+  <%= link_to "<", root_path, class:"link-header"  %>
+  My Garden
+</div>
 
 <div class="container-room-scroll" data-controller="scroll-bar" data-action="click->scroll-bar#highlight">
     <%= link_to my_garden_user_plants_path, class:"link" do %>
-      <div class="room-card" <%= 'active' if !params[:room].present? %> data-scroll-bar-target="room">
+      <div class="room-card active"  data-scroll-bar-target="room home">
         <div class="align-room-card-content">
             <%= image_tag("home.png", :width=>50, :height=>50) %>
             <p>Home</p>
@@ -20,7 +15,6 @@
      <% end%>
 
   <% UserPlant::ROOMS.each do |room| %>
-
     <%= link_to my_garden_user_plants_path(room: room), class:"link" do %>
       <div class="room-card <%= (params[:room].present?) && params[:room] == room.to_s ? 'active' : '' %>" data-scroll-bar-target="room">
         <div class="align-room-card-content">
@@ -33,20 +27,19 @@
 </div>
 
 
-<div class="row">
+
+<div class="container">
   <% @user_plants.each do |user_plant| %>
-    <div class="col">
-      <div class="plant-cards">
-        <%= link_to my_garden_user_plant_path(user_plant), class: "link-dark text-decoration-none" do %>
-          <div class="plant-card-single">
-            <%= cl_image_tag user_plant.plant.photo.key, width: 150, height: 150, crop: :fill, :style => "border-radius: 10px"%>
-            <div class="plant-infos">
-              <h2><strong><%= user_plant.plant.name %></strong></h2>
-              <p><%= user_plant.plant.description %></p>
-            </div>
+    <div class="plant-cards">
+      <%= link_to my_garden_user_plant_path(user_plant), class: "link-dark text-decoration-none" do %>
+        <div class="plant-card-single">
+          <%= cl_image_tag user_plant.plant.photo.key, width: 150, height: 150, crop: :fill, :style => "border-radius: 10px"%>
+          <div class="plant-infos">
+            <h2><strong><%= user_plant.plant.name %></strong></h2>
+            <p><%= user_plant.plant.description %></p>
           </div>
-        <% end %>
-      </div>
+        </div>
+      <% end %>
     </div>
   <% end %>
 </div>

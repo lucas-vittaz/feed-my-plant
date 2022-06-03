@@ -7,7 +7,6 @@
   </div>
 
     <div class="container">
-
       <div class="container-plant-scroll">
         <div class="plant-card d-flex flex-column">
           <span><i class="fas fa-tint"></i></span>
@@ -27,14 +26,14 @@
         </div>
       </div>
 
-      <div class="plant-description">
-        <h3>Description</h3>
-        <p><%= @plant.description %></p>
-      </div>
       <div class="col d-flex justify-content-center">
         <button type="button" class="btn dark-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Add to my garden
         </button>
+      </div>
+      <div class="plant-description">
+        <h3>Description</h3>
+        <p><%= @plant.description %></p>
       </div>
 
     </div>
@@ -59,5 +58,4 @@
       </div>
     </div>
   </div>
-
 </div>
