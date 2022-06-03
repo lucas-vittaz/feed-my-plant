@@ -5,6 +5,13 @@
   overflow-y: hidden;
   display: flex;
   margin-left: 10px;
+
+
+  .align-room-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .container-room-scroll::-webkit-scrollbar{
   width: 0;
@@ -20,10 +27,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  p {
-   text-decoration: none;
-  }
 }
 .room-card.active {
   background-color: $terracotta;
+}
+
+.link{
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
