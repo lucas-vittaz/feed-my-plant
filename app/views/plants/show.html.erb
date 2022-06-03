@@ -1,28 +1,62 @@
-<%= cl_image_tag @plant.photo.key, width: 300, height: 300, crop: :fill %>
+<div id="plant-show">
+  <div style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(<%= cl_image_path(@plant.photo.key, crop: :fill) %>);" class="plant-img">
+      <a href="/plants"><i class="fas fa-angle-left fa-5x"></i></a>
+      <h1><%= @plant.name %></h1>
+      <h2><%= @plant.scientific_name %></h2>
+  </div>
 
-<h1><%= @plant.name %></h1>
+    <div class="container">
 
-<h2><%= @plant.scientific_name %></h2>
-<ul>
-  <li><%= @plant.baseline_hygrometry%></li>
-  <li><%= @plant.min_baseline_temperature%></li>
-    <li><%= @plant.max_baseline_temperature%></li>
-  <li><%= @plant.light_level%></li>
-  <li><%= @plant.care_level%></li>
-</ul>
+      <div class="container-plant-scroll">
+        <div class="plant-card d-flex flex-column">
+          <span><i class="fas fa-tint"></i></span>
+          <p><%= @plant.baseline_hygrometry%></p>
+        </div>
+        <div class="plant-card d-flex flex-column">
+          <span><i class="fas fa-temperature-high"></i></span>
+          <p><%= @plant.min_baseline_temperature%> - <%= @plant.max_baseline_temperature%> °C</p>
+        </div>
+        <div class="plant-card d-flex flex-column">
+          <span><i class="fas fa-adjust"></i></span>
+          <p><%= @plant.light_level%></p>
+        </div>
+        <div class="plant-card d-flex flex-column">
+          <span><i class="fas fa-hand-holding"></i></span>
+          <p><%= @plant.care_level%></p>
+        </div>
+      </div>
 
-<p><%= @plant.description%></p>
+      <div class="plant-description">
+        <h3>Description</h3>
+        <p><%= @plant.description %></p>
+      </div>
+      <div class="col d-flex justify-content-center">
+        <button type="button" class="btn dark-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Add to my garden
+        </button>
+      </div>
 
-<form action="GET">
-  <a type="button"> Add to my garden </a>
-</form>
+    </div>
+  </div>
 
-<div class="modal-body">
-  <%= simple_form_for([:my_garden, @plant, @user_plant]) do |f| %>
-    <%= hidden_field_tag "user_plant[user_id]", current_user.id %>
-    <%= hidden_field_tag "user_plant[plant_id]", @plant.id %>
-    <%= f.input :room, collection: UserPlant::ROOMS, as: :radio_buttons  %>
-    <%= f.button :submit %>
-    <% end %>
-  </form>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="exampleModalLabel">Choose your garden</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body col d-flex justify-content-center">
+          <%= simple_form_for([:my_garden, @plant, @user_plant]) do |f| %>
+              <%= hidden_field_tag "user_plant[user_id]", current_user.id %>
+              <%= hidden_field_tag "user_plant[plant_id]", @plant.id %>
+              <%= f.input :room, collection: UserPlant::ROOMS, as: :radio_buttons, class:'radio-btn'  %>
+              <%= f.button :submit, class:'dark-btn' %>
+            <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
