@@ -1,16 +1,13 @@
 
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <div class="header-img">
 
-      </div>
-    </div>
+
+  <div class="header-garden" style="background-image: url(https://res.cloudinary.com/lucas-vittaz/image/upload/v1654261599/development/header-garden-linear-gradient.png)">
+    <%= link_to "<", root_path, class:"link-header"  %>
+    My Garden
   </div>
-</div>
 
-<%= link_to "<", root_path  %>
-<h1>My garden</h1>
+
+
 
 <div class="container-room-scroll" data-controller="scroll-bar" data-action="click->scroll-bar#highlight">
     <%= link_to my_garden_user_plants_path, class:"link" do %>
