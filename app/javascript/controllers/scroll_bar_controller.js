@@ -8,13 +8,9 @@ export default class extends Controller {
   }
 
   highlight(event) {
-    // event.preventDefault()
-    // this.roomTarget.classList.add("active")
-    let elems = document.querySelectorAll(".active");
-    [].forEach.call(elems, function(el) {
-      el.classList.remove("active");
-    });
-    event.target.className = "active";
-    event.preventDefault()
+    let active_cards = document.querySelectorAll(".active");
+    active_cards.forEach(function(card){ card.classList.remove("active")})
+    this.roomTarget.classList.add("active");
+  
   }
 }

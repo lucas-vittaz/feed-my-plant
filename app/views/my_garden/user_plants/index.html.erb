@@ -9,16 +9,19 @@
 
       <% if room == "Living Room" %>
         <div class="room-card active" data-scroll-bar-target="room">
-          <%= link_to my_garden_user_plants_path(room: room) do %>
-            <%# <%= cl_image_tag("v1654202722/development/family-sofa_dkhs39.png", :width=>50, :height=>50) %> %>
-          <% end%>
+          <div>
+            <%= link_to my_garden_user_plants_path(room: room) do %>
+              <%= image_tag("family-sofa.png", :width=>50, :height=>50) %>
+            <% end%>
+          </div>
         </div>
       <% end %>
 
       <% if room == "Bedroom" %>
         <div class="room-card" data-scroll-bar-target="room">
           <%= link_to my_garden_user_plants_path(room: room) do %>
-            <%# <%= cl_image_tag("v1654202722/development/single-bed_qk13tm.png", :width=>50, :height=>50) %> %>
+            <%# <%= cl_image_tag("v1654202722/development/single-bed_qk13tm.png", :width=>50, :height=>50) %>
+            <%= image_tag("single-bed.png", :width=>50, :height=>50) %>
           <% end%>
         </div>
       <% end %>
@@ -26,15 +29,17 @@
       <% if room == "Parental Room" %>
         <div class="room-card" data-scroll-bar-target="room">
           <%= link_to my_garden_user_plants_path(room: room) do %>
-            <%# <%= cl_image_tag("v1654202725/development/double-bed_dfxapu.png", :width=>50, :height=>50) %> %>
+            <%# <%= cl_image_tag("v1654202725/development/double-bed_dfxapu.png", :width=>50, :height=>50) %>
+            <%= image_tag("double-bed.png", :width=>50, :height=>50) %>
           <% end%>
         </div>
       <% end %>
 
-      <% if room == "Living Room" %>
+      <% if room == "Shower Room" %>
         <div class="room-card" data-scroll-bar-target="room">
           <%= link_to my_garden_user_plants_path(room: room) do %>
-            <%# <%= cl_image_tag("v1654202725/development/shower_bc4tsl.png", :width=>50, :height=>50) %> %>
+             <%= image_tag("shower.png", :width=>50, :height=>50) %>
+            <%# <%= cl_image_tag("v1654202725/development/shower_bc4tsl.png", :width=>50, :height=>50) %>
           <% end%>
         </div>
       <% end %>
@@ -42,7 +47,8 @@
       <% if room == "Patio" %>
         <div class="room-card" data-scroll-bar-target="room">
           <%= link_to my_garden_user_plants_path(room: room) do %>
-            <%# <%= cl_image_tag("v1654202722/development/terrace_zohcrl.png", :width=>50, :height=>50) %> %>
+            <%= image_tag("terrace.png", :width=>50, :height=>50) %>
+            <%# <%= cl_image_tag("v1654202722/development/terrace_zohcrl.png", :width=>50, :height=>50) %>
           <% end%>
         </div>
       <% end %>
@@ -50,7 +56,8 @@
       <% if room == "Kitchen" %>
         <div class="room-card" data-scroll-bar-target="room">
           <%= link_to my_garden_user_plants_path(room: room) do %>
-            <%# <%= cl_image_tag("v1654203890/development/hot-pot_aovdua.png", :width=>50, :height=>50) %> %>
+            <%= image_tag("hot-pot.png", :width=>50, :height=>50) %>
+            <%# <%= cl_image_tag("v1654203890/development/hot-pot_aovdua.png", :width=>50, :height=>50) %>
           <% end%>
         </div>
       <% end %>
