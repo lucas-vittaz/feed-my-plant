@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_01_093408) do
+ActiveRecord::Schema.define(version: 2022_06_03_112310) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,10 @@ ActiveRecord::Schema.define(version: 2022_06_01_093408) do
     t.string "scientific_name"
     t.integer "min_baseline_temperature"
     t.integer "max_baseline_temperature"
+    t.integer "min_baseline_hygrometry"
+    t.integer "max_baseline_hygrometry"
+    t.integer "sensor_hygrometry"
+    t.string "water_need"
   end
 
   create_table "user_plants", force: :cascade do |t|
