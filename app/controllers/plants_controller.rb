@@ -9,7 +9,7 @@ class PlantsController < ApplicationController
       end
     else
       @plants = Plant.all
-      define_plants
+      # define_plants
     end
   end
 
