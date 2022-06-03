@@ -29,9 +29,12 @@ plant_1 = Plant.create(
   baseline_hygrometry: 400,
   min_baseline_temperature: 15,
   max_baseline_temperature: 25,
+  min_baseline_hygrometry: 200,
+  max_baseline_hygrometry: 700,
+  sensor_hygrometry: 50,
   light_level: "medium",
   care_level: "beginner",
-  water_need:"low"
+  water_need: "low"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941775/development/kentiapalm_kgfbz9.webp")
 plant_1.photo.attach(io: file, filename: 'kentiapalm.jpg', content_type: 'image/jpg')
@@ -43,6 +46,9 @@ plant_2 = Plant.create(
   baseline_hygrometry: 550,
   min_baseline_temperature: 16,
   max_baseline_temperature: 27,
+  min_baseline_hygrometry: 200,
+  max_baseline_hygrometry: 700,
+  sensor_hygrometry: 50,
   light_level: "high",
   care_level: "beginner",
   water_need:"low"
@@ -57,6 +63,9 @@ plant_3 = Plant.create(
   baseline_hygrometry: 400,
   min_baseline_temperature: 16,
   max_baseline_temperature: 25,
+  min_baseline_hygrometry: 200,
+  max_baseline_hygrometry: 700,
+  sensor_hygrometry: 500,
   light_level: "medium",
   care_level: "beginner",
   water_need:"low"
@@ -71,6 +80,9 @@ plant_4 = Plant.create(
   baseline_hygrometry: 450,
   min_baseline_temperature: 13,
   max_baseline_temperature: 27,
+  min_baseline_hygrometry: 200,
+  max_baseline_hygrometry: 700,
+  sensor_hygrometry: 500,
   light_level: "medium",
   care_level: "beginner",
   water_need:"low"
@@ -85,6 +97,9 @@ plant_5 = Plant.create(
   baseline_hygrometry: 500,
   min_baseline_temperature: 15,
   max_baseline_temperature: 24,
+  min_baseline_hygrometry: 200,
+  max_baseline_hygrometry: 700,
+  sensor_hygrometry: 500,
   light_level: "low",
   care_level: "beginner",
   water_need:"low"
@@ -99,6 +114,9 @@ plant_6 = Plant.create(
   baseline_hygrometry: 600,
   min_baseline_temperature: -10,
   max_baseline_temperature: 24,
+  min_baseline_hygrometry: 200,
+  max_baseline_hygrometry: 700,
+  sensor_hygrometry: 500,
   light_level: "high",
   care_level: "beginner",
   water_need:"low"
@@ -113,6 +131,9 @@ plant_7 = Plant.create(
   baseline_hygrometry: 550,
   min_baseline_temperature: 15,
   max_baseline_temperature: 20,
+  min_baseline_hygrometry: 200,
+  max_baseline_hygrometry: 700,
+  sensor_hygrometry: 500,
   light_level: "medium",
   care_level: "beginner",
   water_need:"low"
@@ -127,9 +148,13 @@ plant_8 = Plant.create(
   baseline_hygrometry: 500,
   min_baseline_temperature: 18,
   max_baseline_temperature: 22,
-  light_level: "Medium",
-  care_level: "Intermediate",
-  water_need:"Medium"
+  min_baseline_hygrometry: 200,
+  max_baseline_hygrometry: 700,
+  sensor_hygrometry: 500,
+  light_level: "medium",
+  care_level: "intermediate",
+  water_need:"medium"
+
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937977/development/Bird_Strelizia_mztnng.webp")
 plant_8.photo.attach(io: file, filename: '', content_type: 'image/jpg')
@@ -141,9 +166,13 @@ plant_9 = Plant.create(
   baseline_hygrometry: 500,
   min_baseline_temperature: 14,
   max_baseline_temperature: 30,
-  light_level: "Hight",
-  care_level: "Beginner",
-  water_need:"Medium"
+  min_baseline_hygrometry: 200,
+  max_baseline_hygrometry: 700,
+  sensor_hygrometry: 500,
+  light_level: "high",
+  care_level: "beginner",
+  water_need:"medium"
+
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937977/development/Calathea_Triostar_rrln5e.webp")
 plant_9.photo.attach(io: file, filename: '', content_type: 'image/jpg')
@@ -155,6 +184,9 @@ plant_10 = Plant.create(
   baseline_hygrometry: 500,
   min_baseline_temperature: 15,
   max_baseline_temperature: 29,
+  min_baseline_hygrometry: 200,
+  max_baseline_hygrometry: 700,
+  sensor_hygrometry: 500,
   light_level: "medium",
   care_level: "beginner",
   water_need:"medium"
@@ -169,7 +201,10 @@ plant_11 = Plant.create(
   baseline_hygrometry: 500,
   min_baseline_temperature: 20,
   max_baseline_temperature: 25,
-  light_level: "hight",
+  min_baseline_hygrometry: 200,
+  max_baseline_hygrometry: 700,
+  sensor_hygrometry: 500,
+  light_level: "high",
   care_level: "beginner",
   water_need:"medium"
 )
@@ -183,7 +218,10 @@ plant_12 = Plant.create(
   baseline_hygrometry: 500,
   min_baseline_temperature: 15,
   max_baseline_temperature: 27,
-  light_level: "hight",
+  min_baseline_hygrometry: 200,
+  max_baseline_hygrometry: 700,
+  sensor_hygrometry: 500,
+  light_level: "high",
   care_level: "beginner",
   water_need:"medium"
 )
@@ -197,9 +235,12 @@ plant_13 = Plant.create(
   baseline_hygrometry: 500,
   min_baseline_temperature: 10,
   max_baseline_temperature: 27,
-  light_level: "High",
-  care_level: "Beginner",
-  water_need:"Medium"
+  min_baseline_hygrometry: 200,
+  max_baseline_hygrometry: 700,
+  sensor_hygrometry: 500,
+  light_level: "high",
+  care_level: "beginner",
+  water_need:"medium"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937978/development/Snake_Sanseviera_qyusot.webp")
 plant_13.photo.attach(io: file, filename: '', content_type: 'image/jpg')
@@ -211,6 +252,9 @@ plant_14 = Plant.create(
   baseline_hygrometry: 500,
   min_baseline_temperature: 17,
   max_baseline_temperature: 25,
+  min_baseline_hygrometry: 200,
+  max_baseline_hygrometry: 700,
+  sensor_hygrometry: 500,
   light_level: "High",
   care_level: "Medium",
   water_need:"Medium"
@@ -225,6 +269,9 @@ plant_15 = Plant.create(
   baseline_hygrometry: 500,
   min_baseline_temperature: 15,
   max_baseline_temperature: 27,
+  min_baseline_hygrometry: 200,
+  max_baseline_hygrometry: 700,
+  sensor_hygrometry: 500,
   light_level: "High",
   care_level: "Beginner",
   water_need:"High"
@@ -239,6 +286,9 @@ plant_16 = Plant.create(
   baseline_hygrometry: 500,
   min_baseline_temperature: 18,
   max_baseline_temperature: 27,
+  min_baseline_hygrometry: 200,
+  max_baseline_hygrometry: 700,
+  sensor_hygrometry: 500,
   light_level: "Low",
   care_level: "Intermediate",
   water_need:"High"
@@ -251,11 +301,15 @@ plant_17 = Plant.create(
   scientific_name: "Ficus Altissima XL",
   description: "The Ficus Altissima is a tree of the large fig family. Altissima refers to the height that this magnificent plant can reach in its natural environment: 30 metres! Native to South Asia, its beautiful ovoid leaves in shades of yellow and green will look great in your home. It is the perfect plant if you want to add a touch of elegance to your living room, kitchen or veranda.",
   baseline_hygrometry: 500,
+  min_baseline_hygrometry: 200,
+  max_baseline_hygrometry: 400,
   min_baseline_temperature: 16,
   max_baseline_temperature: 25,
+  sensor_hygrometry: 500,
   light_level: "Medium",
   care_level: "Beginner",
   water_need:"High"
+  
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Altissima_pzarma.webp")
 plant_17.photo.attach(io: file, filename: 'ficus_yoeug9', content_type: 'image/jpg')
@@ -267,6 +321,9 @@ plant_18 = Plant.create(
   baseline_hygrometry: 500,
   min_baseline_temperature: 16,
   max_baseline_temperature: 24,
+  min_baseline_hygrometry: 200,
+  max_baseline_hygrometry: 700,
+  sensor_hygrometry: 500,
   light_level: "Medium",
   care_level: "Beginner",
   water_need:"High"
@@ -281,6 +338,9 @@ plant_19 = Plant.create(
   baseline_hygrometry: 500,
   min_baseline_temperature: 10,
   max_baseline_temperature: 25,
+  min_baseline_hygrometry: 200,
+  max_baseline_hygrometry: 700,
+  sensor_hygrometry: 50,
   light_level: "High",
   care_level: "Beginner",
   water_need:"High"
@@ -295,6 +355,9 @@ plant_20 = Plant.create(
   baseline_hygrometry: 500,
   min_baseline_temperature: 10,
   max_baseline_temperature: 25,
+  min_baseline_hygrometry: 200,
+  max_baseline_hygrometry: 700,
+  sensor_hygrometry: 50,
   light_level: "Medium",
   care_level: "Beginner",
   water_need:"High"
@@ -306,9 +369,12 @@ plant_21 = Plant.create(
   name: "Spider plant",
   scientific_name: "Chlorophytum Bonnie",
   description: "The spider plant, or chlorophytum, is the easiest houseplant to grow at home. One of the most interesting thing is its ability to spread quickly! This plant grows so fast that you will be overwhelmed by its babies in a few month!",
-  baseline_hygrometry: 500,
+  baseline_hygrometry: 50,
   min_baseline_temperature: 5,
   max_baseline_temperature: 30,
+  min_baseline_hygrometry: 200,
+  max_baseline_hygrometry: 700,
+  sensor_hygrometry: 500,
   light_level: "Low",
   care_level: "Beginner",
   water_need:"High"
@@ -321,6 +387,7 @@ user_plant1 = UserPlant.create!(
   plant: plant_2,
   latest_hygrometry: 500,
   room: :kitchen
+
 )
 puts " Creating user plant 2"
 user_plant2 = UserPlant.create(
@@ -328,6 +395,7 @@ user_plant2 = UserPlant.create(
   plant: plant_1,
   latest_hygrometry: 700,
   room: :garden
+  
 )
 puts " Creating user plant 3"
 user_plant3 = UserPlant.create!(

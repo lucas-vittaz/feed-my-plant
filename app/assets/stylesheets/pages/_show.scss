@@ -1,0 +1,87 @@
+#plant-show{
+  .plant-img{
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+  }
+  .fas fa-angle-left fa-5x{
+    margin-top: 24px;
+    margin-left: 24px;
+    color: white !important;
+  }
+  .fa-angle-left{
+    color: white !important;
+  }
+  h1{
+    padding-top: 200px;
+    padding-right: 100px;
+    color: $terracotta;
+    font-family: "Butler";
+    font-size: 45px;
+    font-weight: bold;
+  }
+
+  h2{
+    color: white;
+    margin-left: 75px;
+  }
+
+  .container-plant-scroll{
+    background-color: $light-gray;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    margin-left: 10px;
+    margin-top: 30px;
+  }
+
+  .container-plant-scroll::-webkit-scrollbar{
+    width: 0;
+  }
+
+  .plant-card {
+    display: block;
+    min-width: 110px;
+    max-width: 110px;
+    height: 110px;
+    line-height: 110px;
+    border-radius: 20px;
+    background-color: white;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 40px;
+  }
+
+  .plant-description{
+    border: 1px transparent solid;
+    border-radius: 7px;
+    background-color: white;
+    padding: 1rem;
+    margin-top: 30px;
+  }
+  .dark-btn{
+    margin-top: 30px;
+  }
+
+}
+.modal-dialog{
+  margin: 0 !important;
+}
+.modal-title{
+  font-size: 60px;
+  font-weight: bold;
+}
+.modal-body{
+  height: 100vh;
+  margin-top: 50px;
+
+  .form-check{
+    margin-top: 50px;
+  }
+  .dark-btn{
+    margin-top: 100px;
+  }
+}
