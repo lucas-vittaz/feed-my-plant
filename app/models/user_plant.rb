@@ -5,13 +5,14 @@ class UserPlant < ApplicationRecord
   ROOMS = [
     "Kitchen",
     "Bedroom",
-    "Living Room"
+    "Living Room",
+    "Patio",
+    "Parental Room",
+    "Shower Room"
   ]
 
   def needing_attention
     hygrometry < 60
     # true if hygrometry < 60
   end
-
-
 end

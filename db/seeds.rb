@@ -357,3 +357,27 @@ user_plant6 = UserPlant.create(
   latest_hygrometry: 700,
   room: "Kitchen"
 )
+
+puts " Creating user plant 7"
+user_plant7 = UserPlant.create(
+  user: user_1,
+  plant: plant_5,
+  latest_hygrometry: 700,
+  room: "Shower Room"
+)
+
+puts " Creating user plant 8"
+user_plant8 = UserPlant.create(
+  user: user_1,
+  plant: plant_2,
+  latest_hygrometry: 700,
+  room: "Parental Room"
+)
+
+puts " Creating user plant 9"
+user_plant9 = UserPlant.create(
+  user: user_1,
+  plant: plant_10,
+  latest_hygrometry: 700,
+  room: "Patio"
+)
