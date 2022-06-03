@@ -1,52 +1,44 @@
 <div class="home-container">
 
   <% if user_signed_in? %>
-  <div id="home-sign-in">
-
-        <div class="header-garden" style="background-image: url(https://res.cloudinary.com/lucas-vittaz/image/upload/v1654261599/development/header-garden-linear-gradient.png)">
-          Feed My Plant
+    <div id="home-sign-in">
+      <div class="header-garden" style="background-image: url(https://res.cloudinary.com/lucas-vittaz/image/upload/v1654261599/development/header-garden-linear-gradient.png)">
+        Feed My Plant
+        <%= link_to destroy_user_session_path, method: :delete, data: {:confirm => 'Are you sure you want to log out?'}, class:"link-header-right" do %>
+          <i class="fas fa-sign-out-alt"></i>
+        <% end%>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col d-flex justify-content-center">
+            <h1 class="main-title">Find your plants and add them to your garden</h1>
+          </div>
         </div>
+        <div class="row">
+          <div class="col d-flex justify-content-center">
+              <%= form_tag plants_path, method: :get, :class => 'd-flex search-bar input' do %>
+                  <%= text_field_tag :query,
+                      params[:query],
+                      class: "form-control input-search-home",
+                      placeholder: "Look for a plant"%>
 
-    <div class="container">
-        <div class="meteo" data-controller="meteo" >
-          <%# data-meteo-meteo-key-value="<% RAILS_ENV[METEO_KEY]%>
-          <span data-target="injectMeteo" data-action="click->meteo#update">meteo</span>
+                    <button type="submit" class="search-btn">
+                      <i class="fas fa-search"></i>
+                    </button>
+                <% end %>
+          </div>
         </div>
-          <span><i class="far fa-user-circle"></i></span>
+        <div class="row">
+          <div class="col d-flex justify-content-center">
+            <p>Find popular plants, apply filters and more</p>
+          </div>
         </div>
-
-      <div class="row">
         <div class="col d-flex justify-content-center">
-          <h1>Find your plants and add them to your garden</h1>
+          <i class="dark-green fas fa-spa"></i>
         </div>
       </div>
-      <div class="row">
-        <div class="col d-flex justify-content-center">
-            <%= form_tag plants_path, method: :get, :class => 'd-flex search-bar input' do %>
-                <%= text_field_tag :query,
-                    params[:query],
-                    class: "form-control",
-                    placeholder: "Look for a plant"%>
-
-                  <button type="submit" class="search-btn">
-                    <i class="fas fa-search"></i>
-                  </button>
-              <% end %>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col d-flex justify-content-center">
-          <p>Find popular plants, apply filters and more</p>
-        </div>
-      </div>
+      <%= render 'shared/tapbar' %>
     </div>
-    <%= render 'shared/tapbar' %>
-  </div>
-
-
-
-      <%= link_to "Log out", destroy_user_session_path, method: :delete, data: {:confirm => 'Are you sure you want to log out?'} %>
-
 <% else %>
   <div id="home-visitor">
     <div class="wrapper">
