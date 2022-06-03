@@ -1,28 +1,52 @@
-<%= cl_image_tag @plant.photo.key, width: 300, height: 300, crop: :fill %>
+<div class="show-container">
+  <%= cl_image_tag @plant.photo.key, width: 390, height: 400, crop: :fill %>
 
-<h1><%= @plant.name %></h1>
+  <div id="plant-show">
+    <div class="container">
+      <h1><%= @plant.name %></h1>
+      <h2><%= @plant.scientific_name %></h2>
 
-<h2><%= @plant.scientific_name %></h2>
-<ul>
-  <li><%= @plant.baseline_hygrometry%></li>
-  <li><%= @plant.min_baseline_temperature%></li>
-    <li><%= @plant.max_baseline_temperature%></li>
-  <li><%= @plant.light_level%></li>
-  <li><%= @plant.care_level%></li>
-</ul>
+      <div class="plant-info">
+        <div class="plant-info body"><%= @plant.baseline_hygrometry%></div>
+        <div class="plant-info body"><%= @plant.min_baseline_temperature%></div>
+        <div class="plant-info body"><%= @plant.max_baseline_temperature%></div>
+        <div class="plant-info body"><%= @plant.light_level%></div>
+        <div class="plant-info body"><%= @plant.care_level%></div>
+      </div>
 
-<p><%= @plant.description%></p>
+      <div class="plant-description">
+        <h3>Description</h3>
+        <p><%= @plant.description %></p>
+      </div>
 
-<form action="GET">
-  <a type="button"> Add to my garden </a>
-</form>
+      <button type="button" class="btn dark-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+      </button>
+    </div>
+  </div>
 
-<div class="modal-body">
-  <%= simple_form_for([:my_garden, @plant, @user_plant]) do |f| %>
-    <%= hidden_field_tag "user_plant[user_id]", current_user.id %>
-    <%= hidden_field_tag "user_plant[plant_id]", @plant.id %>
-    <%= f.input :room, collection: UserPlant::ROOMS, as: :radio_buttons  %>
-    <%= f.button :submit %>
-    <% end %>
-  </form>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%= simple_form_for([:my_garden, @plant, @user_plant]) do |f| %>
+              <%= hidden_field_tag "user_plant[user_id]", current_user.id %>
+              <%= hidden_field_tag "user_plant[plant_id]", @plant.id %>
+              <%= f.input :room, collection: UserPlant::ROOMS, as: :radio_buttons  %>
+              <%= f.button :submit, class:'dark-btn' %>
+            <% end %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
