@@ -1,188 +1,205 @@
-.tapbar-container{
-  .tapbar {
-    --icon-active: white;
-    --icon-inactive: #6C7486;
-    --icon-hover: #99A3BA;
-    --text: #283618;
-    --circle: #EEA063;
-    --background: white;
-    --shadow: rgba(18, 22, 33, .1);
-    border-radius: 12px 12px 0 0;
-    background: var(--background);
-    width: 100%;
-    bottom: 0;
-    height: 64px;
-    padding: 0 12px;
-    position: absolute;
-    box-shadow: 0 8px 16px var(--shadow);
+// .tapbar-container{
+//   .tapbar {
+//     --icon-active: white;
+//     --icon-inactive: #6C7486;
+//     --icon-hover: #99A3BA;
+//     --text: #283618;
+//     --circle: #EEA063;
+//     --background: white;
+//     --shadow: rgba(18, 22, 33, .1);
+//     border-radius: 12px 12px 0 0;
+//     background: var(--background);
+//     width: 100%;
+//     bottom: 0;
+//     height: 64px;
+//     padding: 0 12px;
+//     position: fixed;
+//     box-shadow: 0 8px 16px var(--shadow);
 
-    i {
-      display: grid;
-      place-content: center;
-    }
+//     i {
+//       display: grid;
+//       place-content: center;
+//     }
 
-    & > div {
-      display: flex;
-      height: 100%;
-      position: relative;
+//     & > div {
+//       display: flex;
+//       height: 100%;
+//       position: relative;
 
-      label {
-        flex: 0 0 33.33%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        cursor: pointer;
-        z-index: 1;
+//       label {
+//         flex: 0 0 33.33%;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         position: relative;
+//         cursor: pointer;
+//         z-index: 1;
 
-        i,
-        span {
-          display: block;
-          -webkit-backface-visibility: hidden;
-          transition: transform .4s cubic-bezier(.2, .64, .48, 1.12), opacity .4s ease, color .4s ease;
-          transform: translateY(var(--y)) scale(var(--s));
-        }
+//         i,
+//         span {
+//           display: block;
+//           -webkit-backface-visibility: hidden;
+//           transition: transform .4s cubic-bezier(.2, .64, .48, 1.12), opacity .4s ease, color .4s ease;
+//           transform: translateY(var(--y)) scale(var(--s));
+//         }
 
-        i {
-          --y: 0;
-          --s: .84;
-          font-size: 20px;
-          margin: auto;
-          color: var (--text);
-          transform-origin: 50% 50%;
-        }
+//         i {
+//           --y: 0;
+//           --s: .84;
+//           font-size: 20px;
+//           margin: auto;
+//           color: var (--text);
+//           transform-origin: 50% 50%;
+//         }
 
-        span {
-          --y: -8px;
-          --s: .92;
-          font-size: 13px;
-          font-weight: 500;
-          position: absolute;
-          left: 0;
-          right: 0;
-          text-align: center;
-          bottom: 0;
-          opacity: 0;
-          color: var(--text);
-          transform-origin: 50% 0;
-        }
+//         span {
+//           --y: -8px;
+//           --s: .92;
+//           font-size: 13px;
+//           font-weight: 500;
+//           position: absolute;
+//           left: 0;
+//           right: 0;
+//           text-align: center;
+//           bottom: 0;
+//           opacity: 0;
+//           color: var(--text);
+//           transform-origin: 50% 0;
+//         }
 
-        &:hover {
-          i {
-            color: var(--icon-hover);
-          }
-        }
+//         &:hover {
+//           i {
+//             color: var(--icon-hover);
+//           }
+//         }
 
-        &:active {
-          i {
-            --s: .76;
-          }
-        }
-      }
+//         &:active {
+//           i {
+//             --s: .76;
+//           }
+//         }
+//       }
 
-      input {
-        display: none;
+//       input {
+//         display: none;
 
-        &:nth-of-type(1) {
-          &:checked {
-            & + label + input + label + input + label + span {
-              --x: 0;
-            }
-          }
-        }
+//         &:nth-of-type(1) {
+//           &:checked {
+//             & + label + input + label + input + label + span {
+//               --x: 0;
+//             }
+//           }
+//         }
 
-        &:nth-of-type(2) {
-          &:checked {
-            & + label + input + label + span {
-              --x: 100%;
-            }
-          }
-        }
+//         &:nth-of-type(2) {
+//           &:checked {
+//             & + label + input + label + span {
+//               --x: 100%;
+//             }
+//           }
+//         }
 
-        &:nth-of-type(3) {
-          &:checked {
-            & + label + span {
-              --x: 200%;
-            }
-          }
-        }
+//         &:nth-of-type(3) {
+//           &:checked {
+//             & + label + span {
+//               --x: 200%;
+//             }
+//           }
+//         }
 
-        &:checked {
-          & + label {
-            i {
-                --y: -24px;
-                --s: 1;
-                color: var(--icon-active);
-            }
-            span {
-                --s: 1;
-                --y: -14px;
-                opacity: 1;
-            }
-          }
-        }
-      }
+//         &:checked {
+//           & + label {
+//             i {
+//                 --y: -24px;
+//                 --s: 1;
+//                 color: var(--icon-active);
+//             }
+//             span {
+//                 --s: 1;
+//                 --y: -14px;
+//                 opacity: 1;
+//             }
+//           }
+//         }
+//       }
 
-      & > span {
-        --x: 0;
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        width: 33.33%;
-        transition: transform .4s cubic-bezier(.2, .64, .48, 1.12);
-        transform: translateX(var(--x));
-        -webkit-backface-visibility: hidden;
+//       & > span {
+//         --x: 0;
+//         display: block;
+//         position: absolute;
+//         left: 0;
+//         top: 0;
+//         bottom: 0;
+//         width: 33.33%;
+//         transition: transform .4s cubic-bezier(.2, .64, .48, 1.12);
+//         transform: translateX(var(--x));
+//         -webkit-backface-visibility: hidden;
 
-        &:after {
-          content: '';
-          width: 44px;
-          height: 44px;
-          display: block;
-          border-radius: 50%;
-          background: var(--circle);
-          position: absolute;
-          left: 50%;
-          top: 0;
-          box-shadow: 0 2px 8px var(--shadow);
-          margin: -14px 0 0 -22px;
-        }
-      }
-    }
+//         &:after {
+//           content: '';
+//           width: 44px;
+//           height: 44px;
+//           display: block;
+//           border-radius: 50%;
+//           background: var(--circle);
+//           position: absolute;
+//           left: 50%;
+//           top: 0;
+//           box-shadow: 0 2px 8px var(--shadow);
+//           margin: -14px 0 0 -22px;
+//         }
+//       }
+//     }
+//   }
+
+//   html {
+//     box-sizing: border-box;
+//     -webkit-font-smoothing: antialiased;
+//   }
+
+//   * {
+//     box-sizing: inherit;
+//     &:before,
+//     &:after {
+//         box-sizing: inherit;
+//     }
+//   }
+
+//   // Center & dribbble
+//   body {
+//     min-height: 100vh;
+//     font-family: Roboto, Arial;
+//     color: #ADAFB6;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background: #3F4656;
+//     .dribbble {
+//         position: fixed;
+//         display: block;
+//         right: 20px;
+//         bottom: 20px;
+//         img {
+//             display: block;
+//             height: 28px;
+//         }
+//     }
+//   }
+// }
+.tapbar {
+  position:fixed;
+  bottom: 0;
+  height: 64px;
+  width: 100%;
+  background-color: white;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  a {
+    text-decoration: none;
+    color: $terracotta;
   }
-
-  html {
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  * {
-    box-sizing: inherit;
-    &:before,
-    &:after {
-        box-sizing: inherit;
-    }
-  }
-
-  // Center & dribbble
-  body {
-    min-height: 100vh;
-    font-family: Roboto, Arial;
-    color: #ADAFB6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #3F4656;
-    .dribbble {
-        position: fixed;
-        display: block;
-        right: 20px;
-        bottom: 20px;
-        img {
-            display: block;
-            height: 28px;
-        }
-    }
+  .items-tapbar {
+    min-width: 100px;
   }
 }

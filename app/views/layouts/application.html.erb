@@ -17,6 +17,8 @@
     <%# <%= render 'shared/flashes' %>
 
     <%= yield %>
-    
+    <% if user_signed_in? %>
+      <%= render 'shared/tapbar' %>
+    <% end %>
   </body>
 </html>
