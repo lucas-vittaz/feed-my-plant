@@ -1,13 +1,19 @@
-<%= link_to "<", root_path %>
-<h1>Search</h1>
+<div class="header-garden" style="background-image: url(https://res.cloudinary.com/lucas-vittaz/image/upload/v1654117576/development/Header_vwebch.png)">
+  All plants
+  <%= link_to "<", root_path, class:"link-header" %>
+</div>
+
+
+<h1>Search for a plant</h1>
+<p class="text-center">Select the one you want to add to your garden</p>
 <div data-controller="search-plants">
   <div class="container" >
-    <div class="row">
-      <div class="col" >
+    <div class="d-flex justify-content-center align-items-center">
+      <div>
         <%= form_with url: plants_path, method: :get, html: { class:
-        'mb-4', data: { search_plants_target: 'form' } } do |f| %>
+        '', data: { search_plants_target: 'form' } } do |f| %>
         <%= f.text_field :query,
-                      class: "form-control",
+                      class: "form-control input-search-index-plants",
                       placeholder: 'Search a plant',
                       value: params[:query],
                       data: { search_plants_target: 'input',
@@ -15,11 +21,10 @@
                       } %>
         <% end %>
       </div>
-      <div class="col">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Launch demo modal
-        </button>
-      </div>
+
+      <button type="button" class="btn btn-terracotta" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <i class="fas fa-sliders-h"></i>
+      </button>
     </div>
   </div>
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
