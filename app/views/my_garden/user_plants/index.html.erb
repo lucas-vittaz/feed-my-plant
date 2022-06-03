@@ -8,7 +8,7 @@
     <% UserPlant::ROOMS.each do |room| %>
 
       <% if room == "Living Room" %>
-        <div class="room-card active" data-scroll-bar-target="room">
+        <div class="room-card" data-scroll-bar-target="room">
           <div>
             <%= link_to my_garden_user_plants_path(room: room) do %>
               <%= image_tag("family-sofa.png", :width=>50, :height=>50) %>

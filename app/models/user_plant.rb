@@ -15,6 +15,4 @@ class UserPlant < ApplicationRecord
     hygrometry < 60
     # true if hygrometry < 60
   end
-
-
 end
