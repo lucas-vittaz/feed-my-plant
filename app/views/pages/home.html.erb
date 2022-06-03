@@ -9,7 +9,7 @@
 
           </div>
         </div>
-        <div class="meteo" data-controller="meteo">
+        <div class="meteo" data-controller="meteo" data-meteo-meteo-key-value="<% RAILS_ENV[METEO_KEY]%>">
           <span data-target="injectMeteo" data-action="click->meteo#update">meteo</span>
         </div>
             <span><i class="far fa-user-circle"></i></span>

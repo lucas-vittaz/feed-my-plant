@@ -1,0 +1,26 @@
+<div class="tabbar-container" data-controller="tabbar">
+  <nav class="tabbar">
+    <div>
+      <input id="menu-1" type="radio" name="menu" checked data-tabbar-target="alert" data-action="click->tabbar#redirectToAlertPage">
+      <label for="menu-1">
+        <i class="fas fa-bell"></i>
+        <span>My alerts</span>
+      </label>
+
+      <input id="menu-2" type="radio" name="menu" data-action="click->tabbar#redirectToSearchPage" data-tabbar-target="search">
+      <label for="menu-2">
+        <i class="fas fa-search"></i>
+        <span>Search</span>
+      </label>
+
+      <input id="menu-3" type="radio" name="menu"
+      data-action="click->tabbar#redirectToGardenPage" data-tabbar-target="garden">
+      <label for="menu-3">
+        <i class="fas fa-leaf"></i>
+        <span>My garden</span>
+      </label>
+
+      <span></span>
+    </div>
+  </nav>
+</div>
