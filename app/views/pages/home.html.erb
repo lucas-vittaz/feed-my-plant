@@ -2,20 +2,19 @@
 
   <% if user_signed_in? %>
   <div id="home-sign-in">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="header-img">
 
-          </div>
+        <div class="header-garden" style="background-image: url(https://res.cloudinary.com/lucas-vittaz/image/upload/v1654261599/development/header-garden-linear-gradient.png)">
+          Feed My Plant
         </div>
+
+    <div class="container">
         <div class="meteo" data-controller="meteo" >
-        <%# data-meteo-meteo-key-value="<% RAILS_ENV[METEO_KEY]%>
+          <%# data-meteo-meteo-key-value="<% RAILS_ENV[METEO_KEY]%>
           <span data-target="injectMeteo" data-action="click->meteo#update">meteo</span>
         </div>
-            <span><i class="far fa-user-circle"></i></span>
+          <span><i class="far fa-user-circle"></i></span>
         </div>
-      </div>
+
       <div class="row">
         <div class="col d-flex justify-content-center">
           <h1>Find your plants and add them to your garden</h1>
@@ -44,14 +43,10 @@
     <%= render 'shared/tapbar' %>
   </div>
 
-  <div class="wrapper">
-    <div class="header">
+
+
       <%= link_to "Log out", destroy_user_session_path, method: :delete, data: {:confirm => 'Are you sure you want to log out?'} %>
-    </div>
 
-
-
-  </div>
 <% else %>
   <div id="home-visitor">
     <div class="wrapper">
