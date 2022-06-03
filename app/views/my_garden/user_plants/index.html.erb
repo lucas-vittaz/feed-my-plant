@@ -4,72 +4,25 @@
 <%= link_to "<", root_path  %>
 <h1>My garden</h1>
 
- <div class="container-room-scroll" data-controller="scroll-bar" data-action="click->scroll-bar#highlight">
-    <% UserPlant::ROOMS.each do |room| %>
+<div class="container-room-scroll" data-controller="scroll-bar" data-action="click->scroll-bar#highlight">
+  <% UserPlant::ROOMS.each do |room| %>
 
-      <% if room == "Living Room" %>
-        <div class="room-card" data-scroll-bar-target="room">
-          <div>
-            <%= link_to my_garden_user_plants_path(room: room) do %>
-              <%= image_tag("family-sofa.png", :width=>50, :height=>50) %>
-            <% end%>
-          </div>
+    <%= link_to my_garden_user_plants_path(room: room) do %>
+      <div class="room-card <%= (params[:room].present?) && params[:room] == room.to_s ? 'active' : '' %>" data-scroll-bar-target="room">
+        <div>
+            <%= image_tag("#{room.to_s}.png", :width=>50, :height=>50) %>
         </div>
-      <% end %>
-
-      <% if room == "Bedroom" %>
-        <div class="room-card" data-scroll-bar-target="room">
-          <%= link_to my_garden_user_plants_path(room: room) do %>
-            <%# <%= cl_image_tag("v1654202722/development/single-bed_qk13tm.png", :width=>50, :height=>50) %>
-            <%= image_tag("single-bed.png", :width=>50, :height=>50) %>
-          <% end%>
-        </div>
-      <% end %>
-
-      <% if room == "Parental Room" %>
-        <div class="room-card" data-scroll-bar-target="room">
-          <%= link_to my_garden_user_plants_path(room: room) do %>
-            <%# <%= cl_image_tag("v1654202725/development/double-bed_dfxapu.png", :width=>50, :height=>50) %>
-            <%= image_tag("double-bed.png", :width=>50, :height=>50) %>
-          <% end%>
-        </div>
-      <% end %>
-
-      <% if room == "Shower Room" %>
-        <div class="room-card" data-scroll-bar-target="room">
-          <%= link_to my_garden_user_plants_path(room: room) do %>
-             <%= image_tag("shower.png", :width=>50, :height=>50) %>
-            <%# <%= cl_image_tag("v1654202725/development/shower_bc4tsl.png", :width=>50, :height=>50) %>
-          <% end%>
-        </div>
-      <% end %>
-
-      <% if room == "Patio" %>
-        <div class="room-card" data-scroll-bar-target="room">
-          <%= link_to my_garden_user_plants_path(room: room) do %>
-            <%= image_tag("terrace.png", :width=>50, :height=>50) %>
-            <%# <%= cl_image_tag("v1654202722/development/terrace_zohcrl.png", :width=>50, :height=>50) %>
-          <% end%>
-        </div>
-      <% end %>
-
-      <% if room == "Kitchen" %>
-        <div class="room-card" data-scroll-bar-target="room">
-          <%= link_to my_garden_user_plants_path(room: room) do %>
-            <%= image_tag("hot-pot.png", :width=>50, :height=>50) %>
-            <%# <%= cl_image_tag("v1654203890/development/hot-pot_aovdua.png", :width=>50, :height=>50) %>
-          <% end%>
-        </div>
-      <% end %>
-
-    <% end %>
+      </div>
+    <% end%>
+  <% end %>
 </div>
+
 
 <div class="row">
   <% @user_plants.each do |user_plant| %>
     <div class="col">
       <div class="plant-cards">
-        <a href="<%= plant_path(user_plant)%>", class="link-dark text-decoration-none">
+        <%= link_to plant_path(user_plant), class: "link-dark text-decoration-none" do %>
           <div class="plant-card-single">
             <%= cl_image_tag user_plant.plant.photo.key, width: 150, height: 150, crop: :fill, :style => "border-radius: 10px"%>
             <div class="plant-infos">
@@ -77,6 +30,8 @@
               <p><%= user_plant.plant.description %></p>
             </div>
           </div>
+        <% end %>
       </div>
     </div>
   <% end %>
+</div>
