@@ -3,11 +3,11 @@ class UserPlant < ApplicationRecord
   belongs_to :plant
 
   ROOMS = [
-    :bedroom,
-    :kitchen,
     :living_room,
-    :patio,
     :parent_room,
+    :bedroom,
+    :patio,
+    :kitchen,
     :shower_room
   ]
 
