@@ -9,7 +9,7 @@ class PlantsController < ApplicationController
       end
     else
       @plants = Plant.all
-      # define_plants
+      define_plants unless define_water_level_params.empty? && define_care_level_params.empty? && define_light_level_params.empty?
     end
   end
 
