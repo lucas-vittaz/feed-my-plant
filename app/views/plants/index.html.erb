@@ -5,20 +5,56 @@
     <div class="row">
       <div class="col" >
         <%= form_with url: plants_path, method: :get, html: { class:
-      'mb-4', data: { search_plants_target: 'form' } } do |f| %>
-      <%= f.text_field :query,
+        'mb-4', data: { search_plants_target: 'form' } } do |f| %>
+        <%= f.text_field :query,
                       class: "form-control",
                       placeholder: 'Search a plant',
                       value: params[:query],
                       data: { search_plants_target: 'input',
                       action: 'keyup->search-plants#update'
                       } %>
-
-
         <% end %>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Launch demo modal
+        </button>
       </div>
     </div>
   </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= form_with method: :get, url: plants_path do |f| %>
+          <h2>Water level</h2>
+          <% Plant::WATER_LEVELS.each do |level| %>
+            <%= f.label level %>
+            <%= f.check_box("water_level_#{level}", { class:"coucou", checked: params["water_level_#{level}"] == "true" }, true, false) %>
+          <% end %>
+
+          <h2>Light level</h2>
+          <% Plant::LIGHT_LEVELS.each do |level| %>
+            <%= f.label level %>
+            <%= f.check_box("light_level_#{level}", { class:"coucou", checked: params["light_level_#{level}"] == "true" }, true, false) %>
+          <% end %>
+
+          <h2>Care level</h2>
+          <% Plant::CARE_LEVELS.each do |level| %>
+            <%= f.label level %>
+            <%= f.check_box("care_level_#{level}", { class:"coucou", checked: params["care_level_#{level}"] == "true" }, true, false) %>
+          <% end %>
+
+        <%= f.submit 'Apply filters', :class => 'dark-btn' %>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>
 
   <div class="container">
     <%= render "list", plants: @plants %>
