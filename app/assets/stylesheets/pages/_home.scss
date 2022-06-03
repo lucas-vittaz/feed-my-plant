@@ -34,8 +34,15 @@
     width: 100%;
     z-index: -2;
   }
-  h1{
-    margin-top: 100px;
+  .main-title {
+    margin: 55px 0;
+    font-size: 35px;
+  }
+
+
+  .input-search-home {
+    background-color:white;
+    width: 280px;
   }
 
   p{
