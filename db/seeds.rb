@@ -6,15 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require "open-uri"
-
 puts "Cleaning DB"
-
 UserPlant.destroy_all
 Plant.destroy_all
 User.destroy_all
-
 puts " Creating Users"
-
 user_1 = User.create(
   user_name: "lucasvittaz",
   email: 'lucas@gmail.com',
@@ -26,7 +22,6 @@ user_2 = User.create(
   password: "123456"
 )
 puts " Creating Plants 1"
-
 plant_1 = Plant.create(
   name: "Kentia Palm",
   scientific_name: "Howea Forsteriana",
@@ -43,9 +38,7 @@ plant_1 = Plant.create(
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941775/development/kentiapalm_kgfbz9.webp")
 plant_1.photo.attach(io: file, filename: 'kentiapalm.jpg', content_type: 'image/jpg')
-
 puts " Creating Plants 1"
-
 plant_2 = Plant.create(
   name: "Bamboo Orchid",
   scientific_name: "Arundina graminifolia",
@@ -62,9 +55,7 @@ plant_2 = Plant.create(
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941899/development/orchid_celue6.webp")
 plant_2.photo.attach(io: file, filename: 'bambooorchid.jpg', content_type: 'image/jpg')
-
 puts " Creating Plants 2"
-
 plant_3 = Plant.create(
   name: "Swiss cheese plant",
   scientific_name: "Monstera Deliciosa",
@@ -81,9 +72,7 @@ plant_3 = Plant.create(
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653942050/development/monstera_ggq4pp.webp")
 plant_3.photo.attach(io: file, filename: 'monstera.jpg', content_type: 'image/jpg')
-
 puts " Creating Plants 3"
-
 plant_4 = Plant.create(
   name: "Aloe Vera",
   scientific_name: "Aloe",
@@ -100,9 +89,7 @@ plant_4 = Plant.create(
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941767/development/aloevera_utvt74.webp")
 plant_4.photo.attach(io: file, filename: 'aloevera.jpg', content_type: 'image/jpg')
-
 puts " Creating Plants 4"
-
 plant_5 = Plant.create(
   name: "Calathea ornata",
   scientific_name: "Marantaceae",
@@ -119,9 +106,7 @@ plant_5 = Plant.create(
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941853/development/calathea_jh8csh.webp")
 plant_5.photo.attach(io: file, filename: 'calatha.jpg', content_type: 'image/jpg')
-
 puts " Creating Plants 5"
-
 plant_6 = Plant.create(
   name: "Cider Gum",
   scientific_name: "Eucalyptus Gunnii",
@@ -138,9 +123,7 @@ plant_6 = Plant.create(
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941859/development/eucalyptus_nk6jhi.webp")
 plant_6.photo.attach(io: file, filename: 'cidergum.jpg', content_type: 'image/jpg')
-
 puts " Creating Plants 6"
-
 plant_7 = Plant.create(
   name: "Anthurium",
   scientific_name: "Araceae",
@@ -157,9 +140,7 @@ plant_7 = Plant.create(
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941782/development/anthurium_qa16s7.webp")
 plant_7.photo.attach(io: file, filename: 'anthurium.jpg', content_type: 'image/jpg')
-
 puts " Creating Plants 7"
-
 plant_8 = Plant.create(
   name: "Bird of Paradise",
   scientific_name: "Strelitzia",
@@ -173,12 +154,11 @@ plant_8 = Plant.create(
   light_level: "medium",
   care_level: "intermediate",
   water_need:"medium"
+
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937977/development/Bird_Strelizia_mztnng.webp")
 plant_8.photo.attach(io: file, filename: '', content_type: 'image/jpg')
-
 puts " Creating Plants 8"
-
 plant_9 = Plant.create(
   name: "Calathea triostar",
   scientific_name: "Calathea",
@@ -189,15 +169,14 @@ plant_9 = Plant.create(
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 700,
   sensor_hygrometry: 500,
-  light_level: "hight",
+  light_level: "high",
   care_level: "beginner",
   water_need:"medium"
+
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937977/development/Calathea_Triostar_rrln5e.webp")
 plant_9.photo.attach(io: file, filename: '', content_type: 'image/jpg')
-
 puts " Creating Plants 9"
-
 plant_10 = Plant.create(
   name: "Orchid Phalaenopsis",
   scientific_name: "Orchid",
@@ -214,9 +193,7 @@ plant_10 = Plant.create(
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937977/development/Orchidee_Phalaenopsis_sibphz.webp")
 plant_10.photo.attach(io: file, filename: '', content_type: 'image/jpg')
-
 puts " Creating Plants 10"
-
 plant_11 = Plant.create(
   name: "Philodendron Monstera Deliciosa",
   scientific_name: "Monstera Deliciosa",
@@ -227,15 +204,13 @@ plant_11 = Plant.create(
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 700,
   sensor_hygrometry: 500,
-  light_level: "hight",
+  light_level: "high",
   care_level: "beginner",
   water_need:"medium"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937978/development/Philodendron_Monstera_wlazop.webp")
 plant_11.photo.attach(io: file, filename: '', content_type: 'image/jpg')
-
 puts " Creating Plants 11"
-
 plant_12 = Plant.create(
   name: "Dracaena Marginata",
   scientific_name: "Dracaena",
@@ -246,15 +221,13 @@ plant_12 = Plant.create(
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 700,
   sensor_hygrometry: 500,
-  light_level: "hight",
+  light_level: "high",
   care_level: "beginner",
   water_need:"medium"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937977/development/Dracaena_Marginata_wocecp.webp")
 plant_12.photo.attach(io: file, filename: '', content_type: 'image/jpg')
-
 puts " Creating Plants 12"
-
 plant_13 = Plant.create(
   name: "Snake plant",
   scientific_name: "Sansevieria Laurentii",
@@ -265,15 +238,13 @@ plant_13 = Plant.create(
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 700,
   sensor_hygrometry: 500,
-  light_level: "hight",
+  light_level: "high",
   care_level: "beginner",
   water_need:"medium"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937978/development/Snake_Sanseviera_qyusot.webp")
 plant_13.photo.attach(io: file, filename: '', content_type: 'image/jpg')
-
 puts " Creating Plants 13"
-
 plant_14 = Plant.create(
   name: "Orange tree",
   scientific_name: "Calamondin",
@@ -284,15 +255,13 @@ plant_14 = Plant.create(
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 700,
   sensor_hygrometry: 500,
-  light_level: "hight",
-  care_level: "medium",
-  water_need:"medium"
+  light_level: "High",
+  care_level: "Medium",
+  water_need:"Medium"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937978/development/Orange_tree_rq5kme.webp")
 plant_14.photo.attach(io: file, filename: '', content_type: 'image/jpg')
-
 puts " Creating Plants 14"
-
 plant_15 = Plant.create(
   name: "Banana tree",
   scientific_name: "Musa Dwarf Cavendish",
@@ -305,13 +274,11 @@ plant_15 = Plant.create(
   sensor_hygrometry: 500,
   light_level: "High",
   care_level: "Beginner",
-  water_need:"hight"
+  water_need:"High"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Bananier_kg4daa.webp")
 plant_15.photo.attach(io: file, filename: 'Bananatree_zgtl5y', content_type: 'image/jpg')
-
 puts " Creating Plants 15"
-
 plant_16 = Plant.create(
   name: "Elephant Ear",
   scientific_name: "Alocasia Portora",
@@ -324,14 +291,11 @@ plant_16 = Plant.create(
   sensor_hygrometry: 500,
   light_level: "Low",
   care_level: "Intermediate",
-  water_need:"hight"
+  water_need:"High"
 )
-
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Potodora_d4fkui.webp")
 plant_16.photo.attach(io: file, filename: 'elephant_ears_sizl7y', content_type: 'image/jpg')
-
 puts " Creating Plants 16"
-
 plant_17 = Plant.create(
   name: "Ficus",
   scientific_name: "Ficus Altissima XL",
@@ -344,14 +308,12 @@ plant_17 = Plant.create(
   sensor_hygrometry: 500,
   light_level: "Medium",
   care_level: "Beginner",
-  water_need:"high"
+  water_need:"High"
+  
 )
-
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Altissima_pzarma.webp")
 plant_17.photo.attach(io: file, filename: 'ficus_yoeug9', content_type: 'image/jpg')
-
 puts " Creating Plants 17"
-
 plant_18 = Plant.create(
   name: "Pachiras",
   scientific_name: "Pachiras aquatica",
@@ -364,14 +326,11 @@ plant_18 = Plant.create(
   sensor_hygrometry: 500,
   light_level: "Medium",
   care_level: "Beginner",
-  water_need:"hight"
+  water_need:"High"
 )
-
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Pachiraaquatiqua_oathel.webp")
 plant_18.photo.attach(io: file, filename: 'Pachiraaquatiqua_myp80p', content_type: 'image/jpg')
-
 puts " Creating Plants 18"
-
 plant_19 = Plant.create(
   name: "Rosemary",
   scientific_name: "Salvia rosmarinus",
@@ -384,14 +343,11 @@ plant_19 = Plant.create(
   sensor_hygrometry: 50,
   light_level: "High",
   care_level: "Beginner",
-  water_need:"hight"
+  water_need:"High"
 )
-
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Romarin_dagj6l.webp")
 plant_19.photo.attach(io: file, filename: 'Romarin_ki6k3k', content_type: 'image/jpg')
-
 puts " Creating Plants 19"
-
 plant_20 = Plant.create(
   name: "Pothos",
   scientific_name: "Pothos Scindapsus climbing",
@@ -404,14 +360,11 @@ plant_20 = Plant.create(
   sensor_hygrometry: 50,
   light_level: "Medium",
   care_level: "Beginner",
-  water_need:"hight"
+  water_need:"High"
 )
-
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Pothos_ze9ale.webp")
 plant_20.photo.attach(io: file, filename: 'Pothos_dumg86', content_type: 'image/jpg')
-
 puts " Creating Plants 20"
-
 plant_21 = Plant.create(
   name: "Spider plant",
   scientific_name: "Chlorophytum Bonnie",
@@ -424,61 +377,75 @@ plant_21 = Plant.create(
   sensor_hygrometry: 500,
   light_level: "Low",
   care_level: "Beginner",
-  water_need:"hight"
+  water_need:"High"
 )
-
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Bonnie_iqjao1.webp")
 plant_21.photo.attach(io: file, filename: 'Bonnie_r3sf1e', content_type: 'image/jpg')
-
 puts " Creating user plant 1"
-
 user_plant1 = UserPlant.create!(
   user: user_1,
   plant: plant_2,
-  latest_hygrometry: 50,
-  room: "Kitchen"
+  latest_hygrometry: 500,
+  room: :kitchen
+
 )
-
 puts " Creating user plant 2"
-
 user_plant2 = UserPlant.create(
   user: user_1,
   plant: plant_1,
-  latest_hygrometry: 70,
-  room: "Garden"
+  latest_hygrometry: 700,
+  room: :garden
+  
 )
-
 puts " Creating user plant 3"
-
 user_plant3 = UserPlant.create!(
   user: user_1,
   plant: plant_13,
   latest_hygrometry: 500,
-  room: "Bedroom"
+  room: :bedroom
 )
-
 puts " Creating user plant 4"
-
 user_plant4 = UserPlant.create(
   user: user_1,
   plant: plant_20,
   latest_hygrometry: 700,
-  room: "Living Room"
+  room: :living_room
 )
 puts " Creating user plant 5"
-
 user_plant5 = UserPlant.create!(
   user: user_1,
   plant: plant_17,
   latest_hygrometry: 500,
-  room: "Bedroom"
+  room: :bedroom
 )
-
 puts " Creating user plant 6"
-
 user_plant6 = UserPlant.create(
   user: user_1,
   plant: plant_12,
   latest_hygrometry: 700,
-  room: "Kitchen"
+  room: :kitchen
+)
+
+puts " Creating user plant 7"
+user_plant7 = UserPlant.create(
+  user: user_1,
+  plant: plant_5,
+  latest_hygrometry: 700,
+  room: :shower_room
+)
+
+puts " Creating user plant 8"
+user_plant8 = UserPlant.create(
+  user: user_1,
+  plant: plant_2,
+  latest_hygrometry: 700,
+  room: :parent_room
+)
+
+puts " Creating user plant 9"
+user_plant9 = UserPlant.create(
+  user: user_1,
+  plant: plant_10,
+  latest_hygrometry: 700,
+  room: :patio
 )

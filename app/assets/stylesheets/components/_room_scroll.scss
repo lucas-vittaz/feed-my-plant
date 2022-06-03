@@ -1,0 +1,28 @@
+.container-room-scroll{
+  background-color: $light-gray;
+  height: 120px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  margin-left: 10px;
+}
+.container-room-scroll::-webkit-scrollbar{
+  width: 0;
+}
+
+.room-card {
+  display: block;
+  min-width: 110px;
+  max-width: 110px;
+  height: 110px;
+  line-height: 110px;
+  border-radius: 20px;
+  background-color: white;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.room-card.active {
+  background-color: $terracotta;
+}
