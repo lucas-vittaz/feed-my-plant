@@ -1,17 +1,21 @@
 <h1>My alert</h1>
-<div class="wrapper"></div>
-<% @plants_attention.each do |user_plant|%>
-  <div class="col">
-    <div class="plant-cards">
-      <%= link_to plant_path(user_plant), class: "link-dark text-decoration-none" do %>
-        <div class="plant-card-single">
-          <%= cl_image_tag user_plant.plant.photo.key, width: 150, height: 150, crop: :fill, :style => "border-radius: 10px"%>
-          <div class="plant-infos">
-            <h2><strong><%= user_plant.plant.name %></strong></h2>
-            <p><%= user_plant.plant.description %></p>
+<%# <div class="wrapper"></div> %>
+<div class="header-garden" style="background-image: url(https://res.cloudinary.com/lucas-vittaz/image/upload/v1654261287/development/Header_d9y58o.png)">
+
+<div class="container">
+  <% @plants_attention.each do |user_plant|%>
+    <div class="row">
+      <div class="plant-cards">
+        <%= link_to plant_path(user_plant), class: "link-dark text-decoration-none" do %>
+          <div class="plant-card-single">
+            <%= cl_image_tag user_plant.plant.photo.key, width: 150, height: 150, crop: :fill, :style => "border-radius: 10px"%>
+            <div class="plant-infos">
+              <h2><strong><%= user_plant.plant.name %></strong></h2>
+              <p><%= user_plant.plant.description %></p>
+            </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
