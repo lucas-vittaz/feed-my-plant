@@ -21,7 +21,7 @@ class MyGarden::UserPlantsController < ApplicationController
 
   def needing_attention
 
-    @plants_attention = UserPlant.select {|user_plant| user_plant.latest_hygrometry < user_plant.plant.baseline_hygrometry}
+    @plants_attention = UserPlant.select{|user_plant| (user_plant.latest_hygrometry == user_plant.plant.baseline_hygrometry)}
   end
 
   def destroy
@@ -31,7 +31,7 @@ class MyGarden::UserPlantsController < ApplicationController
   private
 
   def user_plant_params
-    params.require(:user_plant).permit(:plant_id, :user_id, :room, :latest_hygrometry)
+    params.require(:user_plant).permit(:plant_id, :user_id, :room, :latest_hygrometry,:baseline_hygrometry)
   end
 
 end
