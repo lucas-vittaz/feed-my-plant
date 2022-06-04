@@ -18,6 +18,17 @@ class MyGarden::UserPlantsController < ApplicationController
       render plant_path
     end
   end
+  
+
+  def update
+    @user_plant = UserPlant.find(params[:id])
+
+    @user_plant.update(params[:room])
+    redirect_to my_garden_user_plant_path(@user_plant)
+  end
+
+  def destroy
+  end
 
   def needing_attention
 

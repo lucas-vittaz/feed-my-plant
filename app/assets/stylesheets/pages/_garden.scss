@@ -8,6 +8,16 @@
 
 .header-garden {
   // background: url('https://res.cloudinary.com/lucas-vittaz/image/upload/v1654261599/development/header-garden-linear-gradient.png')  no-repeat center ;
+  h1{
+    padding-top: 0px;
+    padding-right: 50px;
+    padding-left: 62px;
+    color: white;
+    font-family: 'Butler'; 
+    font-size: 45px;
+    font-weight: bold;
+    text-align: left;
+  }
   background-size: cover;
   background-position: center;
   height: 230px;
@@ -23,19 +33,4 @@
   padding-left: 35px;
   position: relative;
   margin-bottom: 20px;
-  .link-header {
-    text-decoration: none;
-    color: white;
-    padding-right: 5px;
-    position: absolute;
-    top:10px;
-  }
-  .link-header-right {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    padding-right: 5px;
-    position: absolute;
-    top:30px;
-  }
 }

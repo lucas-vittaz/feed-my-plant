@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       resources :user_plants, only: [:create]
     end
 
-    resources :user_plants, only: [:index, :show, :destroy] do
+    resources :user_plants, only: [:index, :show, :update, :destroy] do
       collection do
         get :needing_attention
       end
