@@ -1,39 +1,41 @@
 <div id="plant-show">
 <% @plant = @plant %>
-  <div style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(<%= cl_image_path(@plant.photo.key, crop: :fill) %>);" class="plant-img">
-      <a href="/plants"><i class="fas fa-angle-left fa-5x"></i></a>
+  <div style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)), url(<%= cl_image_path(@plant.photo.key, crop: :fill) %>);" class="plant-img">
+      <a href="/plants"><i class="fas fa-angle-left fa-4x"></i></a>
       <h1><%= @plant.name %></h1>
       <h2><%= @plant.scientific_name %></h2>
   </div>
 
     <div class="container">
       <div class="container-plant-scroll">
-        <div class="plant-card d-flex flex-column">
-          <span><i class="fas fa-tint"></i></span>
+        <div class="plant-card d-flex flex-column justify-content-center align-items-center">
+          <span><i class="fas fa-tint fa-2x flex-grow-1"></i></span>
           <p><%= @plant.baseline_hygrometry%></p>
         </div>
-        <div class="plant-card d-flex flex-column">
-          <span><i class="fas fa-temperature-high"></i></span>
+        <div class="plant-card d-flex flex-column justify-content-center align-items-center">
+          <span><i class="fas fa-temperature-high fa-2x"></i></span>
           <p><%= @plant.min_baseline_temperature%> - <%= @plant.max_baseline_temperature%> °C</p>
         </div>
-        <div class="plant-card d-flex flex-column">
-          <span><i class="fas fa-adjust"></i></span>
+        <div class="plant-card d-flex flex-column justify-content-center align-items-center">
+          <span><i class="fas fa-sun fa-2x"></i></span>
           <p><%= @plant.light_level%></p>
         </div>
-        <div class="plant-card d-flex flex-column">
-          <span><i class="fas fa-hand-holding"></i></span>
+        <div class="plant-card d-flex flex-column justify-content-center align-items-center">
+          <span><i class="fas fa-hand-holding fa-2x"></i></span>
           <p><%= @plant.care_level%></p>
         </div>
+      </div>
+
+
+      <div class="plant-description">
+        <h3>Description</h3>
+        <p><%= @plant.description %></p>
       </div>
 
       <div class="col d-flex justify-content-center">
         <button type="button" class="btn dark-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Add to my garden
         </button>
-      </div>
-      <div class="plant-description">
-        <h3>Description</h3>
-        <p><%= @plant.description %></p>
       </div>
 
     </div>

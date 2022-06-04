@@ -5,26 +5,21 @@
     background-size: cover;
     background-position: center;
   }
-  .fas fa-angle-left fa-5x{
-    margin-top: 24px;
-    margin-left: 24px;
-    color: white !important;
-  }
-  .fa-angle-left{
-    color: white !important;
-  }
+
   h1{
     padding-top: 200px;
     padding-right: 100px;
-    color: $terracotta;
-    font-family: "Butler";
+    color: white;
+    font-family: Jost;
     font-size: 45px;
     font-weight: bold;
   }
 
   h2{
-    color: white;
-    margin-left: 75px;
+    font-family: Jost;
+    font-weight: bold;
+    color: $light-green;
+    margin-left: 28px;
   }
 
   .container-plant-scroll{
@@ -52,7 +47,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    line-height: 40px;
+    line-height: 24px;
+    padding-top: 25px;
+
+    p {
+      font-weight: bold;
+      color: $dark-green;
+    }
   }
 
   .plant-description{
@@ -60,12 +61,32 @@
     border-radius: 7px;
     background-color: white;
     padding: 1rem;
-    margin-top: 30px;
+    margin-top: 20px;
+
+    h3{
+      font-family: Jost;
+    }
   }
   .dark-btn{
     margin-top: 30px;
   }
 
+}
+.fa-sun{
+  color: $dark-green;
+  margin: 0!important;
+}
+.fa-temperature-high{
+  color: $dark-green;
+  margin: 0!important;
+}
+.fa-tint{
+  color: $dark-green;
+  margin: 0!important;
+}
+.fa-hand-holding{
+  color: $dark-green;
+  margin: 0!important;
 }
 .modal-dialog{
   margin: 0 !important;
