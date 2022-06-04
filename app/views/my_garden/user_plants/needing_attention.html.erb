@@ -1,8 +1,9 @@
-<h1>My alert</h1>
-<%# <div class="wrapper"></div> %>
-<div class="header-garden" style="background-image: url(https://res.cloudinary.com/lucas-vittaz/image/upload/v1654261287/development/Header_d9y58o.png)">
-
+<div class="header-alert" style="background-image: url(https://res.cloudinary.com/lucas-vittaz/image/upload/v1654261599/development/Header_d9y58o.png)">
+  <a href="/"><i class="fas fa-angle-left fa-4x"></i></a>
+  <h1>My alerts</h1>
+</div>
 <div class="container">
+<p class="text-center"> Retrieve your alerts in real time </p>
   <% @plants_attention.each do |user_plant|%>
     <div class="row">
       <div class="plant-cards">
@@ -11,11 +12,14 @@
             <%= cl_image_tag user_plant.plant.photo.key, width: 150, height: 150, crop: :fill, :style => "border-radius: 10px"%>
             <div class="plant-infos">
               <h2><strong><%= user_plant.plant.name %></strong></h2>
-              <p><%= user_plant.plant.description %></p>
+              <p><%= user_plant.plant.description.truncate(120) %></p>
+              <p><strong>Optimal value</strong> <%= user_plant.plant.baseline_hygrometry / 75 %>
+              <br>
+              <strong>Actual value</strong> <%= user_plant.latest_hygrometry / 75%></p>
             </div>
           </div>
         <% end %>
-      </div>
+      </div>git 
     </div>
   <% end %>
 </div>

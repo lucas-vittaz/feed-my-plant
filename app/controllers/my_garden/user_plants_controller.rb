@@ -21,7 +21,7 @@ class MyGarden::UserPlantsController < ApplicationController
 
   def needing_attention
 
-    @plants_attention = UserPlant.select{|user_plant| (user_plant.latest_hygrometry == user_plant.plant.baseline_hygrometry)}
+    @plants_attention = UserPlant.select{|user_plant| (user_plant.latest_hygrometry != user_plant.plant.baseline_hygrometry)}
   end
 
   def destroy
