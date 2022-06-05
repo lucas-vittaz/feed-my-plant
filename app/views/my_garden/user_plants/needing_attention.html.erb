@@ -8,7 +8,7 @@
   <% @plants_attention.each do |user_plant|%>
     <div class="row">
       <div class="plant-cards">
-        <%= link_to plant_path(user_plant), class: "link-dark text-decoration-none" do %>
+        <%= link_to  my_garden_user_plant_path(user_plant), class: "link-dark text-decoration-none" do %>
           <div class="plant-card-single">
             <%= cl_image_tag user_plant.plant.photo.key, width: 150, height: 150, crop: :fill, :style => "border-radius: 10px"%>
             <div class="plant-infos">

@@ -1,3 +1,28 @@
+.plant-name{
+  border: 1px transparent solid;
+  border-radius: 7px;
+  background-color: white;
+  margin-top: 20px;
+
+  h1{
+    color: $dark-green;
+    font-family: Jost;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 24px;
+    margin-top: 1rem;
+    line-height: 1.2;
+  }
+  h2{
+    font-family: Jost;
+    font-weight: bold;
+    font-style: italic;
+    color: $medium-green;
+    margin-left: 24px;
+    margin-bottom: 1rem;
+  }
+}
 .show-buttons {
   display: flex;
   align-items: center;
