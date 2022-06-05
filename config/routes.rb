@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   resources :plants, only: [:index, :show]
   namespace :my_garden do
     resources :plants, only: [] do
-      resources :user_plants, only: [:create]
+      resources :user_plants, only: [:create, :update]
     end
 
-    resources :user_plants, only: [:index, :show, :update, :destroy] do
+    resources :user_plants, only: [:index, :show, :destroy] do
       collection do
         get :needing_attention
       end

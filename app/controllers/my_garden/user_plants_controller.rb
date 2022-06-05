@@ -18,7 +18,7 @@ class MyGarden::UserPlantsController < ApplicationController
       render plant_path
     end
   end
-  
+
 
   def update
     @user_plant = UserPlant.find(params[:id])
@@ -31,7 +31,6 @@ class MyGarden::UserPlantsController < ApplicationController
   end
 
   def needing_attention
-
     @plants_attention = UserPlant.select{|user_plant| (user_plant.latest_hygrometry != user_plant.plant.baseline_hygrometry)}
   end
 

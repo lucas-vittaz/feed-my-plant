@@ -50,6 +50,7 @@
       <div class="small-modal-body">
         <%= form_with url: my_garden_user_plants_path, method: :patch do |f| %>
           <%= f.select :room, UserPlant::ROOMS %>
+          <%= f.submit %>
           <% end %>
       </div>
       <div class="small-modal-footer">
