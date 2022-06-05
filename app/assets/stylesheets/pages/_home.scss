@@ -13,7 +13,7 @@
   font-weight: bolder;
   font-size: 50px;
   z-index: 2;
-  margin-top: 100px;
+  margin-top: 150px;
   }
 
   h2{
@@ -22,11 +22,35 @@
   font-weight: normal;
   font-size: 38px;
   z-index: 2;
-  margin-top: 30px;
+  margin-top: 50px;
+  margin-left: 30px;
+  }
+  .dark-btn{
+    margin-top: 200px;
+  }
+  .light-btn{
+    margin-top: 30px
   }
 }
 
 #home-sign-in{
+  .header-garden{
+    .meteo{
+      .fa-sun{
+        color: white;
+      }
+      p{
+        font-size: 1rem;
+        font-family: $body-font;
+        font-weight: normal;
+      }
+    }
+    .fas{
+      margin-left: 50px;
+      margin-bottom: 110px;
+      color: white ;
+    }
+  }
   .header-img{
     background: url('https://res.cloudinary.com/lucas-vittaz/image/upload/v1654197648/development/Header_1_jgoafy.png')  no-repeat center ;
     background-size: cover;
@@ -34,15 +58,26 @@
     width: 100%;
     z-index: -2;
   }
+
   .main-title {
     margin: 55px 0;
     font-size: 35px;
   }
 
-
+  .search-bar input{
+    position: relative;
+  }
   .input-search-home {
     background-color:white;
     width: 280px;
+    border-radius: 7px;
+  }
+  .search-btn{
+    position: absolute;
+    top: 445px;
+    right: 55px;
+    border-radius: 7px;
+    padding-right: 5px !important;
   }
 
   p{
