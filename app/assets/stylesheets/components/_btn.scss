@@ -15,6 +15,11 @@
   font-family: 'Jost', sans-serif;
   font-weight: Bold;
   font-size: 16px;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
 }
 
 .dark-btn:hover {
@@ -33,11 +38,16 @@
   border: 1px solid transparent;
   border-radius: 47px;
 
-
   font-family: 'Jost', sans-serif;
   font-weight: Bold;
   font-size: 16px;
+
+  a {
+    text-decoration: none;
+    color: $terracotta;
+  }
 }
+
 .light-btn:hover {
   color: #EEA063!important;
 }

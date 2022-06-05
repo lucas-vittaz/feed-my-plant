@@ -1,5 +1,8 @@
 .plant-cards {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+
+
 
   .plant-card-single {
     width: 100%;
@@ -17,8 +20,7 @@
     margin-left: 15px;
     font-size: 12px;
     height: 150px;
-    overflow: hidden;
-    align-items: center;
+    align-items: space-between;
 
     h2 {
       font-family: $body-font;
