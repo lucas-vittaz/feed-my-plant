@@ -61,7 +61,8 @@
 .added-filter {
   margin: 2px 7px;
   border-radius: 15px;
-  background-color: $dark-green;
+  background-color: white;
+  border: 1px solid $terracotta;
   padding: 2px 10px;
   width: fit-content;
   a {

@@ -18,26 +18,29 @@ class MyGarden::UserPlantsController < ApplicationController
       render plant_path
     end
   end
-  
 
   def update
     @user_plant = UserPlant.find(params[:id])
 
-    @user_plant.update(params[:room])
-    redirect_to my_garden_user_plant_path(@user_plant)
+    @user_plant.update(room: params[:room])
+    if @user_plant.save
+      redirect_to my_garden_user_plant_path(@user_plant)
+    else
+      render :show
+    end
   end
 
+
   def destroy
+    @userplant = UserPlant.find(params[:id])
+    @userplant.destroy
+    redirect_to my_garden_user_plants_path
   end
 
   def needing_attention
-
     @plants_attention = UserPlant.select{|user_plant| (user_plant.latest_hygrometry != user_plant.plant.baseline_hygrometry)}
   end
 
-  def destroy
-    @user_plant.destroy
-  end
 
   private
 

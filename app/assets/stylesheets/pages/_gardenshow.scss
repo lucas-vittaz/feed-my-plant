@@ -1,0 +1,32 @@
+.show-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.modal-style {
+  h5 {
+    color: black;
+    font-family: $body-font;
+    font-size: 40px;
+    text-align: center;
+  }
+  background-color: $light-gray;
+}
+
+#room {
+  word-wrap: normal;
+  border-radius: 7px;
+  width: 200px;
+  margin-bottom: 3rem;
+  justify-content: center;
+}
+
+#edit-plant {
+  margin-top: 594px;
+}
+
+.edit-user-plant-btn {
+  margin-bottom: 3rem;
+}

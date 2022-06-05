@@ -36,7 +36,7 @@
           <%= cl_image_tag user_plant.plant.photo.key, width: 150, height: 150, crop: :fill, :style => "border-radius: 10px"%>
           <div class="plant-infos">
             <h2><strong><%= user_plant.plant.name %></strong></h2>
-            <p><%= user_plant.plant.description %></p>
+            <p><%= user_plant.plant.description.truncate(140) %></p>
           </div>
         </div>
       <% end %>
