@@ -13,6 +13,12 @@ export default class extends Controller {
   //     }) // Convert data to json
   //     .then(function (data) {
   //       console.log(data);
+          //  let temps = data.current.weather[0].description;
+          //  let temperature = `${Math.trunc(resultatsAPI.current.temp)} °C`
+          //  let location = resultatsAPI.timezone;
+          // let imgIcone =  `imgpath/jour/${resultatsAPI.current.weather[0].icon}.svg`
+          // let imgIcone =  `imgpath/nuit/${resultatsAPI.current.weather[0].icon}.svg`
+          //  let hour = new Date().getHours();
   //     });
   // }
 }
