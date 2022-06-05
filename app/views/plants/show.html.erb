@@ -1,6 +1,6 @@
 <div id="plant-show">
 <% @plant = @plant %>
-  <div style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)), url(<%= cl_image_path(@plant.photo.key, crop: :fill) %>);" class="plant-img">
+  <div style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.35)), url(<%= cl_image_path(@plant.photo.key, crop: :fill) %>);" class="plant-img">
       <a href="/plants"><i class="fas fa-angle-left fa-3x"></i></a>
       <h1><%= @plant.name %></h1>
       <h2><%= @plant.scientific_name %></h2>
@@ -46,7 +46,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title" id="exampleModalLabel">Choose your garden</h1>
+          <h1 class="modal-title" id="exampleModalLabel">Choose your room</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body col d-flex justify-content-center">
@@ -54,7 +54,7 @@
               <%= hidden_field_tag "user_plant[user_id]", current_user.id %>
               <%= hidden_field_tag "user_plant[plant_id]", @plant.id %>
               <%= f.input :room, collection: UserPlant::ROOMS, as: :radio_buttons, class:'radio-btn'  %>
-              <%= f.button :submit, class:'dark-btn' %>
+              <%= f.button :submit, 'Add to my garden', class:'dark-btn' %>
             <% end %>
         </div>
       </div>

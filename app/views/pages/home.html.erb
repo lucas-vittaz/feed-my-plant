@@ -2,10 +2,14 @@
   <% if user_signed_in? %>
     <div id="home-sign-in">
       <div class="header-garden" style="background-image: url(https://res.cloudinary.com/lucas-vittaz/image/upload/v1654117576/development/Header_vwebch.png)">
-        Feed My Plant
+        <div class="meteo d-flex flex-column">
+          <i class="far fa-sun"></i>
+          <p class="text-justify">Monday 06th June 2022 - 22°C</p>
+        </div>
         <%= link_to destroy_user_session_path, method: :delete, data: {:confirm => 'Are you sure you want to log out?'}, class:"link-header-right" do %>
           <i class="fas fa-sign-out-alt"></i>
         <% end%>
+
       </div>
       <div class="container">
         <div class="row">
@@ -36,7 +40,7 @@
           <i class="dark-green fas fa-spa"></i>
         </div>
       </div>
-  
+
     </div>
 <% else %>
   <div id="home-visitor">
@@ -57,7 +61,7 @@
             <a href="/users/sign_in" class="dark-btn text-decoration-none">Log In</a>
           </div>
         </div>
-        <div class="row my-4">
+        <div class="row">
           <div class="col d-flex justify-content-center">
             <a href="/users/sign_up" class="light-btn text-decoration-none">Sign up</a>
           </div>
