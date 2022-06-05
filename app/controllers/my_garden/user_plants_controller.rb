@@ -24,7 +24,7 @@ class MyGarden::UserPlantsController < ApplicationController
 
     @user_plant.update(room: params[:room])
     if @user_plant.save
-      redirect_to my_garden_user_plant_path(@user_plant)
+      redirect_to my_garden_user_plants_path(@user_plant, room: params[:room])
     else
       render :show
     end

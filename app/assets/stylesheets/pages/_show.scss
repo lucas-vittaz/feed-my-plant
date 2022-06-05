@@ -5,24 +5,30 @@
     background-size: cover;
     background-position: center;
   }
+  .plant-name{
+    border: 1px transparent solid;
+    border-radius: 7px;
+    background-color: white;
+    margin-top: 20px;
 
-  h1{
-    padding-top: 160px;
-    padding-right: 100px;
-    padding-left: 24px;
-    color: white;
-    font-family: Jost;
-    font-size: 35px;
-    font-weight: bold;
-    text-align: left;
-  }
-
-  h2{
-    font-family: Jost;
-    font-weight: bold;
-    font-style: italic;
-    color: $light-green;
-    margin-left: 28px;
+    h1{
+      color: $dark-green;
+      font-family: Jost;
+      font-size: 25px;
+      font-weight: bold;
+      text-align: left;
+      margin-left: 24px;
+      margin-top: 1rem;
+      line-height: 1.2;
+    }
+    h2{
+      font-family: Jost;
+      font-weight: bold;
+      font-style: italic;
+      color: $medium-green;
+      margin-left: 24px;
+      margin-bottom: 1rem;
+    }
   }
 
   .container-plant-scroll{
