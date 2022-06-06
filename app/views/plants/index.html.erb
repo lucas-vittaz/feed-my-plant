@@ -29,15 +29,62 @@
     </div>
 
 <div class="added-filter-container">
-  <div class="added-filter">
-    <a href="">Water level: High <i class="fas fa-times-circle cross-icon"></i></a>
-  </div>
+
+
+  <% if params[:water_level_low] %>
     <div class="added-filter">
-    <a href="">Light level: Medium<i class="fas fa-times-circle cross-icon"></i></a>
-  </div>
-  <div class="added-filter">
-    <a href="">Beginner<i class="fas fa-times-circle cross-icon"></i></a>
-  </div>
+      <span>Low water level<i class="fas fa-times-circle cross-icon"></i></span>
+    </div>
+  <% end %>
+
+  <% if params[:water_level_medium] %>
+    <div class="added-filter">
+      <span>Medium water level<i class="fas fa-times-circle cross-icon"></i></span>
+    </div>
+  <% end %>
+
+  <% if params[:water_level_high] %>
+    <div class="added-filter">
+      <span>High water level<i class="fas fa-times-circle cross-icon"></i></span>
+    </div>
+  <% end %>
+
+  <% if params[:light_level_low] %>
+    <div class="added-filter">
+      <span>Low light level<i class="fas fa-times-circle cross-icon"></i></span>
+    </div>
+  <% end %>
+
+  <% if params[:light_level_medium] %>
+    <div class="added-filter">
+      <span>Medium light level<i class="fas fa-times-circle cross-icon"></i></span>
+    </div>
+  <% end %>
+
+  <% if params[:light_level_high] %>
+    <div class="added-filter">
+      <span>High light level<i class="fas fa-times-circle cross-icon"></i></span>
+    </div>
+  <% end %>
+
+  <% if params[:care_level_beginner] %>
+    <div class="added-filter">
+      <span>Beginner level<i class="fas fa-times-circle cross-icon"></i></span>
+    </div>
+  <% end %>
+
+  <% if params[:care_level_intermediate] %>
+    <div class="added-filter">
+      <span>Intermediate level<i class="fas fa-times-circle cross-icon"></i></span>
+    </div>
+  <% end %>
+
+  <% if params[:care_level_advanced] %>
+    <div class="added-filter">
+      <span>Advanced level<i class="fas fa-times-circle cross-icon"></i></span>
+    </div>
+  <% end %>
+
 </div>
 <div class="d-flex justify-content-center">
   <%= link_to plants_path, class:"reset-filter text-decoration-none text-black" do %>
@@ -53,28 +100,50 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <%= form_with method: :get, url: plants_path do |f| %>
-          <h2>Water level</h2>
-          <% Plant::WATER_LEVELS.each do |level| %>
-            <%= f.label "water_level_#{level}", level %>
-            <%= f.check_box("water_level_#{level}", { class:"filter filter-water", checked: params["water_level_#{level}"] == "true" }, true, false) %>
+          <%= form_with method: :get, class: 'filters-form', url: plants_path do |f| %>
+           <h2>Water level</h2>
+            <div class="d-flex justify-content-center">
+              <% Plant::WATER_LEVELS.each do |level| %>
+                <div class="d-flex flex-column align-items-center">
+                  <%= f.check_box("water_level_#{level}", { class:"filter-checkbox", checked: params["water_level_#{level}"] == "true" }, true, false) %>
+                  <%= f.label "water_level_#{level}", class:"filter" do %>
+                    <%= inline_svg_tag("water_level_#{level.to_s}.svg", :width=>20, :height=>20) %>
+                  <% end %>
+                  <span><%=level.capitalize %></span>
+                </div>
+              <% end %>
+            </div>
+<hr/>
+            <h2>Light level</h2>
+            <div class="d-flex justify-content-center">
+              <% Plant::LIGHT_LEVELS.each do |level| %>
+                <div class="d-flex flex-column align-items-center">
+                  <%= f.check_box("light_level_#{level}", { class:"filter-checkbox", checked: params["light_level_#{level}"] == "true" }, true, false) %>
+                  <%# <%= f.label "light_level_#{level}", image_tag("light_level_#{level.to_s}.svg", :width=>20, :height=>20), class:"filter" %>
+                  <%= f.label "light_level_#{level}", class:"filter" do %>
+                    <%= inline_svg_tag("light_level_#{level.to_s}.svg", :width=>20, :height=>20) %>
+                  <% end %>
+                  <span><%=level.capitalize %></span>
+                </div>
+              <% end %>
+            </div>
+<hr/>
+            <h2>Care level</h2>
+            <div class="d-flex justify-content-center">
+              <% Plant::CARE_LEVELS.each do |level| %>
+              <div class="d-flex flex-column align-items-center">
+                  <%= f.check_box("care_level_#{level}", { class:"filter-checkbox", checked: params["care_level_#{level}"] == "true" }, true, false) %>
+                  <%= f.label "care_level_#{level}", class:"filter" do %>
+                    <%= inline_svg_tag("care_level_#{level.to_s}.svg", :width=>20, :height=>20) %>
+                  <% end %>
+                <span><%=level.capitalize %></span>
+                </div>
+              <% end %>
+            </div>
+
+
+          <%= f.submit 'Apply filters', :class => 'dark-btn filters-submit-btn' %>
           <% end %>
-
-          <h2>Light level</h2>
-          <% Plant::LIGHT_LEVELS.each do |level| %>
-            <%= f.label "light_level_#{level}", level %>
-            <%= f.check_box("light_level_#{level}", { class:"filter filter-light", checked: params["light_level_#{level}"] == "true" }, true, false) %>
-          <% end %>
-
-          <h2>Care level</h2>
-          <% Plant::CARE_LEVELS.each do |level| %>
-            <%= f.label "care_level_#{level}", level %>
-            <%= f.check_box("care_level_#{level}", { class:"filter filter-care", checked: params["care_level_#{level}"] == "true" }, true, false) %>
-          <% end %>
-
-        <%= f.submit 'Apply filters', :class => 'dark-btn' %>
-        <% end %>
-
       </div>
     </div>
   </div>

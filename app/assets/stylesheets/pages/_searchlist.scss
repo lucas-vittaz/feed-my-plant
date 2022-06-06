@@ -24,35 +24,59 @@
   font-weight: bold;
 }
 .modal-header{
+  text-align: center;
   h1{
     font-size: 40px;
     font-weight: bold;
   }
 }
-.modal-body{
-  height: 100vh;
-  margin-top: 50px;
-  .form-check{
+
+.modal-content {
+  background-color: $light-gray;
+}
+
+.filters-form {
+  text-align: center;
+  margin: 35px, auto;
+    h2 {
+    font-size: 26px;
+    font-family: Jost;
+    margin-top:20px;
+  }
+  .filters-submit-btn {
     margin-top: 50px;
   }
-  // .filter{
-  //   position: absolute;
-  //   transform: scale(0);
-  // }
-  // .filter + label{
-  //   cursor: pointer;
-  //   width: 75px;
-  //   height: 75px;
-  //   border: 1px $dark-green solid;
-  //   border-radius: 10px;
-  //   background-color: white;
-  // }
-  // .filter:checked + label{
-  //   background-color: $terracotta;
-  //   border: 1px $dark-green solid;
-  // }
-  .dark-btn{
-    margin-top: 100px;
+}
+
+.modal-body{
+  height: 100vh;
+  margin-top: 35px;
+  background-color: $light-gray;
+
+  .filter-checkbox {
+    position: absolute;
+    transform: scale(0);
+  }
+
+  .filter-checkbox + label{
+    cursor: pointer;
+    width: 75px;
+    height: 75px;
+    border: 1px $light-gray solid;
+    border-radius: 10px;
+    background-color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+  }
+  .filter-checkbox:checked + label{
+    background-color: $terracotta;
+    border: 1px $light-gray solid;
+    color: #fff;
+    svg path {
+      fill: white;
+    }
   }
 }
 
@@ -71,6 +95,13 @@
   padding: 2px 10px;
   width: fit-content;
   a {
+    text-decoration: none;
+    color: $terracotta;
+    i {
+      margin-left: 7px;
+    }
+  }
+  span {
     text-decoration: none;
     color: $terracotta;
     i {
