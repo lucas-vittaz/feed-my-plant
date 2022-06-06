@@ -2,9 +2,9 @@
   <% if user_signed_in? %>
     <div id="home-sign-in">
       <div class="header-home" style="background-image: url(https://res.cloudinary.com/lucas-vittaz/image/upload/v1654117576/development/Header_vwebch.png)">
-        <div class="meteo d-flex flex-column">
-          <i class="far fa-sun"></i>
-          <p class="text-justify">Monday 06th June 2022 - 22°C</p>
+        <div class="meteo d-flex flex-column" data-controller="meteo">
+          <div class="meteo-icons"></div>
+          <p class="text-justify meteo-value" data-meteo-target="injectMeteo">Monday 06th June 2022 - 22°C</p>
         </div>
         <%= link_to destroy_user_session_path, method: :delete, data: {:confirm => 'Are you sure you want to log out?'}, class:"link-header-right" do %>
           <i class="fas fa-sign-out-alt"></i>
