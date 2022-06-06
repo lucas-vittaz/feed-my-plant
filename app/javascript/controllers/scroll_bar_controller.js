@@ -10,16 +10,9 @@ export default class extends Controller {
   }
 
   highlight(event) {
-    //let active_cards = document.querySelectorAll(".active");
-    // active_cards.forEach(function (card) {
-    //   card.classList.remove("active");
-    // });
 
     let index = document.querySelector(".active");
-
-
     this.roomTarget.classList.add("active");
-
     index.classList.remove("active");
   }
 }
