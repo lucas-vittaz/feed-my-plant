@@ -21,7 +21,7 @@ user_2 = User.create(
   email: 'anto@gmail.com',
   password: "123456"
 )
-puts " Creating Plants 1"
+
 plant_1 = Plant.create(
   name: "Kentia Palm",
   scientific_name: "Howea Forsteriana",
@@ -31,7 +31,6 @@ plant_1 = Plant.create(
   max_baseline_temperature: 25,
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 700,
-  sensor_hygrometry: 50,
   light_level: "medium",
   care_level: "beginner",
   water_need: "low"
@@ -48,7 +47,6 @@ plant_2 = Plant.create(
   max_baseline_temperature: 27,
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 700,
-  sensor_hygrometry: 50,
   light_level: "high",
   care_level: "beginner",
   water_need:"low"
@@ -65,7 +63,6 @@ plant_3 = Plant.create(
   max_baseline_temperature: 25,
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 700,
-  sensor_hygrometry: 500,
   light_level: "medium",
   care_level: "beginner",
   water_need:"low"
@@ -82,7 +79,6 @@ plant_4 = Plant.create(
   max_baseline_temperature: 27,
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 700,
-  sensor_hygrometry: 500,
   light_level: "medium",
   care_level: "beginner",
   water_need:"low"
@@ -99,7 +95,6 @@ plant_5 = Plant.create(
   max_baseline_temperature: 24,
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 700,
-  sensor_hygrometry: 500,
   light_level: "low",
   care_level: "beginner",
   water_need:"low"
@@ -116,7 +111,6 @@ plant_6 = Plant.create(
   max_baseline_temperature: 24,
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 700,
-  sensor_hygrometry: 500,
   light_level: "high",
   care_level: "beginner",
   water_need:"low"
@@ -133,7 +127,6 @@ plant_7 = Plant.create(
   max_baseline_temperature: 20,
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 700,
-  sensor_hygrometry: 500,
   light_level: "medium",
   care_level: "beginner",
   water_need:"low"
@@ -150,7 +143,6 @@ plant_8 = Plant.create(
   max_baseline_temperature: 22,
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 700,
-  sensor_hygrometry: 500,
   light_level: "medium",
   care_level: "intermediate",
   water_need:"medium"
@@ -168,7 +160,6 @@ plant_9 = Plant.create(
   max_baseline_temperature: 30,
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 700,
-  sensor_hygrometry: 500,
   light_level: "high",
   care_level: "beginner",
   water_need:"medium"
@@ -186,7 +177,6 @@ plant_10 = Plant.create(
   max_baseline_temperature: 29,
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 700,
-  sensor_hygrometry: 500,
   light_level: "medium",
   care_level: "beginner",
   water_need:"medium"
@@ -203,7 +193,6 @@ plant_11 = Plant.create(
   max_baseline_temperature: 25,
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 700,
-  sensor_hygrometry: 500,
   light_level: "high",
   care_level: "beginner",
   water_need:"medium"
@@ -220,7 +209,6 @@ plant_12 = Plant.create(
   max_baseline_temperature: 27,
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 700,
-  sensor_hygrometry: 500,
   light_level: "high",
   care_level: "beginner",
   water_need:"medium"
@@ -237,7 +225,6 @@ plant_13 = Plant.create(
   max_baseline_temperature: 27,
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 700,
-  sensor_hygrometry: 500,
   light_level: "high",
   care_level: "beginner",
   water_need:"medium"
@@ -254,7 +241,6 @@ plant_14 = Plant.create(
   max_baseline_temperature: 25,
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 700,
-  sensor_hygrometry: 500,
   light_level: "High",
   care_level: "Medium",
   water_need:"Medium"
@@ -271,7 +257,6 @@ plant_15 = Plant.create(
   max_baseline_temperature: 27,
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 700,
-  sensor_hygrometry: 500,
   light_level: "High",
   care_level: "Beginner",
   water_need:"High"
@@ -288,7 +273,6 @@ plant_16 = Plant.create(
   max_baseline_temperature: 27,
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 700,
-  sensor_hygrometry: 500,
   light_level: "Low",
   care_level: "Intermediate",
   water_need:"High"
@@ -305,11 +289,10 @@ plant_17 = Plant.create(
   max_baseline_hygrometry: 400,
   min_baseline_temperature: 16,
   max_baseline_temperature: 25,
-  sensor_hygrometry: 500,
   light_level: "Medium",
   care_level: "Beginner",
   water_need:"High"
-  
+
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Altissima_pzarma.webp")
 plant_17.photo.attach(io: file, filename: 'ficus_yoeug9', content_type: 'image/jpg')
@@ -323,7 +306,6 @@ plant_18 = Plant.create(
   max_baseline_temperature: 24,
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 700,
-  sensor_hygrometry: 500,
   light_level: "Medium",
   care_level: "Beginner",
   water_need:"High"
@@ -340,7 +322,6 @@ plant_19 = Plant.create(
   max_baseline_temperature: 25,
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 700,
-  sensor_hygrometry: 50,
   light_level: "High",
   care_level: "Beginner",
   water_need:"High"
@@ -357,7 +338,6 @@ plant_20 = Plant.create(
   max_baseline_temperature: 25,
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 700,
-  sensor_hygrometry: 50,
   light_level: "Medium",
   care_level: "Beginner",
   water_need:"High"
@@ -374,7 +354,6 @@ plant_21 = Plant.create(
   max_baseline_temperature: 30,
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 700,
-  sensor_hygrometry: 500,
   light_level: "Low",
   care_level: "Beginner",
   water_need:"High"
@@ -395,7 +374,7 @@ user_plant2 = UserPlant.create(
   plant: plant_1,
   latest_hygrometry: 700,
   room: :garden
-  
+
 )
 puts " Creating user plant 3"
 user_plant3 = UserPlant.create!(

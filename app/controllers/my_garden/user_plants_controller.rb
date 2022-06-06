@@ -11,6 +11,7 @@ class MyGarden::UserPlantsController < ApplicationController
 
   def create
     @user_plant = UserPlant.new(user_plant_params)
+    @user_plant.set_latest_hygrometry_to_default_value
     if @user_plant.save
       # Flash notice // Your added thisplant to your garden
       redirect_to my_garden_user_plants_path
@@ -43,6 +44,7 @@ class MyGarden::UserPlantsController < ApplicationController
 
 
   private
+
 
   def user_plant_params
     params.require(:user_plant).permit(:plant_id, :user_id, :room, :latest_hygrometry,:baseline_hygrometry)

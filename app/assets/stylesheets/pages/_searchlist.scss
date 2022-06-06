@@ -35,22 +35,22 @@
   .form-check{
     margin-top: 50px;
   }
-  .filter{
-    position: absolute;
-    transform: scale(0);
-  }
-  .filter + label{
-    cursor: pointer;
-    width: 75px;
-    height: 75px;
-    border: 1px $dark-green solid;
-    border-radius: 10px;
-    background-color: white;
-  }
-  .filter:checked + label{
-    background-color: $terracotta;
-    border: 1px $dark-green solid;
-  }
+  // .filter{
+  //   position: absolute;
+  //   transform: scale(0);
+  // }
+  // .filter + label{
+  //   cursor: pointer;
+  //   width: 75px;
+  //   height: 75px;
+  //   border: 1px $dark-green solid;
+  //   border-radius: 10px;
+  //   background-color: white;
+  // }
+  // .filter:checked + label{
+  //   background-color: $terracotta;
+  //   border: 1px $dark-green solid;
+  // }
   .dark-btn{
     margin-top: 100px;
   }

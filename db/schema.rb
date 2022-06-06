@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_03_135954) do
+ActiveRecord::Schema.define(version: 2022_06_06_081943) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,7 +57,6 @@ ActiveRecord::Schema.define(version: 2022_06_03_135954) do
     t.integer "max_baseline_temperature"
     t.integer "min_baseline_hygrometry"
     t.integer "max_baseline_hygrometry"
-    t.integer "sensor_hygrometry"
     t.string "water_need"
   end
 
@@ -67,7 +66,7 @@ ActiveRecord::Schema.define(version: 2022_06_03_135954) do
     t.string "room"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "latest_hygrometry"
+    t.integer "latest_hygrometry", default: 0
     t.index ["plant_id"], name: "index_user_plants_on_plant_id"
     t.index ["user_id"], name: "index_user_plants_on_user_id"
   end

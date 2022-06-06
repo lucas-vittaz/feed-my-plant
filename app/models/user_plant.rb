@@ -10,6 +10,9 @@ class UserPlant < ApplicationRecord
     :kitchen,
     :shower_room
   ]
+  def set_latest_hygrometry_to_default_value
+    self.latest_hygrometry = plant.baseline_hygrometry
+  end
 
   def needing_attention
     hygrometry < 60
