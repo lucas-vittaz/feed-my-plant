@@ -56,19 +56,19 @@
         <%= form_with method: :get, url: plants_path do |f| %>
           <h2>Water level</h2>
           <% Plant::WATER_LEVELS.each do |level| %>
-            <%= f.label level %>
+            <%= f.label "water_level_#{level}", level %>
             <%= f.check_box("water_level_#{level}", { class:"filter filter-water", checked: params["water_level_#{level}"] == "true" }, true, false) %>
           <% end %>
 
           <h2>Light level</h2>
           <% Plant::LIGHT_LEVELS.each do |level| %>
-            <%= f.label level %>
+            <%= f.label "light_level_#{level}", level %>
             <%= f.check_box("light_level_#{level}", { class:"filter filter-light", checked: params["light_level_#{level}"] == "true" }, true, false) %>
           <% end %>
 
           <h2>Care level</h2>
           <% Plant::CARE_LEVELS.each do |level| %>
-            <%= f.label level %>
+            <%= f.label "care_level_#{level}", level %>
             <%= f.check_box("care_level_#{level}", { class:"filter filter-care", checked: params["care_level_#{level}"] == "true" }, true, false) %>
           <% end %>
 
