@@ -1,6 +1,6 @@
 <div id="plant-show">
 <% @plant = @plant %>
-  <div style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.35)), url(<%= cl_image_path(@plant.photo.key, crop: :fill) %>);" class="plant-img">
+  <div style="background-image: url(<%= cl_image_path(@plant.photo.key, crop: :fill) %>);" class="plant-img">
       <a href="/plants"><i class="fas fa-angle-left fa-3x"></i></a>
   </div>
 
