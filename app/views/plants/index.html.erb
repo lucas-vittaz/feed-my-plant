@@ -119,7 +119,6 @@
               <% Plant::LIGHT_LEVELS.each do |level| %>
                 <div class="d-flex flex-column align-items-center">
                   <%= f.check_box("light_level_#{level}", { class:"filter-checkbox", checked: params["light_level_#{level}"] == "true" }, true, false) %>
-                  <%# <%= f.label "light_level_#{level}", image_tag("light_level_#{level.to_s}.svg", :width=>20, :height=>20), class:"filter" %>
                   <%= f.label "light_level_#{level}", class:"filter" do %>
                     <%= inline_svg_tag("light_level_#{level.to_s}.svg", :width=>20, :height=>20) %>
                   <% end %>

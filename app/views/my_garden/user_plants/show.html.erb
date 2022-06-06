@@ -3,8 +3,6 @@
       <a href="/my_garden/user_plants "><i class="fas fa-angle-left fa-5x"></i></a>
   </div>
 
-
-
       <div class="container">
       <div class="plant-name">
         <h1><%= @user_plant.plant.name %></h1>
@@ -52,9 +50,19 @@
           <h5 id="edit-plantLabel">Select a new room</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="small-modal-body d-flex justify-content-center">
-          <%= form_with url: my_garden_plant_user_plant_path(@user_plant), method: :patch, :class => 'form-style'  do |f| %>
-            <%= f.select :room, UserPlant::ROOMS %>
+        <div class="modal-body d-flex justify-content-center">
+          <%= form_with url: my_garden_plant_user_plant_path(@user_plant), method: :patch, :class => 'd-flex flex-column align-items-center'  do |f| %>
+
+            <div class="d-flex flex-wrap justify-content-center">
+              <% UserPlant::ROOMS.each do |room| %>
+                <div class="d-flex flex-column align-items-center">
+                  <%= f.check_box(:room, {class:"filter-checkbox", checked: params[:room] == "true" }, true, false) %>
+                    <%= f.label room, class:"filter" do %>
+                      <%= inline_svg_tag("#{room.to_s}.svg", :width=>40, :height=>40) %>
+                    <% end %>
+                </div>
+              <% end %>
+            </div>
             <%= f.submit 'Save changes', :class => 'dark-btn edit-user-plant-btn'%>
             <% end %>
         </div>
