@@ -24,11 +24,27 @@
   font-weight: bold;
 }
 .modal-header{
+  text-align: center;
   h1{
     font-size: 40px;
     font-weight: bold;
   }
 }
+
+.modal-content {
+  background-color: $light-gray;
+}
+
+.filters-form {
+  text-align: center;
+  h2 {
+    font-size: 26px;
+    font-family: Jost;
+    margin-top:20px;
+  }
+
+}
+
 .modal-body{
   height: 100vh;
   margin-top: 50px;
@@ -37,7 +53,12 @@
     margin-top: 50px;
   }
 
-  .filter + label{
+  .filter-checkbox {
+    position: absolute;
+    transform: scale(0);
+  }
+
+  .filter-checkbox + label{
     cursor: pointer;
     width: 75px;
     height: 75px;
@@ -47,14 +68,16 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    margin: 7px;
   }
-  .filter:checked + label{
+  .filter-checkbox:checked + label{
     background-color: $terracotta;
     border: 1px $dark-green solid;
+    color: #fff;
+    svg path {
+      fill: white;
+    }
   }
-  // .dark-btn{
-  //   margin-top: 100px;
-  // }
 }
 
 .added-filter-container {

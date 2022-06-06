@@ -53,28 +53,37 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <%= form_with method: :get, url: plants_path do |f| %>
-          <h2>Water level</h2>
-          <% Plant::WATER_LEVELS.each do |level| %>
-            <%= f.label "water_level_#{level}", image_tag("water_level_#{level.to_s}.svg", :width=>50, :height=>50), class:"filter"%>
-            <%= f.check_box("water_level_#{level}", { checked: params["water_level_#{level}"] == "true" }, true, false) %>
+          <%= form_with method: :get, class: 'filters-form', url: plants_path do |f| %>
+            <h2>Water level</h2>
+            <% Plant::WATER_LEVELS.each do |level| %>
+              <%= f.check_box("water_level_#{level}", { class:"filter-checkbox", checked: params["water_level_#{level}"] == "true" }, true, false) %>
+              <%#= f.label "water_level_#{level}", image_tag("water_level_#{level.to_s}.svg", :width=>20, :height=>20), class:"filter"%>
+              <%= f.label "water_level_#{level}", class:"filter" do %>
+                <%= inline_svg_tag("water_level_#{level.to_s}.svg", :width=>20, :height=>20) %>
+              <% end %>
+
+            <% end %>
+
+            <h2>Light level</h2>
+            <% Plant::LIGHT_LEVELS.each do |level| %>
+              <%= f.check_box("light_level_#{level}", { class:"filter-checkbox", checked: params["light_level_#{level}"] == "true" }, true, false) %>
+              <%# <%= f.label "light_level_#{level}", image_tag("light_level_#{level.to_s}.svg", :width=>20, :height=>20), class:"filter" %>
+              <%= f.label "light_level_#{level}", class:"filter" do %>
+                <%= inline_svg_tag("light_level_#{level.to_s}.svg", :width=>20, :height=>20) %>
+              <% end %>
+            <% end %>
+
+            <h2>Care level</h2>
+            <% Plant::CARE_LEVELS.each do |level| %>
+              <%= f.check_box("care_level_#{level}", { class:"filter-checkbox", checked: params["care_level_#{level}"] == "true" }, true, false) %>
+              <%# <%= f.label "care_level_#{level}", image_tag("care_level_#{level.to_s}.svg", :width=>20, :height=>20), class:"filter" %>
+              <%= f.label "care_level_#{level}", class:"filter" do %>
+                <%= inline_svg_tag("care_level_#{level.to_s}.svg", :width=>20, :height=>20) %>
+              <% end %>
+            <% end %>
+
+          <%= f.submit 'Apply filters', :class => 'dark-btn' %>
           <% end %>
-
-          <h2>Light level</h2>
-          <% Plant::LIGHT_LEVELS.each do |level| %>
-            <%= f.label "light_level_#{level}", image_tag("light_level_#{level.to_s}.svg", :width=>50, :height=>50), class:"filter" %>
-            <%= f.check_box("light_level_#{level}", { class:"filter filter-light", checked: params["light_level_#{level}"] == "true" }, true, false) %>
-          <% end %>
-
-          <h2>Care level</h2>
-          <% Plant::CARE_LEVELS.each do |level| %>
-            <%= f.label "care_level_#{level}", image_tag("care_level_#{level.to_s}.svg", :width=>50, :height=>50), class:"filter" %>
-            <%= f.check_box("care_level_#{level}", { class:"filter filter-care", checked: params["care_level_#{level}"] == "true" }, true, false) %>
-          <% end %>
-
-        <%= f.submit 'Apply filters', :class => 'dark-btn' %>
-        <% end %>
-
       </div>
     </div>
   </div>
