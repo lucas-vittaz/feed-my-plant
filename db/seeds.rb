@@ -29,8 +29,8 @@ plant_1 = Plant.create(
   baseline_hygrometry: 400,
   min_baseline_temperature: 15,
   max_baseline_temperature: 25,
-  min_baseline_hygrometry: 200,
-  max_baseline_hygrometry: 700,
+  min_baseline_hygrometry: 100,
+  max_baseline_hygrometry: 300,
   light_level: "medium",
   care_level: "beginner",
   water_need: "low"
@@ -45,8 +45,8 @@ plant_2 = Plant.create(
   baseline_hygrometry: 550,
   min_baseline_temperature: 16,
   max_baseline_temperature: 27,
-  min_baseline_hygrometry: 200,
-  max_baseline_hygrometry: 700,
+  min_baseline_hygrometry: 100,
+  max_baseline_hygrometry: 300,
   light_level: "high",
   care_level: "beginner",
   water_need:"low"
@@ -61,8 +61,8 @@ plant_3 = Plant.create(
   baseline_hygrometry: 400,
   min_baseline_temperature: 16,
   max_baseline_temperature: 25,
-  min_baseline_hygrometry: 200,
-  max_baseline_hygrometry: 700,
+  min_baseline_hygrometry: 100,
+  max_baseline_hygrometry: 300,
   light_level: "medium",
   care_level: "beginner",
   water_need:"low"
@@ -77,8 +77,8 @@ plant_4 = Plant.create(
   baseline_hygrometry: 450,
   min_baseline_temperature: 13,
   max_baseline_temperature: 27,
-  min_baseline_hygrometry: 200,
-  max_baseline_hygrometry: 700,
+  min_baseline_hygrometry: 100,
+  max_baseline_hygrometry: 300,
   light_level: "medium",
   care_level: "beginner",
   water_need:"low"
@@ -93,8 +93,8 @@ plant_5 = Plant.create(
   baseline_hygrometry: 500,
   min_baseline_temperature: 15,
   max_baseline_temperature: 24,
-  min_baseline_hygrometry: 200,
-  max_baseline_hygrometry: 700,
+  min_baseline_hygrometry: 100,
+  max_baseline_hygrometry: 300,
   light_level: "low",
   care_level: "beginner",
   water_need:"low"
@@ -109,8 +109,8 @@ plant_6 = Plant.create(
   baseline_hygrometry: 600,
   min_baseline_temperature: -10,
   max_baseline_temperature: 24,
-  min_baseline_hygrometry: 200,
-  max_baseline_hygrometry: 700,
+  min_baseline_hygrometry: 100,
+  max_baseline_hygrometry: 300,
   light_level: "high",
   care_level: "beginner",
   water_need:"low"
@@ -125,8 +125,8 @@ plant_7 = Plant.create(
   baseline_hygrometry: 550,
   min_baseline_temperature: 15,
   max_baseline_temperature: 20,
-  min_baseline_hygrometry: 200,
-  max_baseline_hygrometry: 700,
+  min_baseline_hygrometry: 100,
+  max_baseline_hygrometry: 300,
   light_level: "medium",
   care_level: "beginner",
   water_need:"low"
@@ -142,7 +142,7 @@ plant_8 = Plant.create(
   min_baseline_temperature: 18,
   max_baseline_temperature: 22,
   min_baseline_hygrometry: 200,
-  max_baseline_hygrometry: 700,
+  max_baseline_hygrometry: 400,
   light_level: "medium",
   care_level: "intermediate",
   water_need:"medium"
@@ -159,7 +159,7 @@ plant_9 = Plant.create(
   min_baseline_temperature: 14,
   max_baseline_temperature: 30,
   min_baseline_hygrometry: 200,
-  max_baseline_hygrometry: 700,
+  max_baseline_hygrometry: 400,
   light_level: "high",
   care_level: "beginner",
   water_need:"medium"
@@ -176,7 +176,7 @@ plant_10 = Plant.create(
   min_baseline_temperature: 15,
   max_baseline_temperature: 29,
   min_baseline_hygrometry: 200,
-  max_baseline_hygrometry: 700,
+  max_baseline_hygrometry: 400,
   light_level: "medium",
   care_level: "beginner",
   water_need:"medium"
@@ -192,7 +192,7 @@ plant_11 = Plant.create(
   min_baseline_temperature: 20,
   max_baseline_temperature: 25,
   min_baseline_hygrometry: 200,
-  max_baseline_hygrometry: 700,
+  max_baseline_hygrometry: 400,
   light_level: "high",
   care_level: "beginner",
   water_need:"medium"
@@ -208,7 +208,7 @@ plant_12 = Plant.create(
   min_baseline_temperature: 15,
   max_baseline_temperature: 27,
   min_baseline_hygrometry: 200,
-  max_baseline_hygrometry: 700,
+  max_baseline_hygrometry: 400,
   light_level: "high",
   care_level: "beginner",
   water_need:"medium"
@@ -224,7 +224,7 @@ plant_13 = Plant.create(
   min_baseline_temperature: 10,
   max_baseline_temperature: 27,
   min_baseline_hygrometry: 200,
-  max_baseline_hygrometry: 700,
+  max_baseline_hygrometry: 400,
   light_level: "high",
   care_level: "beginner",
   water_need:"medium"
@@ -240,7 +240,7 @@ plant_14 = Plant.create(
   min_baseline_temperature: 17,
   max_baseline_temperature: 25,
   min_baseline_hygrometry: 200,
-  max_baseline_hygrometry: 700,
+  max_baseline_hygrometry: 400,
   light_level: "High",
   care_level: "Medium",
   water_need:"Medium"
@@ -256,7 +256,7 @@ plant_15 = Plant.create(
   min_baseline_temperature: 15,
   max_baseline_temperature: 27,
   min_baseline_hygrometry: 200,
-  max_baseline_hygrometry: 700,
+  max_baseline_hygrometry: 400,
   light_level: "High",
   care_level: "Beginner",
   water_need:"High"
@@ -271,8 +271,8 @@ plant_16 = Plant.create(
   baseline_hygrometry: 500,
   min_baseline_temperature: 18,
   max_baseline_temperature: 27,
-  min_baseline_hygrometry: 200,
-  max_baseline_hygrometry: 700,
+  min_baseline_hygrometry: 300,
+  max_baseline_hygrometry: 500,
   light_level: "Low",
   care_level: "Intermediate",
   water_need:"High"
@@ -287,8 +287,8 @@ plant_17 = Plant.create(
   baseline_hygrometry: 500,
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 400,
-  min_baseline_temperature: 16,
-  max_baseline_temperature: 25,
+  min_baseline_hygrometry: 300,
+  max_baseline_hygrometry: 500,
   light_level: "Medium",
   care_level: "Beginner",
   water_need:"High"
@@ -304,8 +304,8 @@ plant_18 = Plant.create(
   baseline_hygrometry: 500,
   min_baseline_temperature: 16,
   max_baseline_temperature: 24,
-  min_baseline_hygrometry: 200,
-  max_baseline_hygrometry: 700,
+  min_baseline_hygrometry: 300,
+  max_baseline_hygrometry: 500,
   light_level: "Medium",
   care_level: "Beginner",
   water_need:"High"
@@ -320,8 +320,8 @@ plant_19 = Plant.create(
   baseline_hygrometry: 500,
   min_baseline_temperature: 10,
   max_baseline_temperature: 25,
-  min_baseline_hygrometry: 200,
-  max_baseline_hygrometry: 700,
+  min_baseline_hygrometry: 300,
+  max_baseline_hygrometry: 500,
   light_level: "High",
   care_level: "Beginner",
   water_need:"High"
@@ -336,8 +336,8 @@ plant_20 = Plant.create(
   baseline_hygrometry: 500,
   min_baseline_temperature: 10,
   max_baseline_temperature: 25,
-  min_baseline_hygrometry: 200,
-  max_baseline_hygrometry: 700,
+  min_baseline_hygrometry: 300,
+  max_baseline_hygrometry: 500,
   light_level: "Medium",
   care_level: "Beginner",
   water_need:"High"
@@ -352,8 +352,8 @@ plant_21 = Plant.create(
   baseline_hygrometry: 50,
   min_baseline_temperature: 5,
   max_baseline_temperature: 30,
-  min_baseline_hygrometry: 200,
-  max_baseline_hygrometry: 700,
+  min_baseline_hygrometry: 300,
+  max_baseline_hygrometry: 500,
   light_level: "Low",
   care_level: "Beginner",
   water_need:"High"
@@ -364,7 +364,7 @@ puts " Creating user plant 1"
 user_plant1 = UserPlant.create!(
   user: user_1,
   plant: plant_2,
-  latest_hygrometry: 500,
+  latest_hygrometry: 150,
   room: :kitchen
 
 )
@@ -416,8 +416,8 @@ user_plant7 = UserPlant.create(
 puts " Creating user plant 8"
 user_plant8 = UserPlant.create(
   user: user_1,
-  plant: plant_2,
-  latest_hygrometry: 700,
+  plant: plant_3,
+  latest_hygrometry: 150,
   room: :parent_room
 )
 
