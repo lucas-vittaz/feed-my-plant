@@ -55,10 +55,10 @@ file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v165394189
 plant_2.photo.attach(io: file, filename: 'bambooorchid.jpg', content_type: 'image/jpg')
 puts " Creating Plants 2"
 plant_3 = Plant.create(
-  name: "Swiss cheese plant",
+  name: "Swiss Cheese",
   scientific_name: "Monstera Deliciosa",
   description: "The monstera deliciosa is one of the most coveted houseplants for its large, atypical leaves. If you want a green plant that is easy to live with and striking in its size, the Monstera should be on your list.",
-  baseline_hygrometry: 400,
+  baseline_hygrometry: 220,
   min_baseline_temperature: 16,
   max_baseline_temperature: 25,
   min_baseline_hygrometry: 100,
@@ -364,7 +364,7 @@ puts " Creating user plant 1"
 user_plant1 = UserPlant.create!(
   user: user_1,
   plant: plant_2,
-  latest_hygrometry: 200,
+  latest_hygrometry: 10,
   room: :kitchen
 
 )
@@ -409,7 +409,7 @@ puts " Creating user plant 7"
 user_plant7 = UserPlant.create(
   user: user_1,
   plant: plant_5,
-  latest_hygrometry: 700,
+  latest_hygrometry: 750,
   room: :shower_room
 )
 
@@ -417,7 +417,7 @@ puts " Creating user plant 8"
 user_plant8 = UserPlant.create(
   user: user_1,
   plant: plant_3,
-  latest_hygrometry: 150,
+  latest_hygrometry: 90,
   room: :parent_room
 )
 
