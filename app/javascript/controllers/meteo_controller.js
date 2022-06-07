@@ -4,17 +4,38 @@ export default class extends Controller {
   static targets = ["injectMeteo"];
 
   static values = {
-    apiKey: String
-  }
+    apiKey: String,
+  };
   connect() {
     console.log("stimulus connected");
-    console.log(this.apiKeyValue)
-    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    console.log(this.apiKeyValue);
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
     const d = new Date();
     let month = months[d.getMonth()];
     const dayInt = new Date().getDate();
 
-    const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
     const date = new Date();
     let day = days[date.getDay()];
 
@@ -32,10 +53,16 @@ export default class extends Controller {
         console.log(data);
         let temps = data.current.weather[0].description;
         console.log(temps);
-        let temperature = `${Math.trunc(data.current.temp)} °C`;
-        document.querySelector('.meteo-value').innerHTML = `Nantes : ${day} ${dayInt} ${month} - ${temperature}`;
 
-        document.querySelector('.meteo-icons').innerHTML = `<img src='http://openweathermap.org/img/wn/${data.current.weather[0].icon}@2x.png'/>`
+        let temperature = `${Math.trunc(data.current.temp)} °C`;
+        document.querySelector(".meteo-degree").innerHTML = temperature;
+        document.querySelector(
+          ".meteo-value"
+        ).innerHTML = `Nantes : ${day} ${dayInt}th ${month}`;
+
+        document.querySelector(
+          ".meteo-icons"
+        ).innerHTML = `<img src='http://openweathermap.org/img/wn/${data.current.weather[0].icon}@2x.png'/>`;
         // let imgIcone =  `imgpath/jour/${resultatsAPI.current.weather[0].icon}.svg`
         console.log();
         // let imgIcone =  `imgpath/nuit/${resultatsAPI.current.weather[0].icon}.svg`
