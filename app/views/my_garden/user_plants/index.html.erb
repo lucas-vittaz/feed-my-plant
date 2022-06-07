@@ -3,7 +3,7 @@
   <a href="/"><i class="back-arrow fas fa-angle-left fa-4x"></i></a>
   <h1>My Garden</h1>
 </div>
- <p class="text-center">Look through your rooms, and find your favorite plants </p>
+ <p class="text-center">Look throught your rooms, and find your favorite plants </p>
 <div class="container-room-scroll" data-controller="scroll-bar" data-scroll-bar-target="container">
     <%= link_to my_garden_user_plants_path, class:"link", data: {"data-action": "click->scroll-bar#highlight"} do %>
       <% if params[:room].present? %>
@@ -14,10 +14,9 @@
         </div>
       </div>
       <% else %>
-      <div class="room-card active"  data-scroll-bar-target="room home">
+      <div class="room-card active link"  data-scroll-bar-target="room home">
         <div class="align-room-card-content">
             <%= inline_svg_tag("home.svg", :width=>40, :height=>40) %>
-            <%# <%= image_tag("home.png", :width=>50, :height=>50) %>
             <p>Home</p>
         </div>
       </div>
@@ -29,7 +28,6 @@
       <div class="room-card <%= (params[:room].present?) && params[:room] == room.to_s ? 'active' : '' %>" data-scroll-bar-target="room">
         <div class="align-room-card-content">
             <%= inline_svg_tag("#{room.to_s}.svg", :width=>40, :height=>40) %>
-            <%# <%= image_tag("#{room.to_s}.png", :width=>50, :height=>50) %>
             <p class="room-title"><%= room.to_s.humanize%></p>
         </div>
       </div>

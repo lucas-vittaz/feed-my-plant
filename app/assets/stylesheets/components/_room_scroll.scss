@@ -27,6 +27,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  fill: $dark-green;
+  color: $dark-green;
+
 }
 .room-card.active {
   background-color: $terracotta;
@@ -36,7 +39,8 @@
 
 .link{
   text-decoration: none;
-  color: black;
+  color: $dark-green;
+  fill: $dark-green;
   display: flex;
   align-items: center;
   justify-content: center;
