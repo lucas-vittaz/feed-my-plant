@@ -4,6 +4,7 @@
   <h1>My Garden</h1>
 </div>
  <p class="text-center">Look throught your rooms, and find your favorite plants </p>
+ <hr>
 <div class="container-room-scroll" data-controller="scroll-bar" data-scroll-bar-target="container">
     <%= link_to my_garden_user_plants_path, class:"link", data: {"data-action": "click->scroll-bar#highlight"} do %>
       <% if params[:room].present? %>
