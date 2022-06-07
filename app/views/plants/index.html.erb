@@ -8,29 +8,25 @@
   <div class="container" >
     <div class="d-flex justify-content-center align-items-center">
       <div class="input-container d-flex">
-        <%= form_with url: plants_path, method: :get, html: { class:
-        '', data: { search_plants_target: 'form' } } do |f| %>
-        <%= f.text_field :query,
-                      class: "form-control input-search-index-plants",
-                      placeholder: 'Search a plant',
-                      value: params[:query],
-                      data: { search_plants_target: 'input',
-                      action: 'keyup->search-plants#update'
-                      } %>
+        <%= form_with url: plants_path, method: :get, html: { class: '', data: { search_plants_target: 'form' } } do |f| %>
+          <%= f.text_field :query,
+                        class: "form-control input-search-index-plants",
+                        placeholder: 'Search a plant',
+                        value: params[:query],
+                        data: { search_plants_target: 'input',
+                        action: 'keyup->search-plants#update'
+                        } %>
         <% end %>
       </div>
       <button type="button" class="btn btn-terracotta" data-bs-toggle="modal" data-bs-target="#exampleModal">
         <i class="fas fa-sliders-h"></i>
       </button>
     </div>
-    <div class="d-flex justify-content-center">
+    <hr/>
   </div>
-<hr/>
-    </div>
+</div>
 
 <div class="added-filter-container">
-
-
   <% if params[:water_level_low] %>
     <div class="added-filter">
       <span>Low water level<i class="fas fa-times-circle cross-icon"></i></span>
@@ -86,13 +82,14 @@
   <% end %>
 
 </div>
+
 <div class="d-flex justify-content-center">
   <%= link_to plants_path, class:"reset-filter text-decoration-none text-black" do %>
     <i class="fas fa-redo text-black"></i> Reset filters
   <% end %>
 </div>
 
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -113,7 +110,7 @@
                 </div>
               <% end %>
             </div>
-<hr/>
+            <hr/>
             <h2>Light level</h2>
             <div class="d-flex justify-content-center">
               <% Plant::LIGHT_LEVELS.each do |level| %>
@@ -126,7 +123,7 @@
                 </div>
               <% end %>
             </div>
-<hr/>
+            <hr/>
             <h2>Care level</h2>
             <div class="d-flex justify-content-center">
               <% Plant::CARE_LEVELS.each do |level| %>
@@ -140,7 +137,6 @@
               <% end %>
             </div>
 
-
           <%= f.submit 'Apply filters', :class => 'dark-btn filters-submit-btn' %>
           <% end %>
       </div>
@@ -148,7 +144,7 @@
   </div>
 </div>
 
-  <div class="container" id="index-plants">
-    <%= render "list", plants: @plants %>
-  </div>
+<div class="container" id="index-plants">
+  <%= render "list", plants: @plants %>
+</div>
 </div>
