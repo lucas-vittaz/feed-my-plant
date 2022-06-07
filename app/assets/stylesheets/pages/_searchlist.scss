@@ -32,7 +32,7 @@
 }
 
 .modal-content {
-  background-color: $light-gray;
+  background-color: $main-bg;
 }
 
 .filters-form {
@@ -51,7 +51,7 @@
 .modal-body{
   height: 100vh;
   margin-top: 35px;
-  background-color: $light-gray;
+  background-color: $main-bg;
 
   .filter-checkbox {
     position: absolute;

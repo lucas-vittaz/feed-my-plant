@@ -1,9 +1,10 @@
 .container-room-scroll{
-  background-color: $light-gray;
+  background-color: $main-bg;
   overflow-x: auto;
   overflow-y: hidden;
   display: flex;
   margin-left: 10px;
+  padding: 10px;
 
 
   .align-room-card-content {
@@ -29,6 +30,7 @@
   justify-content: center;
   fill: $dark-green;
   color: $dark-green;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
 }
 .room-card.active {

@@ -33,12 +33,13 @@
   }
 
   .container-plant-scroll{
-    background-color: $light-gray;
+    background-color: $main-bg;
     overflow-x: auto;
     overflow-y: hidden;
     display: flex;
     margin-left: 10px;
     margin-top: 30px;
+    padding: 10px;
   }
 
   .container-plant-scroll::-webkit-scrollbar{
@@ -59,6 +60,7 @@
     justify-content: center;
     line-height: 24px;
     padding-top: 25px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
     p {
       font-weight: bold;
@@ -73,6 +75,7 @@
     padding: 1rem;
     margin-top: 20px;
     color: $dark-green;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
     h3{
       font-family: Jost;
