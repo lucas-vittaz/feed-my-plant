@@ -30,7 +30,7 @@ plant_1 = Plant.create(
   min_baseline_temperature: 15,
   max_baseline_temperature: 25,
   min_baseline_hygrometry: 100,
-  max_baseline_hygrometry: 300,
+  max_baseline_hygrometry: 700,
   light_level: "medium",
   care_level: "beginner",
   water_need: "low"
@@ -46,7 +46,7 @@ plant_2 = Plant.create(
   min_baseline_temperature: 16,
   max_baseline_temperature: 27,
   min_baseline_hygrometry: 100,
-  max_baseline_hygrometry: 300,
+  max_baseline_hygrometry: 700,
   light_level: "high",
   care_level: "beginner",
   water_need:"low"
@@ -364,7 +364,7 @@ puts " Creating user plant 1"
 user_plant1 = UserPlant.create!(
   user: user_1,
   plant: plant_2,
-  latest_hygrometry: 150,
+  latest_hygrometry: 200,
   room: :kitchen
 
 )
