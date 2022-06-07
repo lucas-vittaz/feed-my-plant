@@ -52,6 +52,28 @@
   margin-bottom: 3rem;
 }
 
-.select-room-dropdown {
-  width: 300px;
+.filter-checkbox {
+  position: absolute;
+  transform: scale(0);
+}
+
+.filter-checkbox + label{
+  cursor: pointer;
+  width: 75px;
+  height: 75px;
+  border: 1px $light-gray solid;
+  border-radius: 10px;
+  background-color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+.filter-checkbox:checked + label{
+  background-color: $terracotta;
+  border: 1px $light-gray solid;
+  color: #fff;
+  svg path {
+    fill: white;
+  }
 }
