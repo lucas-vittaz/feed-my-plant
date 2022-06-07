@@ -12,29 +12,42 @@ export default class extends Controller {
     console.log("Hello from our first Stimulus controller")
     // console.log (this.latestHygrometryValue)
     // console.log (this.minMaxHygrometryValue)
-    let chartWidth  = 120
-    let needleValue = this.latestHygrometryValue / 7.5
+    const chartWidth  = 120;
+    let needleValue = this.latestHygrometryValue / 7.5;
+
+    console.log(needleValue)
+
     let options = {
       hasNeedle: true,
       outerNeedle: false,
-      needleColor: "#2ecc71",
+      needleColor: "##AAA2A2",
       needleStartValue: 50,
-      arcColors: ["#c0392b","#2ecc71","#c0392b"],
+      arcColors: ["#F77B7D","#7BF77F","#F77B7D"],
       arcDelimiters: this.minMaxHygrometryValue.map(value => {
-        return value / 7.5
+        return  value / 7.5
       }),
       // arcLabels: ["Under","Over"],
-      arcPadding : 4,
+      arcPadding : 2,
       arcPaddingColor : ["#d8eecc"],
       arcOverEffect : false,
       rangeLabel: ["0","100"],
-      centralLabel: "Water",
-      rangeLabelFontSize: 6,
-}
+      centralLabel: label,
+      rangeLabelFontSize: 8,
+    }
 
-      GaugeChart.gaugeChart(this.chartTarget, chartWidth, options).updateNeedle(needleValue)
+    let arcDelimiters = options.arcDelimiters;
+
+    function label() {
+      if (needleValue < arcDelimiters[0]) {
+        return "🥵"
+      } else if ( needleValue > arcDelimiters[1]) {
+        return "😰"
+      } else {
+        return "😌"
+      }
+    }
 
 
-
+    GaugeChart.gaugeChart(this.chartTarget, chartWidth, options).updateNeedle(needleValue)
   }
 }

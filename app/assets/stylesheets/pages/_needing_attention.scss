@@ -1,71 +1,57 @@
-.alert-container {
-  .header-alert {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 230px;
-    //display: flex;
-    //justify-content: flex-start;
-    // align-items: center;
-    color: white;
-    // font-size: 39px;
-    font-family: $headers-font;
-    font-weight: bold;
-    // width: 100%;
-    // z-index: -2;
-    //padding-left: 35px;
-    // position: relative;
-    margin-bottom: 20px;
+.plant-cards-alert {
+  display: flex;
+  flex-direction: column;
 
-    h1{
-      padding-top: 0px;
-      //padding-bottom: 100px;
-      padding-right: 50px;
-      padding-left: 62px;
-      color: white;
-      font-family: 'B';
-      font-size: 45px;
-      font-weight: bold;
-      text-align: left;
-    }
-    p{
-      padding-top: 0px;
-      //padding-bottom: 100px;
-      padding-right: 50px;
-      padding-left: 65px;
-      color: rgb(0, 0, 0);
-      font-family: Jost;
+
+
+  .plant-card-single {
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 15px auto;
+    background-color: $light-green;
+    padding: 10px;
+    height: 90px;
+  }
+
+  .plant-infos-alert {
+    margin-left: 15px;
+    font-size: 12px;
+    height: 150px;
+    align-items: space-between;
+
+    h2 {
+      font-family: $body-font;
       font-size: 16px;
-      font-weight: ligth;
-      text-align: left;
+      }
+
+    p {
+      font-family: $body-font;
+      font-size: 12px;
     }
-    .link-header {
-      text-decoration: none;
-      color: white;
-      padding-right: 5px;
-      position: absolute;
-      top:10px;
-    }
-    .link-header-right {
-      text-decoration: none;
-      color: white;
-      font-size: 18px;
-      padding-right: 5px;
-      position: absolute;
-      top:30px;
-    }
-  }
-
-  .plant-cards .plant-card-single {
-    height: unset;
-  }
-
-  .plant-cards .plant-infos {
-    height: unset;
-  }
-
-  .gauge {
-    padding-right: 200px;
-
   }
 }
+
+
+
+  // .plant-cards .plant-card-single {
+  //   height: unset;
+  // }
+
+  // .plant-cards .plant-infos {
+  //   height: unset;
+  // }
+
+  .gauge {
+    // padding-right: 200px;
+    transform: translate(130px, -60px);
+
+    svg text:last-child {
+      font-size: 15px;
+      transform: translate(-10px, 0px);
+
+    }
+
+  }
