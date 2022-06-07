@@ -191,15 +191,52 @@
   bottom: 0;
   height: 64px;
   width: 100%;
-  background-color: white;
+  background-color: $dark-dark-green;
   display:flex;
   align-items: center;
   justify-content: space-around;
+  color: transparent;
+
   a {
     text-decoration: none;
-    color: $terracotta;
+    color: white;
   }
   .items-tapbar {
     min-width: 100px;
+
+    i {
+      font-size: 1.5rem;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  .active {
+    color: $terracotta;
+    margin-bottom: 3rem;
+
+    a {
+      text-decoration: none;
+      color: $terracotta;
+      background: $dark-dark-green;
+      padding: 2rem;
+      border-radius: 50%;
+      height: 3rem;
+      width: 3rem;
+      display: grid;
+      place-content: center;
+    }
+
+    i {
+      font-size: 1.2rem;
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      bottom: 1rem;
+    }
   }
 }
