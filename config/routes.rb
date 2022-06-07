@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   namespace :my_garden do
     resources :plants, only: [] do
       resources :user_plants, only: [:create, :update]
+      resources :devices, only:[:new, :create]
     end
 
     resources :user_plants, only: [:index, :show, :destroy] do
