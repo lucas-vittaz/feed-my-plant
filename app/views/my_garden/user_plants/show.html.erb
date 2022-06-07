@@ -4,35 +4,34 @@
   </div>
 
       <div class="container">
-      <div class="plant-name">
-        <h1><%= @user_plant.plant.name %></h1>
-        <h2><%= @user_plant.plant.scientific_name %></h2>
-      </div>
-      <div class="container-plant-scroll">
-        <div class="plant-card d-flex flex-column justify-content-center align-items-center">
-          <span><i class="fas fa-tint fa-2x"></i></span>
-          <p><%= @user_plant.plant.baseline_hygrometry %></p>
+        <div class="plant-name">
+          <h1><%= @user_plant.plant.name %></h1>
+          <h2><%= @user_plant.plant.scientific_name %></h2>
         </div>
-        <div class="plant-card d-flex flex-column justify-content-center align-items-center">
-          <span><i class="fas fa-temperature-high fa-2x"></i></span>
-          <p><%= @user_plant.plant.min_baseline_temperature%> - <%= @user_plant.plant.max_baseline_temperature%> °C</p>
+        <div class="container-plant-scroll">
+          <div class="plant-card d-flex flex-column justify-content-center align-items-center">
+            <span><i class="fas fa-tint fa-2x"></i></span>
+            <p><%= @user_plant.plant.water_need %></p>
+          </div>
+          <div class="plant-card d-flex flex-column justify-content-center align-items-center">
+            <span><i class="fas fa-temperature-high fa-2x"></i></span>
+            <p><%= @user_plant.plant.min_baseline_temperature%> - <%= @user_plant.plant.max_baseline_temperature%> °C</p>
+          </div>
+          <div class="plant-card d-flex flex-column justify-content-center align-items-center">
+            <span><i class="fas fa-sun fa-2x"></i></span>
+            <p><%= @user_plant.plant.light_level %></p>
+          </div>
+          <div class="plant-card d-flex flex-column justify-content-center align-items-center">
+            <span><i class="fas fa-hand-holding fa-2x"></i></span>
+            <p><%= @user_plant.plant.care_level%></p>
+          </div>
         </div>
-        <div class="plant-card d-flex flex-column justify-content-center align-items-center">
-          <span><i class="fas fa-sun fa-2x"></i></span>
-          <p><%= @user_plant.plant.light_level %></p>
-        </div>
-        <div class="plant-card d-flex flex-column justify-content-center align-items-center">
-          <span><i class="fas fa-hand-holding fa-2x"></i></span>
-          <p><%= @user_plant.plant.care_level%></p>
-        </div>
-      </div>
 
-      <div class="plant-description">
-        <h3>Description</h3>
-        <p><%= @user_plant.plant.description %></p>
+        <div class="plant-description">
+          <h3>Description</h3>
+          <p><%= @user_plant.plant.description %></p>
+        </div>
       </div>
-
-    </div>
   </div>
 </div>
 
