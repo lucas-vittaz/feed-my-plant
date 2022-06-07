@@ -1,8 +1,18 @@
 class MyGarden::UserPlantsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:sensor_hygrometry]
   def index
     @user_plants = current_user.user_plants # all plants from current user
 
     @user_plants = @user_plants.where(room: params[:room]) if params[:room].present? #filter plant by room
+  end
+
+  def sensor_hygrometry
+    p params[:sensor]
+
+    user_plant = UserPlant.last
+    user_plant.update(latest_hygrometry: params[:sensor])
+
+    head :ok
   end
 
   def show
@@ -37,7 +47,7 @@ class MyGarden::UserPlantsController < ApplicationController
   end
 
   def needing_attention
-    @plants_attention = UserPlant.select{|user_plant| (user_plant.latest_hygrometry != user_plant.plant.baseline_hygrometry)}
+    @plants_attention = UserPlant.select{|user_plant| (user_plant.latest_hygrometry < user_plant.plant.baseline_hygrometry)}
   end
 
 
