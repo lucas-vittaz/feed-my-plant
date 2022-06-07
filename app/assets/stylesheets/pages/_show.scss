@@ -24,8 +24,9 @@
     h2{
       font-family: Jost;
       font-weight: bold;
+      font-size: 24px;
       font-style: italic;
-      color: $medium-green;
+      color: $light-green;
       margin-left: 24px;
       margin-bottom: 1rem;
     }
@@ -71,9 +72,11 @@
     background-color: white;
     padding: 1rem;
     margin-top: 20px;
+    color: $dark-green;
 
     h3{
       font-family: Jost;
+      color: $dark-green;
     }
   }
   .dark-btn{

@@ -191,11 +191,12 @@
   bottom: 0;
   height: 64px;
   width: 100%;
-  background-color: $dark-dark-green;
+  background-color: $dark-green;
   display:flex;
   align-items: center;
   justify-content: space-around;
   color: transparent;
+  border-radius: 20px 20px 0 0;;
 
   a {
     text-decoration: none;
@@ -210,23 +211,27 @@
 
     span {
       display: none;
+      position: absolute;
+      
     }
   }
 
   .active {
-    color: $terracotta;
+    color: white;
     margin-bottom: 3rem;
+
 
     a {
       text-decoration: none;
-      color: $terracotta;
-      background: $dark-dark-green;
+      color: white;
+      background: $dark-green;
       padding: 2rem;
       border-radius: 50%;
       height: 3rem;
       width: 3rem;
       display: grid;
       place-content: center;
+
     }
 
     i {
@@ -235,7 +240,6 @@
 
     span {
       display: block;
-      position: absolute;
       bottom: 1rem;
     }
   }

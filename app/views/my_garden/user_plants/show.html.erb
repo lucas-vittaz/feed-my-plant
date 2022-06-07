@@ -11,7 +11,7 @@
       <div class="container-plant-scroll">
         <div class="plant-card d-flex flex-column justify-content-center align-items-center">
           <span><i class="fas fa-tint fa-2x"></i></span>
-          <p><%= @user_plant.plant.baseline_hygrometry%></p>
+          <p><%= @user_plant.plant.baseline_hygrometry %></p>
         </div>
         <div class="plant-card d-flex flex-column justify-content-center align-items-center">
           <span><i class="fas fa-temperature-high fa-2x"></i></span>
@@ -60,6 +60,7 @@
                   <%= f.label room, class:"filter" do %>
                     <%= inline_svg_tag("#{room.to_s}.svg", :width=>40, :height=>40) %>
                   <% end %>
+                  <%= room.to_s.humanize %>
                 </div>
               <% end %>
 
