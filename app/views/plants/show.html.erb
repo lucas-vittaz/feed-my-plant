@@ -53,11 +53,21 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body col d-flex justify-content-center">
-          <%= simple_form_for([:my_garden, @plant, @user_plant]) do |f| %>
-              <%= hidden_field_tag "user_plant[user_id]", current_user.id %>
+
+            <%= form_with url: my_garden_plant_user_plants_path(@plant), method: :POST, :class => 'd-flex flex-column align-items-center'  do |f| %>
               <%= hidden_field_tag "user_plant[plant_id]", @plant.id %>
-              <%= f.input :room, collection: UserPlant::ROOMS, as: :radio_buttons, class:'radio-btn'  %>
-              <%= f.button :submit, 'Add to my garden', class:'dark-btn' %>
+              <%= hidden_field_tag "user_plant[user_id]", current_user.id %>
+              <div class="d-flex flex-wrap justify-content-center">
+                <% UserPlant::ROOMS.each do |room| %>
+                  <div class="d-flex flex-column align-items-center">
+                    <%= f.radio_button("user_plant[room]", room, {class:"filter-checkbox", id: room }) %>
+                    <%= f.label room, class:"filter" do %>
+                      <%= inline_svg_tag("#{room.to_s}.svg", :width=>40, :height=>40) %>
+                    <% end %>
+                  </div>
+                <% end %>
+              </div>
+              <%= f.submit 'Save changes', :class => 'dark-btn edit-user-plant-btn'%>
             <% end %>
         </div>
       </div>
