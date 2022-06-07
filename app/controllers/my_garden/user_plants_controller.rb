@@ -55,7 +55,7 @@ class MyGarden::UserPlantsController < ApplicationController
 
 
   def user_plant_params
-    params.require(:user_plant).permit(:plant_id, :user_id, :room, :latest_hygrometry,:baseline_hygrometry)
+    params.require(:user_plant).permit(:plant_id, :user_id, :room)
   end
 
 end
