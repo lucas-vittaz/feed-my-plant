@@ -22,10 +22,8 @@ class MyGarden::UserPlantsController < ApplicationController
 
   def update
     @user_plant = UserPlant.find(params[:id])
-
-    @user_plant.update(room: params[:room])
-    if @user_plant.save
-      redirect_to my_garden_user_plants_path(@user_plant, room: params[:room])
+    if @user_plant.update(user_plant_params)
+      redirect_to my_garden_user_plants_path(@user_plant, room: @user_plant.room)
     else
       render :show
     end

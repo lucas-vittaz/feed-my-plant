@@ -56,12 +56,13 @@
             <div class="d-flex flex-wrap justify-content-center">
               <% UserPlant::ROOMS.each do |room| %>
                 <div class="d-flex flex-column align-items-center">
-                  <%= f.check_box(:room, {class:"filter-checkbox", checked: params[:room] == "true" }, true, false) %>
-                    <%= f.label room, class:"filter" do %>
-                      <%= inline_svg_tag("#{room.to_s}.svg", :width=>40, :height=>40) %>
-                    <% end %>
+                  <%= f.radio_button("user_plant[room]", room, {class:"filter-checkbox", id: room, checked: @user_plant.room == room.to_s }) %>
+                  <%= f.label room, class:"filter" do %>
+                    <%= inline_svg_tag("#{room.to_s}.svg", :width=>40, :height=>40) %>
+                  <% end %>
                 </div>
               <% end %>
+
             </div>
             <%= f.submit 'Save changes', :class => 'dark-btn edit-user-plant-btn'%>
             <% end %>
