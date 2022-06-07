@@ -14,8 +14,8 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <%= form_with url: devices_path, method: :post, :class => 'd-flex flex-column align-items-center'  do |f| %>
-                <%= f.text_field :external_id %>
+              <%= form_with url: pair_device_my_garden_user_plant_path(@user_plant), method: :patch, :class => 'd-flex flex-column align-items-center'  do |f| %>
+                <%= f.select "device[external_id]", Device.pluck(:external_id), include_blank: false %>
                 <%= f.submit :class => 'dark-btn'%>
               <% end %>
             </div>

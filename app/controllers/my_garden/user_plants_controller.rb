@@ -15,6 +15,18 @@ class MyGarden::UserPlantsController < ApplicationController
     head :ok
   end
 
+  def pair_device
+    @device = Device.find_by(external_id: params[:device][:external_id])
+    @user_plant = UserPlant.find(params[:id])
+    @user_plant.device_id = @device.id
+    if @user_plant.save
+      redirect_to my_garden_user_plant_path(@user_plant)
+    else
+      render :show
+    end
+
+  end
+
   def show
     @user_plant = UserPlant.find(params[:id])
   end
