@@ -10,7 +10,7 @@ class MyGarden::UserPlantsController < ApplicationController
     p params[:sensor]
 
     user_plant = UserPlant.last
-    user_plant.update(latest_hygrometry: params[:sensor])
+    user_plant.update(latest_hygrometry: params[:sensor]) 
 
     head :ok
   end

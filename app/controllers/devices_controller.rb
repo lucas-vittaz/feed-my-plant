@@ -1,4 +1,14 @@
 class DevicesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:telemetry]
+
+  def telemetry
+    # params[:telemetry]
+    user_plant = UserPlant.last
+    user_plant.update(latest_hygrometry: params[:sensor])
+
+    head:ok
+  end
+
   def create
     @device = Device.new(device_params)
     if @device.save

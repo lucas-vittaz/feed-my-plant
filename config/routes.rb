@@ -11,19 +11,16 @@ Rails.application.routes.draw do
       collection do
         get :needing_attention
       end
-
-      member do
+       member do
         get :sensor_hygrometry
         patch :pair_device
       end
     end
   end
-
-  resources :devices, param: :external_id do
+  resources :devices, param: :external_id, only: [] do
     member do
       get :telemetry
     end
   end
-
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
