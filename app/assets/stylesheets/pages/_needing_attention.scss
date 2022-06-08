@@ -1,8 +1,17 @@
+.gauge {
+  transform: translate(135px, -106px);
+
+  svg text:last-child {
+    font-size: 15px;
+    transform: translate(-8px, 0px);
+
+  }
+
+}
+
 .plant-cards-alert {
   display: flex;
   flex-direction: column;
-
-
 
   .plant-card-single {
     width: 100%;
@@ -30,10 +39,10 @@
     p {
       font-family: $body-font;
       font-size: 12px;
+      transform: translate(2px, -9px);
     }
   }
 }
-
 
 
   // .plant-cards .plant-card-single {
