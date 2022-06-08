@@ -1,11 +1,10 @@
-<div id="plant-show">
-<% @plant = @plant %>
+<div class="plant-show">
+  <% @plant = @plant %>
   <div style="background-image: url(<%= cl_image_path(@plant.photo.key, crop: :fill) %>);" class="plant-img">
-      <a href="/plants"><%= inline_svg_tag("back-dark.svg", :width=>40, :height=>40) %></a>
+      <a href="/plants"><%= inline_svg_tag("back-dark.svg", :width=>20, :height=>20) %></a>
   </div>
 
-    <div class="container">
-
+    <div>
       <div class="plant-name">
         <h1><%= @plant.name %></h1>
         <h2><%= @plant.scientific_name %></h2>
@@ -28,7 +27,6 @@
           <p><%= @plant.care_level%></p>
         </div>
       </div>
-
 
       <div class="plant-description">
         <h3>Description</h3>

@@ -4,17 +4,16 @@
   align-items: center;
   width: 254px;
   height: 51px;
-
   background-color: #EEA063;
   color: #fff;
   border: 1px solid transparent;
   border-radius: 47px;
   text-align: center;
   vertical-align: middle;
-
   font-family: 'Jost', sans-serif;
   font-weight: Bold;
   font-size: 16px;
+  letter-spacing: 1px;
 
   a {
     text-decoration: none;
@@ -32,12 +31,11 @@
   align-items: center;
   width: 254px;
   height: 51px;
-
+  letter-spacing: 1px;
   background-color: #fff;
   color: #EEA063;
   border: 3px solid $terracotta;
   border-radius: 47px;
-
   font-family: 'Jost', sans-serif;
   font-weight: Bold;
   font-size: 16px;
@@ -63,6 +61,7 @@
   color: #fff;
   border-radius: 0px 5px 5px 0px;
   cursor: pointer;
+  letter-spacing: 1px;
 }
 
 
