@@ -1,28 +1,28 @@
-
 <div class="header" style="background-image: url(https://res.cloudinary.com/lucas-vittaz/image/upload/v1654686382/development%20/header-garden_drfp8d.png)">
-  <a href="/"><%= inline_svg_tag("back-light.svg", :width=>40, :height=>40) %></a>
+  <a href="/"><%= inline_svg_tag("back-light.svg", :width=>20, :height=>20) %></a>
   <h1>My Garden</h1>
 </div>
- <p class="text-center">Look throught your rooms, and find your favorite plants </p>
- <hr>
+
+<p class="text-center px-5">Look throught your rooms, and find your favorite plants </p>
+<hr>
 <div class="container-room-scroll" data-controller="scroll-bar" data-scroll-bar-target="container">
-    <%= link_to my_garden_user_plants_path, class:"link", data: {"data-action": "click->scroll-bar#highlight"} do %>
-      <% if params[:room].present? %>
-        <div class="room-card"  data-scroll-bar-target="room home">
-        <div class="align-room-card-content">
-            <%= image_tag("home.svg", :width=>50, :height=>50) %>
-            <p>Home</p>
-        </div>
+  <%= link_to my_garden_user_plants_path, class:"link", data: {"data-action": "click->scroll-bar#highlight"} do %>
+    <% if params[:room].present? %>
+      <div class="room-card"  data-scroll-bar-target="room home">
+      <div class="align-room-card-content">
+          <%= image_tag("home.svg", :width=>50, :height=>50) %>
+          <p>Home</p>
       </div>
-      <% else %>
-      <div class="room-card active link"  data-scroll-bar-target="room home">
-        <div class="align-room-card-content">
-            <%= inline_svg_tag("home.svg", :width=>40, :height=>40) %>
-            <p>Home</p>
-        </div>
+    </div>
+    <% else %>
+    <div class="room-card active link"  data-scroll-bar-target="room home">
+      <div class="align-room-card-content">
+          <%= inline_svg_tag("home.svg", :width=>40, :height=>40) %>
+          <p>Home</p>
       </div>
-      <% end %>
-    <% end%>
+    </div>
+    <% end %>
+  <% end%>
 
   <% UserPlant::ROOMS.each do |room| %>
     <%= link_to my_garden_user_plants_path(room: room), class:"link", data: {"data-action": "click->scroll-bar#highlight"}  do %>
@@ -36,23 +36,23 @@
   <% end %>
 </div>
 
-
-
-<div class="container">
+<div>
   <% @user_plants.each do |user_plant| %>
-    <div class="plant-cards">
-      <%= link_to my_garden_user_plant_path(user_plant), class: "link-dark text-decoration-none" do %>
-        <div class="plant-card-single">
-          <%= cl_image_tag user_plant.plant.photo.key, width: 150, height: 150, crop: :fill, :style => "border-radius: 10px"%>
-          <div class="plant-infos">
-            <h2><strong><%= user_plant.plant.name %></strong></h2>
-            <p><strong><%= user_plant.room.capitalize.humanize %></strong><br>Added on <i><%= user_plant.created_at.strftime("%a, %d %b %Y") %></i><br>Updated at <i><%= user_plant.updated_at.strftime("%H:%M") %></i></p>
-            <div  data-controller="gauge" data-gauge-latest-hygrometry-value="<%= user_plant.latest_hygrometry%>" data-gauge-min-max-hygrometry-value="<%= [user_plant.plant.min_baseline_hygrometry,user_plant.plant.max_baseline_hygrometry] %>">
-              <div class="gauge2"data-gauge-target="chart"></div>
+    <div class="container">
+      <div class="plant-cards">
+        <%= link_to my_garden_user_plant_path(user_plant), class: "link-dark text-decoration-none" do %>
+          <div class="plant-card-single">
+            <%= cl_image_tag user_plant.plant.photo.key, width: 150, height: 150, crop: :fill, :style => "border-radius: 10px"%>
+            <div class="plant-infos">
+              <h2><strong><%= user_plant.plant.name %></strong></h2>
+              <p><strong><%= user_plant.room.capitalize.humanize %></strong><br>Added on <i><%= user_plant.created_at.strftime("%a, %d %b %Y") %></i><br>Updated at <i><%= user_plant.updated_at.strftime("%H:%M") %></i></p>
+              <div  data-controller="gauge" data-gauge-latest-hygrometry-value="<%= user_plant.latest_hygrometry%>" data-gauge-min-max-hygrometry-value="<%= [user_plant.plant.min_baseline_hygrometry,user_plant.plant.max_baseline_hygrometry] %>">
+                <div class="gauge2"data-gauge-target="chart"></div>
+              </div>
             </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
   <% end %>
 </div>

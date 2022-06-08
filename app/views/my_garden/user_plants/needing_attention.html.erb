@@ -1,9 +1,10 @@
 <div class="header" style="background-image: url(https://res.cloudinary.com/lucas-vittaz/image/upload/v1654686556/development%20/header-alert_xhqfhg.png)">
-  <a href="/"><%= inline_svg_tag("back-light.svg", :width=>40, :height=>40) %></a>
+  <a href="/"><%= inline_svg_tag("back-light.svg", :width=>20, :height=>20) %></a>
   <h1>My alerts</h1>
 </div>
+
 <div class="container alert-container">
-  <p class="text-center"> Check your plants health in real time </p>
+  <p class="text-center px-5"> Check your plants health in real time </p>
   <hr>
   <div class="plant-cards-alert">
     <% @plants_attention.each do |user_plant| %>

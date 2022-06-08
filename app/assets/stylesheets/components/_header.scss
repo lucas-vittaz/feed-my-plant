@@ -7,19 +7,20 @@
   font-family: $headers-font;
   font-weight: bold;
   margin-bottom: 20px;
+
   svg{
-    margin-top: 40px;
-    margin-left: 10px;
+    position: absolute;
+    left: 1.5rem;
+    top: 1.5rem;
   }
+
   h1{
-    padding-top: 0px;
-    padding-right: 50px;
-    padding-left: 80px;
+    padding-top: 6rem;
+    text-align: center;
     color: white;
     font-family: 'B';
     font-size: 45px;
     font-weight: bold;
-    text-align: left;
   }
   p{
     padding-top: 0px;

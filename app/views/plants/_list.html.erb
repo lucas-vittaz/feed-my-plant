@@ -3,7 +3,7 @@
   <% @plants.each do |plant| %>
     <div class="col">
       <div class="plant-cards">
-        <a href="<%= plant_path(plant)%>", class="link-dark text-decoration-none">
+        <%= link_to plant_path(plant), class:"link-dark text-decoration-none" do %>
           <div class="plant-card-single">
             <%= cl_image_tag plant.photo.key, width: 150, height: 150, crop: :fill, :style => "border-radius: 10px"%>
             <div class="plant-infos">
@@ -11,6 +11,7 @@
               <p><%= plant.description.truncate(140) %></p>
             </div>
           </div>
+        <% end %>
       </div>
     </div>
   <% end %>

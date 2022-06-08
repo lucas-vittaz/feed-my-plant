@@ -33,18 +33,21 @@
   position: relative;
   margin-bottom: 20px;
 
-  p {
-    font-family: $body-font;
-    font-size: 8px;
-    transform: translate(0px, -12px);
+  .plant-card-alert {
+    p {
+      font-family: $body-font;
+      font-size: 8px;
+      transform: translate(0px, -12px);
+    }
+    p {
+      font-family: $body-font;
+      font-size: 8px;
+      transform: translate(0px, -8px);
+    }
   }
 }
 
-p {
-  font-family: $body-font;
-  font-size: 8px;
-  transform: translate(0px, -8px);
-}
+
 .gauge2 {
   transform: translate(15px, -25px);
 
@@ -53,5 +56,4 @@ p {
     transform: translate(-8px, 0px);
 
   }
-
 }

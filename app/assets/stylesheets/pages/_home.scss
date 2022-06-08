@@ -10,12 +10,12 @@
   }
 
   h1{
-  color: white;
-  font-family:$headers-font;
-  font-weight: bolder;
-  font-size: 50px;
-  z-index: 2;
-  margin-top: 150px;
+    color: white;
+    font-family:$headers-font;
+    font-weight: bolder;
+    font-size: 50px;
+    z-index: 2;
+    margin-top: 150px;
   }
 
   h2{
@@ -39,8 +39,12 @@
   .header-home{
     .meteo{
       .meteo-degree {
-        font-size: 35px;
-        font-weight: bolder;
+        font-size: 40px;
+        font-weight: bold;
+      }
+
+      .meteo-icons {
+        margin-bottom: 2rem;
       }
 
       p{
@@ -100,7 +104,7 @@
   }
 
   p{
-    margin-top: 15px;
+    font-size: 15px;
   }
   .fa-spa{
     color: hsla(87, 35%, 17%, 0.07);
