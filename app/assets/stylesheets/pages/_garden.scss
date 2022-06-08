@@ -46,6 +46,9 @@ p {
   transform: translate(0px, -8px);
 }
 .gauge2 {
+  animation: fadeInAnimation ease 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
   transform: translate(15px, -25px);
 
   svg text:last-child {
@@ -54,4 +57,13 @@ p {
 
   }
 
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }

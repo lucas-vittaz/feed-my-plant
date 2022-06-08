@@ -12,7 +12,7 @@ export default class extends Controller {
     console.log("Hello from our first Stimulus controller")
     // console.log (this.latestHygrometryValue)
     // console.log (this.minMaxHygrometryValue)
-    const chartWidth  = 150;
+    const chartWidth  = 130;
     let needleValue = this.latestHygrometryValue / 7.5;
 
     // console.log(needleValue)
@@ -20,9 +20,9 @@ export default class extends Controller {
     let options = {
       hasNeedle: true,
       outerNeedle: false,
-      needleUpdateSpeed : 0,
+      needleUpdateSpeed : 500,
       needleColor: "##AAA2A2",
-      // needleStartValue: 0,
+      needleStartValue: 0,
       arcColors: ["#F77B7D","#7BF77F","#F77B7D"],
       arcDelimiters: this.minMaxHygrometryValue.map(value => {
         return  value / 7.5

@@ -10,6 +10,8 @@ puts "Cleaning DB"
 UserPlant.destroy_all
 Plant.destroy_all
 User.destroy_all
+Device.destroy_all
+
 puts " Creating Users"
 user_1 = User.create(
   user_name: "lucasvittaz",
@@ -68,7 +70,7 @@ plant_3 = Plant.create(
   max_baseline_hygrometry: 300,
   light_level: "medium",
   care_level: "beginner",
-  water_need:"low"
+  water_need:"medium"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1654684982/development%20/PhilodendronMonsteraDeliciasa_loqppy.webp")
 plant_3.photo.attach(io: file, filename: 'monstera.jpg', content_type: 'image/jpg')
@@ -78,7 +80,7 @@ plant_4 = Plant.create(
   name: "Aloe Vera",
   scientific_name: "Aloe",
   description: "Aloe vera is an ancient plant from the Arabian Peninsula. Popularized for its therapeutic virtues, it's a resistant plant that requires little attention to thrive. It's a perfect plant for beginners.",
-  baseline_hygrometry: 450,
+  baseline_hygrometry: 120,
   min_baseline_temperature: 13,
   max_baseline_temperature: 27,
   min_baseline_hygrometry: 100,
@@ -95,7 +97,7 @@ plant_5 = Plant.create(
   name: "Calathea ornata",
   scientific_name: "Marantaceae",
   description: "The Calathea ornata can be recognised by its beautiful dark black leaves with contrasting pale pink veins.",
-  baseline_hygrometry: 500,
+  baseline_hygrometry: 280,
   min_baseline_temperature: 15,
   max_baseline_temperature: 24,
   min_baseline_hygrometry: 100,
@@ -112,7 +114,7 @@ plant_6 = Plant.create(
   name: "Cider Gum",
   scientific_name: "Eucalyptus Gunnii",
   description: "Eucalyptus gunnii brings a simple, fragrant and Mediterranean touch to your home. Easy to care for, accommodating, this plant adapts very quickly and can also be placed on your balcony or in your garden.",
-  baseline_hygrometry: 600,
+  baseline_hygrometry: 160,
   min_baseline_temperature: -10,
   max_baseline_temperature: 24,
   min_baseline_hygrometry: 100,
@@ -129,7 +131,7 @@ plant_7 = Plant.create(
   name: "Anthurium",
   scientific_name: "Araceae",
   description: "Anthuriums are making a comeback and are back in fashion! The anthurium pink has the ability to remain in bloom all year round, enough to make its friends the orchids jealous. ",
-  baseline_hygrometry: 550,
+  baseline_hygrometry: 180,
   min_baseline_temperature: 15,
   max_baseline_temperature: 20,
   min_baseline_hygrometry: 100,
@@ -146,7 +148,7 @@ plant_8 = Plant.create(
   name: "Bird of Paradise",
   scientific_name: "Strelitzia",
   description: "Strelitzia, commonly known as the bird of paradise, is the undisputed queen of the houseplant world",
-  baseline_hygrometry: 500,
+  baseline_hygrometry: 380,
   min_baseline_temperature: 18,
   max_baseline_temperature: 22,
   min_baseline_hygrometry: 200,
@@ -164,7 +166,7 @@ plant_9 = Plant.create(
   name: "Calathea triostar",
   scientific_name: "Calathea",
   description: "The calathea triostar is composed of thin pink, green and white leaves.",
-  baseline_hygrometry: 500,
+  baseline_hygrometry: 320,
   min_baseline_temperature: 14,
   max_baseline_temperature: 30,
   min_baseline_hygrometry: 200,
@@ -182,7 +184,7 @@ plant_10 = Plant.create(
   name: "Orchid Phalaenopsis",
   scientific_name: "Orchid",
   description: "The Phalaenopsis multiflora orchid is one of the few plants that continue to purify the air in your home after sunset.",
-  baseline_hygrometry: 500,
+  baseline_hygrometry: 260,
   min_baseline_temperature: 15,
   max_baseline_temperature: 29,
   min_baseline_hygrometry: 200,
@@ -199,7 +201,7 @@ plant_11 = Plant.create(
   name: "Philodendron Monstera Deliciosa",
   scientific_name: "Monstera Deliciosa",
   description: "If you want an easy and striking houseplant the Monstera deliciosa should be on your list.",
-  baseline_hygrometry: 500,
+  baseline_hygrometry: 310,
   min_baseline_temperature: 20,
   max_baseline_temperature: 25,
   min_baseline_hygrometry: 200,
@@ -216,7 +218,7 @@ plant_12 = Plant.create(
   name: "Dracaena Marginata",
   scientific_name: "Dracaena",
   description: "Dracaenas are mainly native to Africa, but can also be find in Asia and Central America.",
-  baseline_hygrometry: 500,
+  baseline_hygrometry: 230,
   min_baseline_temperature: 15,
   max_baseline_temperature: 27,
   min_baseline_hygrometry: 200,
@@ -233,7 +235,7 @@ plant_13 = Plant.create(
   name: "Snake plant",
   scientific_name: "Sansevieria Laurentii",
   description: "If you are not yet a plant owner and looking for an easy houseplant, the snake plant is a must have.",
-  baseline_hygrometry: 500,
+  baseline_hygrometry: 300,
   min_baseline_temperature: 10,
   max_baseline_temperature: 27,
   min_baseline_hygrometry: 200,
@@ -250,7 +252,7 @@ plant_14 = Plant.create(
   name: "Orange tree",
   scientific_name: "Calamondin",
   description: "As a citrus fruit, the calamansi brings a Mediterranean fragrance into your home.",
-  baseline_hygrometry: 500,
+  baseline_hygrometry: 320,
   min_baseline_temperature: 17,
   max_baseline_temperature: 25,
   min_baseline_hygrometry: 200,
@@ -267,7 +269,7 @@ plant_15 = Plant.create(
   name: "Banana tree",
   scientific_name: "Musa Dwarf Cavendish",
   description: "No, bananas don't grow on trees, they grow on plants! The Musa Dwarf is particularly appreciated for its large green leaves that give a tropical atmosphere to your home.",
-  baseline_hygrometry: 500,
+  baseline_hygrometry: 350,
   min_baseline_temperature: 15,
   max_baseline_temperature: 27,
   min_baseline_hygrometry: 200,
@@ -284,11 +286,11 @@ plant_16 = Plant.create(
   name: "Elephant Ear",
   scientific_name: "Alocasia Portora",
   description: "Perhaps the most majestic subspecies of the large Alocasia family, Portodora has very large leaves, reminiscent of elephant ears, hence its nickname \"elephant ear\". Native to South East Asia, this plant with its large, curled leaves will add incredible charisma to your home.",
-  baseline_hygrometry: 500,
+  baseline_hygrometry: 480,
   min_baseline_temperature: 18,
   max_baseline_temperature: 27,
-  min_baseline_hygrometry: 300,
-  max_baseline_hygrometry: 500,
+  min_baseline_hygrometry: 220,
+  max_baseline_hygrometry: 700,
   light_level: "Low",
   care_level: "Intermediate",
   water_need:"High"
@@ -301,7 +303,7 @@ plant_17 = Plant.create(
   name: "Ficus",
   scientific_name: "Ficus Altissima XL",
   description: "The Ficus Altissima is a tree of the large fig family. Altissima refers to the height that this magnificent plant can reach in its natural environment: 30 metres! Native to South Asia, its beautiful ovoid leaves in shades of yellow and green will look great in your home. It is the perfect plant if you want to add a touch of elegance to your living room, kitchen or veranda.",
-  baseline_hygrometry: 500,
+  baseline_hygrometry: 400,
   min_baseline_temperature: 18,
   max_baseline_temperature: 27,
   min_baseline_hygrometry: 300,
@@ -319,7 +321,7 @@ plant_18 = Plant.create(
   name: "Pachiras",
   scientific_name: "Pachiras aquatica",
   description: "The Pachira has been a trendy houseplant over the last few years. Native to the tropical zones of Asia and America, he is highly appreciated for its twisted trunk and ease of maintenance.",
-  baseline_hygrometry: 500,
+  baseline_hygrometry: 360,
   min_baseline_temperature: 16,
   max_baseline_temperature: 24,
   min_baseline_hygrometry: 300,
@@ -336,7 +338,7 @@ plant_19 = Plant.create(
   name: "Rosemary",
   scientific_name: "Salvia rosmarinus",
   description: "Rosemary is a sumptuous plant, frequently filling your home with its beautiful, delicate purple blooms. Offering a magnificent scent all year round, it is a beautiful and soothing outdoor plant.",
-  baseline_hygrometry: 500,
+  baseline_hygrometry: 450,
   min_baseline_temperature: 10,
   max_baseline_temperature: 25,
   min_baseline_hygrometry: 300,
@@ -353,7 +355,7 @@ plant_20 = Plant.create(
   name: "Pothos",
   scientific_name: "Pothos Scindapsus climbing",
   description: "Epipremnum aureum, or more commonly known as scindapsus or devil's ivy, is an emblematic climbing plant. It is variegated with green and mustard yellow. It is an extremely easy to care for plant that will adapt to a variety of light conditions. It is hardy and tolerates irregular watering.",
-  baseline_hygrometry: 500,
+  baseline_hygrometry: 430,
   min_baseline_temperature: 10,
   max_baseline_temperature: 25,
   min_baseline_hygrometry: 300,
@@ -370,7 +372,7 @@ plant_21 = Plant.create(
   name: "Spider plant",
   scientific_name: "Chlorophytum Bonnie",
   description: "The spider plant, or chlorophytum, is the easiest houseplant to grow at home. One of the most interesting thing is its ability to spread quickly! This plant grows so fast that you will be overwhelmed by its babies in a few month!",
-  baseline_hygrometry: 50,
+  baseline_hygrometry: 390,
   min_baseline_temperature: 5,
   max_baseline_temperature: 30,
   min_baseline_hygrometry: 300,
@@ -394,7 +396,7 @@ puts " Creating user plant 2"
 user_plant2 = UserPlant.create(
   user: user_1,
   plant: plant_1,
-  latest_hygrometry: 700,
+  latest_hygrometry: 600,
   room: :garden
 
 )
@@ -402,28 +404,28 @@ puts " Creating user plant 3"
 user_plant3 = UserPlant.create!(
   user: user_1,
   plant: plant_13,
-  latest_hygrometry: 500,
+  latest_hygrometry: 300,
   room: :bedroom
 )
 puts " Creating user plant 4"
 user_plant4 = UserPlant.create(
   user: user_1,
   plant: plant_20,
-  latest_hygrometry: 700,
+  latest_hygrometry: 480,
   room: :living_room
 )
 puts " Creating user plant 5"
 user_plant5 = UserPlant.create!(
   user: user_1,
   plant: plant_17,
-  latest_hygrometry: 500,
+  latest_hygrometry: 320,
   room: :bedroom
 )
 puts " Creating user plant 6"
 user_plant6 = UserPlant.create(
   user: user_1,
   plant: plant_12,
-  latest_hygrometry: 700,
+  latest_hygrometry: 500,
   room: :kitchen
 )
 
@@ -431,7 +433,7 @@ puts " Creating user plant 7"
 user_plant7 = UserPlant.create(
   user: user_1,
   plant: plant_5,
-  latest_hygrometry: 750,
+  latest_hygrometry: 75,
   room: :shower_room
 )
 
@@ -447,7 +449,7 @@ puts " Creating user plant 9"
 user_plant9 = UserPlant.create(
   user: user_1,
   plant: plant_10,
-  latest_hygrometry: 700,
+  latest_hygrometry: 430,
   room: :patio
 )
 
