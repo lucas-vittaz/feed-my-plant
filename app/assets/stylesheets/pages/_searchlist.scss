@@ -3,12 +3,8 @@
   .plant-infos{
       margin-top: 24px;
   }
+}
 
-}
-svg{
-  margin-top: 40px;
-  margin-left: 20px;
-}
 .reset-filter{
   color: grey!important;
 }
@@ -18,8 +14,16 @@ svg{
 .h1-search {
   text-align: center;
   font-size: 50px;
-  margin-top: -55px;
+  margin: 0;
+  justify-content: end;
+  display: flex;
 }
+.logo-svg {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+}
+
 .modal-dialog{
   margin: 0 !important;
 }
@@ -27,8 +31,8 @@ svg{
   font-size: 60px;
   font-weight: bold;
 }
-.modal-header{
-  text-align: center;
+.filter-title {
+  margin-top: 2rem;
   h1{
     font-size: 40px;
     font-weight: bold;
@@ -37,6 +41,7 @@ svg{
 
 .modal-content {
   background-color: $main-bg;
+  height: 100vh;
 }
 
 .filters-form {
@@ -48,15 +53,13 @@ svg{
     margin-top:20px;
   }
   .filters-submit-btn {
-    margin-top: 50px;
+    margin-top: 30px;
   }
 }
 
-
-
 .modal-body{
-  height: 100vh;
-  margin-top: 35px;
+  height: fit-content;
+  margin-top: 0;
   background-color: $main-bg;
 
   label{

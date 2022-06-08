@@ -4,7 +4,7 @@
       <div class="header-home" style="background-image: url(https://res.cloudinary.com/lucas-vittaz/image/upload/v1654117576/development/Header_vwebch.png)">
         <div class="meteo d-flex flex-column" data-controller="meteo"  data-meteo-api-key-value="<%= ENV['METEO_KEY'] %>">
         <div class="meteo-wrap d-flex align-items-center">
-          <div class="meteo-degree"></div>
+          <p class="meteo-degree"></p>
           <div class="meteo-icons"></div>
         </div>
           <p class="text-justify meteo-value" data-meteo-target="injectMeteo"></p>
@@ -21,55 +21,54 @@
         </div>
         <div class="row">
           <div class="col d-flex justify-content-center">
-              <%= form_tag plants_path, method: :get, :class => 'd-flex search-bar input' do %>
-                  <%= text_field_tag :query,
-                      params[:query],
-                      class: "form-control input-search-home",
-                      placeholder: "Look for a plant"%>
+            <%= form_tag plants_path, method: :get, :class => 'd-flex search-bar input' do %>
+              <%= text_field_tag :query,
+                  params[:query],
+                  class: "form-control input-search-home",
+                  placeholder: "Look for a plant"%>
 
-                    <button type="submit" class="search-btn">
-                      <i class="fas fa-search"></i>
-                    </button>
-                <% end %>
+              <button type="submit" class="search-btn">
+                <i class="fas fa-search"></i>
+              </button>
+            <% end %>
           </div>
         </div>
-        <div class="row">
-          <div class="col d-flex justify-content-center">
+        <div class="logo-wrapper">
+          <div class="col d-flex justify-content-center home-empty">
             <p>Find popular plants, apply filters and more</p>
           </div>
-        </div>
-        <div class="col d-flex justify-content-center">
-          <i class="fas fa-spa fa-10x"></i>
-        </div>
-      </div>
-
-    </div>
-<% else %>
-  <div id="home-visitor">
-    <div class="wrapper">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col">
-            <h1>Feed my plant</h1>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <h2>Stop your plants<br>from dying</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col d-flex justify-content-center">
-            <a href="/users/sign_in" class="dark-btn text-decoration-none">Log In</a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col d-flex justify-content-center">
-            <a href="/users/sign_up" class="light-btn text-decoration-none">Sign up</a>
+          <div class="col d-flex justify-content-center logo-home">
+            <i class="fas fa-spa fa-10x"></i>
           </div>
         </div>
       </div>
     </div>
-  </div>
-<% end %>
+  <% else %>
+    <div id="home-visitor">
+      <div class="wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col">
+              <h1>Feed my plant</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h2>Stop your plants<br>from dying</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col d-flex justify-content-center">
+              <a href="/users/sign_in" class="dark-btn text-decoration-none">Log In</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col d-flex justify-content-center">
+              <a href="/users/sign_up" class="light-btn text-decoration-none">Sign up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>
