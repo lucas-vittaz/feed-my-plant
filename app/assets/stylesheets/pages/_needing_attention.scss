@@ -55,7 +55,10 @@
 
   .gauge {
     // padding-right: 200px;
-    transform: translate(130px,  -100px);
+    animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transform: translate(145px,  -100px);
 
     svg text:last-child {
       font-size: 15px;
@@ -64,3 +67,12 @@
     }
 
   }
+
+  @keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

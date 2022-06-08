@@ -5,7 +5,7 @@ class DevicesController < ApplicationController
     # Update le user plant /// ==> UserPlant qui est pairé.
     # // on a access au params d'external id
     # params[:telemetry]
-    device = Device.find(external_id: params[:external_id])
+    device = Device.find_or_create_by(external_id: params[:external_id])
     user_plant = device.user_plant
     user_plant.update(latest_hygrometry: params[:sensor])
 
