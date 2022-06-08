@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   namespace :my_garden do
     resources :plants, only: [] do
       resources :user_plants, only: [:create, :update]
-      resources :devices, only:[:new, :create]
     end
 
     resources :user_plants, only: [:index, :show, :destroy] do
@@ -15,8 +14,16 @@ Rails.application.routes.draw do
 
       member do
         get :sensor_hygrometry
+        patch :pair_device
       end
     end
   end
+
+  resources :devices, param: :external_id do
+    member do
+      get :telemetry
+    end
+  end
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

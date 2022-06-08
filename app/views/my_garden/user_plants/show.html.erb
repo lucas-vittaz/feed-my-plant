@@ -1,6 +1,38 @@
 <div id="plant-show">
   <div style="background-image: url(<%= cl_image_path(@user_plant.plant.photo.key, crop: :fill) %>);" class="plant-img">
       <a href="/my_garden/user_plants "><%= inline_svg_tag("back-dark", :width=>40, :height=>40) %></a>
+
+      <button type="button" class="device-pairing-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Pair a sensor
+      </button>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Pair a sensor</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <%= form_with url: pair_device_my_garden_user_plant_path(@user_plant), method: :patch, :class => 'd-flex flex-column align-items-center'  do |f| %>
+                <%= f.select "device[external_id]", Device.pluck(:external_id), include_blank: false %>
+                <%= f.submit :class => 'dark-btn'%>
+              <% end %>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    
+
+
   </div>
 
       <div class="container">

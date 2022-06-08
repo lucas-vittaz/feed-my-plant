@@ -428,3 +428,18 @@ user_plant9 = UserPlant.create(
   latest_hygrometry: 700,
   room: :patio
 )
+
+Device.create!(
+  external_id: "00999433",
+  latest_hygrometry: 0
+)
+
+Device.create!(
+  external_id: "42343263",
+  latest_hygrometry: 500
+)
+
+Device.create!(
+  external_id: "04230423",
+  latest_hygrometry: 250
+)
