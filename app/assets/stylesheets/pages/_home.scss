@@ -5,6 +5,9 @@
     background-size: cover;
     height: 100vh;
   }
+  .meteo-degree{
+    font-family: Jost;
+  }
 
   h1{
   color: white;
@@ -39,13 +42,14 @@
         color: white;
       }
       p{
-        font-size: 1rem;
+        font-size: 23px;
         font-family: $body-font;
         font-weight: normal;
+        margin: 0;
       }
     }
     .fas{
-      margin-left: 50px;
+      margin-left: 20px;
       margin-bottom: 110px;
       color: white ;
     }
@@ -80,5 +84,8 @@
 
   p{
     margin-top: 15px;
+  }
+  .fa-spa{
+    color: hsla(87, 35%, 17%, 0.07);
   }
 }
