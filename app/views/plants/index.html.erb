@@ -1,7 +1,9 @@
-<a href="/"><%= inline_svg_tag("quit-dark.svg", :width=>40, :height=>40) %></a>
+<div class="d-flex align-items-center justify-content-center mt-3">
+  <h1 class="h1-search">Search</h1>
+</div>
 
-<h1 class="h1-search">Search</h1>
 <p class="text-center">Select a plant to add to your garden</p>
+
 <div data-controller="search-plants">
   <div class="container" >
     <div class="d-flex justify-content-center align-items-center">
@@ -90,9 +92,9 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h1>Choose your filters</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="d-flex align-items-center justify-content-center mt-3">
+        <h1 class="h1-search filter-title">Choose your filters</h1>
+        <button type="button" class="btn-close logo-svg" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
           <%= form_with method: :get, class: 'filters-form', url: plants_path do |f| %>

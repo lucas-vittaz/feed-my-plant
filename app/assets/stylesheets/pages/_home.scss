@@ -38,17 +38,34 @@
 #home-sign-in{
   .header-home{
     .meteo{
-      .fa-sun{
-        color: white;
+      .meteo-degree {
+        font-size: 35px;
+        font-weight: bolder;
       }
+
       p{
-        font-size: 23px;
+        font-size: 16px;
+        font-style: italic;
         font-family: $body-font;
         font-weight: normal;
         margin: 0;
       }
+      .meteo-value {
+        position: absolute;
+        bottom: 4rem;
+      }
     }
+
+    .link-header-right {
+      flex-grow: 1;
+      display: flex;
+      justify-content: end;
+      padding: 2rem;
+      text-decoration: none;
+    }
+
     .fas{
+      font-size: 25px;
       margin-left: 20px;
       margin-bottom: 110px;
       color: white ;
@@ -72,14 +89,14 @@
   .input-search-home {
     background-color:white;
     width: 280px;
-    border-radius: 7px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
   }
   .search-btn{
-    position: absolute;
-    top: 445px;
-    right: 55px;
-    border-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
     padding-right: 5px !important;
+    height: unset;
   }
 
   p{
@@ -87,5 +104,18 @@
   }
   .fa-spa{
     color: hsla(87, 35%, 17%, 0.07);
+  }
+  .logo-wrapper {
+    position: relative;
+  }
+  .home-empty {
+    position: absolute;
+    bottom: -10rem;
+    width: 100%;
+  }
+  .logo-home {
+    position: absolute;
+    width: 100%;
+    margin: 2rem auto;
   }
 }
