@@ -7,11 +7,14 @@
   font-family: $headers-font;
   font-weight: bold;
   margin-bottom: 20px;
-
+  svg{
+    margin-top: 40px;
+    margin-left: 10px;
+  }
   h1{
     padding-top: 0px;
     padding-right: 50px;
-    padding-left: 62px;
+    padding-left: 80px;
     color: white;
     font-family: 'B';
     font-size: 45px;

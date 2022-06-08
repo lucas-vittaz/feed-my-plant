@@ -5,6 +5,10 @@
   }
 
 }
+svg{
+  margin-top: 40px;
+  margin-left: 20px;
+}
 .reset-filter{
   color: grey!important;
 }
@@ -32,7 +36,7 @@
 }
 
 .modal-content {
-  background-color: $light-gray;
+  background-color: $main-bg;
 }
 
 .filters-form {
@@ -48,14 +52,26 @@
   }
 }
 
+
+
 .modal-body{
   height: 100vh;
   margin-top: 35px;
-  background-color: $light-gray;
+  background-color: $main-bg;
+
+  label{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
 
   .filter-checkbox {
     position: absolute;
     transform: scale(0);
+
+  }
+
+  svg{
+    margin-top: 0;
+    margin-left: 0;
   }
 
   .filter-checkbox + label{

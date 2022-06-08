@@ -11,6 +11,10 @@ Rails.application.routes.draw do
       collection do
         get :needing_attention
       end
+       member do
+        get :sensor_hygrometry
+        patch :pair_device
+      end
     end
   end
   resources :devices, param: :external_id, only: [] do
