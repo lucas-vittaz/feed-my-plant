@@ -54,7 +54,7 @@ export default class extends Controller {
         let temps = data.current.weather[0].description;
         console.log(temps);
 
-        let temperature = `${Math.trunc(data.current.temp)} °C`;
+        let temperature = `${Math.trunc(data.current.temp)} °c`;
         document.querySelector(".meteo-degree").innerHTML = temperature;
         document.querySelector(
           ".meteo-value"

@@ -5,6 +5,9 @@
     background-size: cover;
     height: 100vh;
   }
+  .meteo-degree{
+    font-family: Jost;
+  }
 
   h1{
   color: white;
@@ -39,7 +42,7 @@
         color: white;
       }
       p{
-        font-size: 26px;
+        font-size: 23px;
         font-family: $body-font;
         font-weight: normal;
         margin: 0;
