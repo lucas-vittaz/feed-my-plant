@@ -5,10 +5,10 @@ export default class extends Controller {
   static targets = ["form", "input", "list"]
 
   connect() {
-
   }
 
-  update() {
+  update(event) {
+    console.log(event.currentTarget)
     if (this.inputTarget.value == '') {
       return
     }
@@ -16,6 +16,7 @@ export default class extends Controller {
     fetch(url, { headers: { "Accept": "text/plain" } })
       .then(response => response.text())
       .then((data) => {
+        console.log(data)
         this.listTarget.outerHTML = data
       })
   }
