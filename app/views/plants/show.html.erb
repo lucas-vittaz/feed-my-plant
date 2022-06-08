@@ -1,7 +1,7 @@
 <div id="plant-show">
 <% @plant = @plant %>
   <div style="background-image: url(<%= cl_image_path(@plant.photo.key, crop: :fill) %>);" class="plant-img">
-      <a href="/plants"><i class="fas fa-angle-left fa-3x"></i></a>
+      <a href="/plants"><%= inline_svg_tag("back-dark.svg", :width=>40, :height=>40) %></a>
   </div>
 
     <div class="container">
@@ -24,7 +24,7 @@
           <p><%= @plant.light_level%></p>
         </div>
         <div class="plant-card d-flex flex-column justify-content-center align-items-center">
-          <span><i class="fas fa-hand-holding fa-2x"></i></span>
+          <span><i class="fas fa-seedling fa-2x"></span>
           <p><%= @plant.care_level%></p>
         </div>
       </div>
@@ -64,6 +64,7 @@
                     <%= f.label room, class:"filter" do %>
                       <%= inline_svg_tag("#{room.to_s}.svg", :width=>40, :height=>40) %>
                     <% end %>
+                    <%= room.to_s.humanize %>
                   </div>
                 <% end %>
               </div>

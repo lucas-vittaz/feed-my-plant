@@ -5,6 +5,10 @@
     background-size: cover;
     background-position: center;
   }
+  svg{
+    margin-top: 40px;
+    margin-left: 10px;
+  }
   .plant-name{
     border: 1px transparent solid;
     border-radius: 7px;
@@ -24,20 +28,22 @@
     h2{
       font-family: Jost;
       font-weight: bold;
+      font-size: 24px;
       font-style: italic;
-      color: $medium-green;
+      color: $h2-green;
       margin-left: 24px;
       margin-bottom: 1rem;
     }
   }
 
   .container-plant-scroll{
-    background-color: $light-gray;
+    background-color: $main-bg;
     overflow-x: auto;
     overflow-y: hidden;
     display: flex;
     margin-left: 10px;
     margin-top: 30px;
+    padding: 10px;
   }
 
   .container-plant-scroll::-webkit-scrollbar{
@@ -58,6 +64,7 @@
     justify-content: center;
     line-height: 24px;
     padding-top: 25px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
     p {
       font-weight: bold;
@@ -71,9 +78,12 @@
     background-color: white;
     padding: 1rem;
     margin-top: 20px;
+    color: $dark-green;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
     h3{
       font-family: Jost;
+      color: $dark-green;
     }
   }
   .dark-btn{
@@ -93,7 +103,7 @@
   color: $medium-green;
   margin: 0!important;
 }
-.fa-hand-holding{
+.fa-seedling{
   color: $medium-green;
   margin: 0!important;
 }
