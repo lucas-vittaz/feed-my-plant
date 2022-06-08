@@ -6,7 +6,7 @@ class DevicesController < ApplicationController
     user_plant = UserPlant.last
     user_plant.update(latest_hygrometry: params[:sensor])
 
-    head:ok
+    head :ok
   end
 
 

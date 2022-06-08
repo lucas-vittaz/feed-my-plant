@@ -45,7 +45,10 @@
           <%= cl_image_tag user_plant.plant.photo.key, width: 150, height: 150, crop: :fill, :style => "border-radius: 10px"%>
           <div class="plant-infos">
             <h2><strong><%= user_plant.plant.name %></strong></h2>
-            <p><%= user_plant.plant.description.truncate(140) %></p>
+            <p><strong><%= user_plant.room.capitalize.humanize %></strong><br>Added on <i><%= user_plant.created_at.strftime("%a, %d %b %Y") %></i><br>Updated at <i><%= user_plant.updated_at.strftime("%H:%M") %></i></p>
+            <div  data-controller="gauge" data-gauge-latest-hygrometry-value="<%= user_plant.latest_hygrometry%>" data-gauge-min-max-hygrometry-value="<%= [user_plant.plant.min_baseline_hygrometry,user_plant.plant.max_baseline_hygrometry] %>">
+              <div class="gauge2"data-gauge-target="chart"></div>
+            </div>
           </div>
         </div>
       <% end %>

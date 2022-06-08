@@ -6,14 +6,14 @@ class MyGarden::UserPlantsController < ApplicationController
     @user_plants = @user_plants.where(room: params[:room]) if params[:room].present? #filter plant by room
   end
 
-  def sensor_hygrometry
-    p params[:sensor]
+  # def sensor_hygrometry
+  #   p params[:sensor]
 
-    user_plant = UserPlant.last
-    user_plant.update(latest_hygrometry: params[:sensor]) 
+  #   user_plant = UserPlant.last
+  #   user_plant.update(latest_hygrometry: params[:sensor])
 
-    head :ok
-  end
+  #   head :ok
+  # end
 
   def show
     @user_plant = UserPlant.find(params[:id])
@@ -47,7 +47,7 @@ class MyGarden::UserPlantsController < ApplicationController
   end
 
   def needing_attention
-    @plants_attention = UserPlant.select{|user_plant| (user_plant.latest_hygrometry < user_plant.plant.baseline_hygrometry)}
+    @plants_attention = UserPlant.select{|user_plant| (user_plant.latest_hygrometry < user_plant.plant.min_baseline_hygrometry ||user_plant.latest_hygrometry > user_plant.plant.max_baseline_hygrometry)}
   end
 
 
