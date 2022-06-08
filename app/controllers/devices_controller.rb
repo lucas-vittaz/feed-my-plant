@@ -7,7 +7,7 @@ class DevicesController < ApplicationController
     # params[:telemetry]
     device = Device.find_or_create_by(external_id: params[:external_id])
     user_plant = device.user_plant
-    user_plant.update(latest_hygrometry: params[:sensor])
+    user_plant.update!(latest_hygrometry: params[:sensor])
 
     head :ok
   end
