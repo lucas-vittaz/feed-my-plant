@@ -285,8 +285,8 @@ plant_17 = Plant.create(
   scientific_name: "Ficus Altissima XL",
   description: "The Ficus Altissima is a tree of the large fig family. Altissima refers to the height that this magnificent plant can reach in its natural environment: 30 metres! Native to South Asia, its beautiful ovoid leaves in shades of yellow and green will look great in your home. It is the perfect plant if you want to add a touch of elegance to your living room, kitchen or veranda.",
   baseline_hygrometry: 500,
-  min_baseline_hygrometry: 200,
-  max_baseline_hygrometry: 400,
+  min_baseline_temperature: 18,
+  max_baseline_temperature: 27,
   min_baseline_hygrometry: 300,
   max_baseline_hygrometry: 500,
   light_level: "Medium",
@@ -427,4 +427,19 @@ user_plant9 = UserPlant.create(
   plant: plant_10,
   latest_hygrometry: 700,
   room: :patio
+)
+
+Device.create!(
+  external_id: "00999433",
+  latest_hygrometry: 0
+)
+
+Device.create!(
+  external_id: "42343263",
+  latest_hygrometry: 500
+)
+
+Device.create!(
+  external_id: "04230423",
+  latest_hygrometry: 250
 )

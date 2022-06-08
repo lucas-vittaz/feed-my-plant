@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_06_081943) do
+ActiveRecord::Schema.define(version: 2022_06_07_152407) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,13 @@ ActiveRecord::Schema.define(version: 2022_06_06_081943) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "devices", force: :cascade do |t|
+    t.string "external_id"
+    t.integer "latest_hygrometry"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "plants", force: :cascade do |t|
     t.string "name"
     t.integer "baseline_hygrometry"
@@ -67,6 +74,8 @@ ActiveRecord::Schema.define(version: 2022_06_06_081943) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "latest_hygrometry", default: 0
+    t.bigint "device_id"
+    t.index ["device_id"], name: "index_user_plants_on_device_id"
     t.index ["plant_id"], name: "index_user_plants_on_plant_id"
     t.index ["user_id"], name: "index_user_plants_on_user_id"
   end
@@ -86,6 +95,7 @@ ActiveRecord::Schema.define(version: 2022_06_06_081943) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "user_plants", "devices"
   add_foreign_key "user_plants", "plants"
   add_foreign_key "user_plants", "users"
 end
