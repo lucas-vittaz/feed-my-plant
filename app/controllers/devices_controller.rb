@@ -2,11 +2,14 @@ class DevicesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:telemetry]
 
   def telemetry
+    # Update le user plant /// ==> UserPlant qui est pairé.
+    # // on a access au params d'external id
     # params[:telemetry]
-    user_plant = UserPlant.last
+    device = Device.find(external_id: params[:external_id])
+    user_plant = device.user_plant
     user_plant.update(latest_hygrometry: params[:sensor])
 
-    head:ok
+    head :ok
   end
 
   def create
@@ -18,10 +21,10 @@ class DevicesController < ApplicationController
       render plant_path
     end
   end
-  
-  def telemetry
-    Device.find_or_create_by(external_id: params[:external_id])
-  end
+
+  # def telemetry
+  #   Device.find_or_create_by(external_id: params[:external_id])
+  # end
 
   private
 
