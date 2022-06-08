@@ -35,8 +35,10 @@ plant_1 = Plant.create(
   care_level: "beginner",
   water_need: "low"
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941775/development/kentiapalm_kgfbz9.webp")
+
+file = URI.open("https://flowy.fr/products/palmier-kentia?_pos=1&_sid=651307c3e&_ss=r&variant=39290028064881#imgZoomModal")
 plant_1.photo.attach(io: file, filename: 'kentiapalm.jpg', content_type: 'image/jpg')
+
 puts " Creating Plants 1"
 plant_2 = Plant.create(
   name: "Bamboo Orchid",
@@ -51,8 +53,9 @@ plant_2 = Plant.create(
   care_level: "beginner",
   water_need:"low"
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941899/development/orchid_celue6.webp")
+file = URI.open("https://flowy.fr/products/orchidee-bambou-rose?_pos=1&_sid=ba60b0950&_ss=r&variant=32200945369201#imgZoomModal")
 plant_2.photo.attach(io: file, filename: 'bambooorchid.jpg', content_type: 'image/jpg')
+
 puts " Creating Plants 2"
 plant_3 = Plant.create(
   name: "Swiss Cheese",
@@ -67,8 +70,9 @@ plant_3 = Plant.create(
   care_level: "beginner",
   water_need:"low"
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653942050/development/monstera_ggq4pp.webp")
+file = URI.open("https://flowy.fr/products/monstera-xl?_pos=2&_sid=f98320b10&_ss=r&variant=39289949814897#imgZoomModal")
 plant_3.photo.attach(io: file, filename: 'monstera.jpg', content_type: 'image/jpg')
+
 puts " Creating Plants 3"
 plant_4 = Plant.create(
   name: "Aloe Vera",
@@ -83,8 +87,9 @@ plant_4 = Plant.create(
   care_level: "beginner",
   water_need:"low"
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941767/development/aloevera_utvt74.webp")
+file = URI.open("https://flowy.fr/products/aloe-vera?_pos=1&_sid=f96853180&_ss=r&variant=39289934610545#imgZoomModal")
 plant_4.photo.attach(io: file, filename: 'aloevera.jpg', content_type: 'image/jpg')
+
 puts " Creating Plants 4"
 plant_5 = Plant.create(
   name: "Calathea ornata",
@@ -99,8 +104,9 @@ plant_5 = Plant.create(
   care_level: "beginner",
   water_need:"low"
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941853/development/calathea_jh8csh.webp")
+file = URI.open("https://flowy.fr/products/calathea-oppenheimiana?_pos=1&_sid=7107754fa&_ss=r&variant=39289478217841#imgZoomModal")
 plant_5.photo.attach(io: file, filename: 'calatha.jpg', content_type: 'image/jpg')
+
 puts " Creating Plants 5"
 plant_6 = Plant.create(
   name: "Cider Gum",
@@ -115,8 +121,9 @@ plant_6 = Plant.create(
   care_level: "beginner",
   water_need:"low"
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941859/development/eucalyptus_nk6jhi.webp")
+file = URI.open("https://flowy.fr/products/eucalyptus-bush?_pos=1&_sid=e4dc00250&_ss=r#imgZoomModal")
 plant_6.photo.attach(io: file, filename: 'cidergum.jpg', content_type: 'image/jpg')
+
 puts " Creating Plants 6"
 plant_7 = Plant.create(
   name: "Anthurium",
@@ -131,8 +138,9 @@ plant_7 = Plant.create(
   care_level: "beginner",
   water_need:"low"
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941782/development/anthurium_qa16s7.webp")
+file = URI.open("https://flowy.fr/products/ahturium-pink?_pos=1&_sid=6f976e912&_ss=r&variant=39293600890993#imgZoomModal")
 plant_7.photo.attach(io: file, filename: 'anthurium.jpg', content_type: 'image/jpg')
+
 puts " Creating Plants 7"
 plant_8 = Plant.create(
   name: "Bird of Paradise",
@@ -148,8 +156,9 @@ plant_8 = Plant.create(
   water_need:"medium"
 
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937977/development/Bird_Strelizia_mztnng.webp")
+file = URI.open("https://flowy.fr/products/oiseau-de-paradis?_pos=1&_sid=bf6d288e0&_ss=r&variant=39260864741489#imgZoomModal")
 plant_8.photo.attach(io: file, filename: '', content_type: 'image/jpg')
+
 puts " Creating Plants 8"
 plant_9 = Plant.create(
   name: "Calathea triostar",
@@ -165,8 +174,9 @@ plant_9 = Plant.create(
   water_need:"medium"
 
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937977/development/Calathea_Triostar_rrln5e.webp")
+file = URI.open("https://flowy.fr/products/calathea-oppenheimiana?_pos=1&_sid=dedc256b2&_ss=r&variant=32244704444529#imgZoomModal")
 plant_9.photo.attach(io: file, filename: '', content_type: 'image/jpg')
+
 puts " Creating Plants 9"
 plant_10 = Plant.create(
   name: "Orchid Phalaenopsis",
@@ -181,8 +191,9 @@ plant_10 = Plant.create(
   care_level: "beginner",
   water_need:"medium"
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937977/development/Orchidee_Phalaenopsis_sibphz.webp")
+file = URI.open("https://flowy.fr/products/orchidee-phalaenopsis-multiflora-rose?_pos=1&_sid=67425311d&_ss=r&variant=39289947717745#imgZoomModal")
 plant_10.photo.attach(io: file, filename: '', content_type: 'image/jpg')
+
 puts " Creating Plants 10"
 plant_11 = Plant.create(
   name: "Philodendron Monstera Deliciosa",
@@ -197,8 +208,9 @@ plant_11 = Plant.create(
   care_level: "beginner",
   water_need:"medium"
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937978/development/Philodendron_Monstera_wlazop.webp")
+file = URI.open("https://flowy.fr/products/monstera?_pos=1&_sid=bade66580&_ss=r&variant=39289944277105#imgZoomModal")
 plant_11.photo.attach(io: file, filename: '', content_type: 'image/jpg')
+
 puts " Creating Plants 11"
 plant_12 = Plant.create(
   name: "Dracaena Marginata",
@@ -213,8 +225,9 @@ plant_12 = Plant.create(
   care_level: "beginner",
   water_need:"medium"
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937977/development/Dracaena_Marginata_wocecp.webp")
+file = URI.open("https://flowy.fr/products/dracanea-marginata?_pos=1&_sid=6fff47b17&_ss=r&variant=39290035699825#imgZoomModal")
 plant_12.photo.attach(io: file, filename: '', content_type: 'image/jpg')
+
 puts " Creating Plants 12"
 plant_13 = Plant.create(
   name: "Snake plant",
@@ -229,8 +242,9 @@ plant_13 = Plant.create(
   care_level: "beginner",
   water_need:"medium"
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937978/development/Snake_Sanseviera_qyusot.webp")
+file = URI.open("https://flowy.fr/products/sansevieria-laurentii-1?_pos=1&_sid=34f80b5c8&_ss=r&variant=39289940574321#imgZoomModal")
 plant_13.photo.attach(io: file, filename: '', content_type: 'image/jpg')
+
 puts " Creating Plants 13"
 plant_14 = Plant.create(
   name: "Orange tree",
@@ -245,8 +259,9 @@ plant_14 = Plant.create(
   care_level: "Medium",
   water_need:"Medium"
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653937978/development/Orange_tree_rq5kme.webp")
+file = URI.open("https://flowy.fr/products/calamondin?_pos=1&_sid=788c7fe88&_ss=r&variant=39289987006577#imgZoomModal")
 plant_14.photo.attach(io: file, filename: '', content_type: 'image/jpg')
+
 puts " Creating Plants 14"
 plant_15 = Plant.create(
   name: "Banana tree",
@@ -261,8 +276,9 @@ plant_15 = Plant.create(
   care_level: "Beginner",
   water_need:"High"
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Bananier_kg4daa.webp")
+file = URI.open("https://flowy.fr/products/bananier?_pos=1&_sid=b33077816&_ss=r&variant=39289931432049#imgZoomModal")
 plant_15.photo.attach(io: file, filename: 'Bananatree_zgtl5y', content_type: 'image/jpg')
+
 puts " Creating Plants 15"
 plant_16 = Plant.create(
   name: "Elephant Ear",
@@ -277,8 +293,9 @@ plant_16 = Plant.create(
   care_level: "Intermediate",
   water_need:"High"
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Potodora_d4fkui.webp")
+file = URI.open("https://flowy.fr/products/alocasia-portadora-grande-plante?variant=39770950893681#imgZoomModal")
 plant_16.photo.attach(io: file, filename: 'elephant_ears_sizl7y', content_type: 'image/jpg')
+
 puts " Creating Plants 16"
 plant_17 = Plant.create(
   name: "Ficus",
@@ -294,8 +311,9 @@ plant_17 = Plant.create(
   water_need:"High"
 
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Altissima_pzarma.webp")
+file = URI.open("https://flowy.fr/products/ficus-altissima?_pos=2&_sid=135868c24&_ss=r#imgZoomModal")
 plant_17.photo.attach(io: file, filename: 'ficus_yoeug9', content_type: 'image/jpg')
+
 puts " Creating Plants 17"
 plant_18 = Plant.create(
   name: "Pachiras",
@@ -310,8 +328,9 @@ plant_18 = Plant.create(
   care_level: "Beginner",
   water_need:"High"
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Pachiraaquatiqua_oathel.webp")
+file = URI.open("https://flowy.fr/products/pachira?_pos=1&_sid=4a30a2d21&_ss=r&variant=39289935364209#imgZoomModal")
 plant_18.photo.attach(io: file, filename: 'Pachiraaquatiqua_myp80p', content_type: 'image/jpg')
+
 puts " Creating Plants 18"
 plant_19 = Plant.create(
   name: "Rosemary",
@@ -326,8 +345,9 @@ plant_19 = Plant.create(
   care_level: "Beginner",
   water_need:"High"
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Romarin_dagj6l.webp")
+file = URI.open("https://flowy.fr/collections/all/products/romarin-romarinus?variant=39760430366833#imgZoomModal")
 plant_19.photo.attach(io: file, filename: 'Romarin_ki6k3k', content_type: 'image/jpg')
+
 puts " Creating Plants 19"
 plant_20 = Plant.create(
   name: "Pothos",
@@ -342,8 +362,9 @@ plant_20 = Plant.create(
   care_level: "Beginner",
   water_need:"High"
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Pothos_ze9ale.webp")
+file = URI.open("https://flowy.fr/products/photos?_pos=1&_sid=7e5677a60&_ss=r&variant=39335545438321#imgZoomModal")
 plant_20.photo.attach(io: file, filename: 'Pothos_dumg86', content_type: 'image/jpg')
+
 puts " Creating Plants 20"
 plant_21 = Plant.create(
   name: "Spider plant",
@@ -358,8 +379,9 @@ plant_21 = Plant.create(
   care_level: "Beginner",
   water_need:"High"
 )
-file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1653941931/development/Bonnie_iqjao1.webp")
+file = URI.open("https://flowy.fr/products/chlorophytum-bonnie?_pos=1&_sid=99bcd3b6e&_ss=r&variant=39335597113457#imgZoomModal")
 plant_21.photo.attach(io: file, filename: 'Bonnie_r3sf1e', content_type: 'image/jpg')
+
 puts " Creating user plant 1"
 user_plant1 = UserPlant.create!(
   user: user_1,
