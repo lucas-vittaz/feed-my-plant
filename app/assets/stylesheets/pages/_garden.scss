@@ -72,18 +72,7 @@
 }
 
 
-.gauge2 {
-  animation: fadeInAnimation ease 1.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  transform: translate(145px,  -100px);
 
-  svg text:last-child {
-    font-size: 15px;
-    transform: translate(-10px, 0px);
-
-  }
-}
 
 @keyframes fadeInAnimation {
   0% {
