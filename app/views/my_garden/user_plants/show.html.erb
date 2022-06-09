@@ -33,6 +33,7 @@
     <div class="plant-name">
       <h1><%= @user_plant.plant.name %></h1>
       <h2><%= @user_plant.plant.scientific_name %></h2>
+      <h3>Added on <i><%= @user_plant.created_at.strftime("%a, %d %b %Y") %></i></h3>
     </div>
     <div class="container-plant-scroll">
       <div class="plant-card d-flex flex-column justify-content-center align-items-center">
