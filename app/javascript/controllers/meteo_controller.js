@@ -58,7 +58,7 @@ export default class extends Controller {
         document.querySelector(".meteo-degree").innerHTML = temperature;
         document.querySelector(
           ".meteo-value"
-        ).innerHTML = `Nantes : ${day} ${dayInt}th ${month}`;
+        ).innerHTML = `Nantes ${day} ${dayInt}th ${month}`;
 
         document.querySelector(
           ".meteo-icons"
