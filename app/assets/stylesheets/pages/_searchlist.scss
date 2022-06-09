@@ -67,6 +67,16 @@
   margin-top: 0;
   background-color: $main-bg;
 
+  .modal-style {
+    h5 {
+      color: black;
+      font-family: $body-font;
+      font-size: 40px;
+      text-align: center;
+    }
+    background-color: $main-bg;
+  }
+
   label{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   }
@@ -74,7 +84,6 @@
   .filter-checkbox {
     position: absolute;
     transform: scale(0);
-
   }
 
   svg{
