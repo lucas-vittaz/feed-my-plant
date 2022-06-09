@@ -45,31 +45,54 @@
       transform: translate(0px, -8px);
     }
   }
-}
-
-.plant-cards {
-  display: flex;
-  flex-direction: column;
-
-  .plant-card-single {
-    width: 100%;
-    border-radius: 10px;
+  .plant-cards {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin: 15px auto;
-    background-color: $light-green;
-    padding: 10px;
-    height: 90px;
-  }
-  .plant-infos{
-    p {
-      font-family: $body-font;
-      font-size: 12px;
-      transform: translate(2px, -9px);
+    flex-direction: column;
+
+    .plant-card-single {
+      width: 100%;
+      border-radius: 10px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin: 15px auto;
+      background-color: $light-green;
+      padding: 10px;
+      height: 90px;
+    }
+    .plant-infos{
+      p {
+        font-family: $body-font;
+        font-size: 12px;
+        transform: translate(2px, -9px);
+      }
     }
   }
 }
+
+// .plant-cards {
+//   display: flex;
+//   flex-direction: column;
+
+//   .plant-card-single {
+//     width: 100%;
+//     border-radius: 10px;
+//     display: flex;
+//     justify-content: flex-start;
+//     align-items: flex-start;
+//     margin: 15px auto;
+//     background-color: $light-green;
+//     padding: 10px;
+//     height: 90px;
+//   }
+//   .plant-infos{
+//     p {
+//       font-family: $body-font;
+//       font-size: 12px;
+//       transform: translate(2px, -9px);
+//     }
+//   }
+// }
 
 
 

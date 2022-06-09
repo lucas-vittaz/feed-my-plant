@@ -172,7 +172,7 @@ plant_9 = Plant.create(
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 400,
   light_level: "high",
-  care_level: "beginner",
+  care_level: "intermediate",
   water_need:"medium"
 
 )
@@ -190,7 +190,7 @@ plant_10 = Plant.create(
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 400,
   light_level: "medium",
-  care_level: "beginner",
+  care_level: "intermediate",
   water_need:"medium"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1654684982/development%20/OrchideePhalaenopsismultiflorarose_raxy7x.webp")
@@ -207,7 +207,7 @@ plant_11 = Plant.create(
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 400,
   light_level: "high",
-  care_level: "beginner",
+  care_level: "intermediate",
   water_need:"medium"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1654684982/development%20/PhilodendronMonsteraDeliciasa_loqppy.webp")
@@ -224,7 +224,7 @@ plant_12 = Plant.create(
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 400,
   light_level: "high",
-  care_level: "beginner",
+  care_level: "intermediate",
   water_need:"medium"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1654684982/development%20/DracaenaMarginata_wfbjvu.webp")
@@ -241,7 +241,7 @@ plant_13 = Plant.create(
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 400,
   light_level: "high",
-  care_level: "beginner",
+  care_level: "intermediate",
   water_need:"medium"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1654684981/development%20/Sansevierialaurentiilanguedebellemere_yycswe.webp")
@@ -258,7 +258,7 @@ plant_14 = Plant.create(
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 400,
   light_level: "High",
-  care_level: "Medium",
+  care_level: "intermediate",
   water_need:"Medium"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1654684981/development%20/CalamondinCalamasiOrangerd_interieur_pkxl9b.webp")
@@ -275,7 +275,7 @@ plant_15 = Plant.create(
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 400,
   light_level: "High",
-  care_level: "Beginner",
+  care_level: "advanced",
   water_need:"High"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1654684981/development%20/Bananier_dw9sb4.webp")
@@ -292,7 +292,7 @@ plant_16 = Plant.create(
   min_baseline_hygrometry: 220,
   max_baseline_hygrometry: 700,
   light_level: "Low",
-  care_level: "Intermediate",
+  care_level: "advanced",
   water_need:"High"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1654684982/development%20/Potodora_mwfa3j.webp")
@@ -309,7 +309,7 @@ plant_17 = Plant.create(
   min_baseline_hygrometry: 300,
   max_baseline_hygrometry: 500,
   light_level: "Medium",
-  care_level: "Beginner",
+  care_level: "advanced",
   water_need:"High"
 
 )
@@ -327,7 +327,7 @@ plant_18 = Plant.create(
   min_baseline_hygrometry: 300,
   max_baseline_hygrometry: 500,
   light_level: "Medium",
-  care_level: "Beginner",
+  care_level: "advanced",
   water_need:"High"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1654684982/development%20/Pachiraaquatiqua_l76iz4.webp")
@@ -344,7 +344,7 @@ plant_19 = Plant.create(
   min_baseline_hygrometry: 300,
   max_baseline_hygrometry: 500,
   light_level: "High",
-  care_level: "Beginner",
+  care_level: "advanced",
   water_need:"High"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1654684981/development%20/Romarin_nrymah.webp")
@@ -361,7 +361,7 @@ plant_20 = Plant.create(
   min_baseline_hygrometry: 300,
   max_baseline_hygrometry: 500,
   light_level: "Medium",
-  care_level: "Beginner",
+  care_level: "advanced",
   water_need:"High"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1654684982/development%20/Pothos_ectm72.webp")
@@ -378,26 +378,43 @@ plant_21 = Plant.create(
   min_baseline_hygrometry: 300,
   max_baseline_hygrometry: 500,
   light_level: "Low",
-  care_level: "Beginner",
+  care_level: "advanced",
   water_need:"High"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1654684981/development%20/Bonnie_ofvoxt.webp")
 plant_21.photo.attach(io: file, filename: 'Bonnie_r3sf1e', content_type: 'image/jpg')
 
+puts " Creating devices"
+device_1 = Device.create!(
+  external_id: "10999433",
+  latest_hygrometry: 10
+)
+
+device_2 = Device.create!(
+  external_id: "14230423",
+  latest_hygrometry: 300
+)
+
+device_3 = Device.create!(
+  external_id: "42343263",
+  latest_hygrometry: 600
+)
+
 puts " Creating user plant 1"
 user_plant1 = UserPlant.create!(
   user: user_1,
-  plant: plant_2,
+  plant: plant_1,
   latest_hygrometry: 10,
-  room: :kitchen
-
+  room: :patio,
+  device: device_1
 )
 puts " Creating user plant 2"
 user_plant2 = UserPlant.create(
   user: user_1,
-  plant: plant_1,
+  plant: plant_8,
   latest_hygrometry: 600,
-  room: :garden
+  room: :parent_room,
+  device: device_2
 
 )
 puts " Creating user plant 3"
@@ -405,7 +422,8 @@ user_plant3 = UserPlant.create!(
   user: user_1,
   plant: plant_13,
   latest_hygrometry: 300,
-  room: :bedroom
+  room: :bedroom,
+  device: device_3
 )
 puts " Creating user plant 4"
 user_plant4 = UserPlant.create(
@@ -413,57 +431,4 @@ user_plant4 = UserPlant.create(
   plant: plant_20,
   latest_hygrometry: 480,
   room: :living_room
-)
-puts " Creating user plant 5"
-user_plant5 = UserPlant.create!(
-  user: user_1,
-  plant: plant_17,
-  latest_hygrometry: 320,
-  room: :bedroom
-)
-puts " Creating user plant 6"
-user_plant6 = UserPlant.create(
-  user: user_1,
-  plant: plant_12,
-  latest_hygrometry: 500,
-  room: :kitchen
-)
-
-puts " Creating user plant 7"
-user_plant7 = UserPlant.create(
-  user: user_1,
-  plant: plant_5,
-  latest_hygrometry: 75,
-  room: :shower_room
-)
-
-puts " Creating user plant 8"
-user_plant8 = UserPlant.create(
-  user: user_1,
-  plant: plant_3,
-  latest_hygrometry: 90,
-  room: :parent_room
-)
-
-puts " Creating user plant 9"
-user_plant9 = UserPlant.create(
-  user: user_1,
-  plant: plant_10,
-  latest_hygrometry: 430,
-  room: :patio
-)
-
-Device.create!(
-  external_id: "00999433",
-  latest_hygrometry: 0
-)
-
-Device.create!(
-  external_id: "42343263",
-  latest_hygrometry: 500
-)
-
-Device.create!(
-  external_id: "04230423",
-  latest_hygrometry: 250
 )
