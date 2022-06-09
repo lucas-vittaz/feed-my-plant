@@ -13,14 +13,11 @@ class Plant < ApplicationRecord
   scope :with_water_level, ->(level) do
     if level == :high
       baseline_hygrometry = 600
-    elsif level == :medium
-
+    elsif
+      level == :medium
+    else
+      level == :low
     end
-
-    # baseline_hygrometry = {
-    #   high:   600,
-    #   medium: 300
-    # }[level]
 
     where('baseline_hygrometry >= :baseline_hygrometry', baseline_hygrometry: baseline_hygrometry)
   end
