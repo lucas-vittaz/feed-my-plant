@@ -259,7 +259,7 @@ plant_14 = Plant.create(
   max_baseline_hygrometry: 400,
   light_level: "high",
   care_level: "intermediate",
-  water_need:"Medium"
+  water_need:"medium"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1654684981/development%20/CalamondinCalamasiOrangerd_interieur_pkxl9b.webp")
 plant_14.photo.attach(io: file, filename: '', content_type: 'image/jpg')
@@ -291,7 +291,7 @@ plant_16 = Plant.create(
   max_baseline_temperature: 27,
   min_baseline_hygrometry: 220,
   max_baseline_hygrometry: 700,
-  light_level: "Low",
+  light_level: "low",
   care_level: "advanced",
   water_need:"high"
 )
@@ -308,7 +308,7 @@ plant_17 = Plant.create(
   max_baseline_temperature: 27,
   min_baseline_hygrometry: 300,
   max_baseline_hygrometry: 500,
-  light_level: "Medium",
+  light_level: "medium",
   care_level: "advanced",
   water_need:"high"
 
@@ -326,7 +326,7 @@ plant_18 = Plant.create(
   max_baseline_temperature: 24,
   min_baseline_hygrometry: 300,
   max_baseline_hygrometry: 500,
-  light_level: "Medium",
+  light_level: "medium",
   care_level: "advanced",
   water_need:"high"
 )
@@ -360,7 +360,7 @@ plant_20 = Plant.create(
   max_baseline_temperature: 25,
   min_baseline_hygrometry: 300,
   max_baseline_hygrometry: 500,
-  light_level: "Medium",
+  light_level: "medium",
   care_level: "advanced",
   water_need:"high"
 )
@@ -377,7 +377,7 @@ plant_21 = Plant.create(
   max_baseline_temperature: 30,
   min_baseline_hygrometry: 300,
   max_baseline_hygrometry: 500,
-  light_level: "Low",
+  light_level: "low",
   care_level: "advanced",
   water_need:"high"
 )
