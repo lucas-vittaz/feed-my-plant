@@ -23,7 +23,7 @@ user_2 = User.create(
   email: 'anto@gmail.com',
   password: "123456"
 )
-
+puts "first plant"
 plant_1 = Plant.create(
   name: "Kentia Palm",
   scientific_name: "Howea Forsteriana",
