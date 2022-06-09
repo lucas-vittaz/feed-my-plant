@@ -49,7 +49,7 @@
               <div  data-controller="gauge" data-gauge-latest-hygrometry-value="<%= user_plant.latest_hygrometry%>" data-gauge-min-max-hygrometry-value="<%= [user_plant.plant.min_baseline_hygrometry,user_plant.plant.max_baseline_hygrometry] %>">
                 <% if !user_plant.device.nil? %>
                   <p><br>Updated at <i><%= user_plant.updated_at.strftime("%H:%M") %></i></p>
-                  <div class="gauge2"data-gauge-target="chart"></div>
+                  <div class="gauge2" data-gauge-target="chart"></div>
                 <% else %>
                   <br>
                   <p> <em> Awaiting sensor pairing </em></p>
