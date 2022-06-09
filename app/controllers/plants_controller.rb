@@ -8,7 +8,11 @@ class PlantsController < ApplicationController
         format.text { render partial: "plants/list", locals: { plants: @plants }, formats: [:html] }
       end
     else
-      @plants = Plant.none
+      puts "#################################################################"
+      @plants = Plant.all unless filtered_params_water? || filtered_params_care? || filtered_params_light?
+
+      @plants = Plant.none if filtered_params_water? || filtered_params_care? || filtered_params_light?
+
       @plants = @plants + Plant.filter_by_water_need("low") if params[:water_level_low]
       @plants = @plants + Plant.filter_by_water_need("medium") if params[:water_level_medium]
       @plants = @plants + Plant.filter_by_water_need("high") if params[:water_level_high]
@@ -23,6 +27,18 @@ class PlantsController < ApplicationController
     end
   end
 
+  def filtered_params_water?
+    params[:water_level_low].present? || params[:water_level_medium].present? || params[:water_level_high].present?
+  end
+
+
+  def filtered_params_care?
+    params[:care_level_beginner].present? || params[:care_level_intermediate].present? || params[:care_level_advanced].present?
+  end
+
+  def filtered_params_light?
+    params[:light_level_low].present? || params[:light_level_medium].present? || params[:light_level_high].present?
+  end
   def show
     @plant = Plant.find(params[:id])
     @user_plant = UserPlant.new
