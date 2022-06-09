@@ -3,7 +3,7 @@ class MyGarden::UserPlantsController < ApplicationController
   def index
     @user_plants = current_user.user_plants # all plants from current user
 
-    @user_plants = @user_plants.where(room: params[:room]) if params[:room].present? #filter plant by room
+    @user_plants = @user_plants.where(room: params[:room]).order(created_at: :asc) if params[:room].present? #filter plant by room
   end
 
   # def sensor_hygrometry
