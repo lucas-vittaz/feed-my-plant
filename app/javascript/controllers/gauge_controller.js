@@ -9,7 +9,6 @@ export default class extends Controller {
   }
 
   connect() {
-    console.log("Hello from our first Stimulus controller")
     // console.log (this.latestHygrometryValue)
     // console.log (this.minMaxHygrometryValue)
     const chartWidth  = 130;
@@ -48,7 +47,8 @@ export default class extends Controller {
       }
     }
 
-
-    GaugeChart.gaugeChart(this.chartTarget, chartWidth, options).updateNeedle(needleValue)
+    if (this.hasChartTarget) {
+      GaugeChart.gaugeChart(this.chartTarget, chartWidth, options).updateNeedle(needleValue)
+    }
   }
 }
