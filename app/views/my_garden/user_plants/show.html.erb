@@ -6,7 +6,9 @@
 
 
 <% if @user_plant.device.nil? %>
-  <button type="button" class="device-pairing-btn" data-bs-toggle="modal" data-bs-target="#pairingModal">Pair a sensor</button>
+  <button type="button" class="device-pairing-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Pair a sensor</button>
+<% else %>
+  <button type="button" class="device-pairing-btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: green">Sensor paired</button>
 <% end %>
 
     <div class="modal fade" id="pairingModal" tabindex="-1" aria-labelledby="pairingModalLabel" aria-hidden="true">
