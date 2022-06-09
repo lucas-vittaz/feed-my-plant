@@ -257,7 +257,7 @@ plant_14 = Plant.create(
   max_baseline_temperature: 25,
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 400,
-  light_level: "High",
+  light_level: "high",
   care_level: "intermediate",
   water_need:"Medium"
 )
@@ -274,9 +274,9 @@ plant_15 = Plant.create(
   max_baseline_temperature: 27,
   min_baseline_hygrometry: 200,
   max_baseline_hygrometry: 400,
-  light_level: "High",
+  light_level: "high",
   care_level: "advanced",
-  water_need:"High"
+  water_need:"high"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1654684981/development%20/Bananier_dw9sb4.webp")
 plant_15.photo.attach(io: file, filename: '', content_type: 'image/jpg')
@@ -293,7 +293,7 @@ plant_16 = Plant.create(
   max_baseline_hygrometry: 700,
   light_level: "Low",
   care_level: "advanced",
-  water_need:"High"
+  water_need:"high"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1654684982/development%20/Potodora_mwfa3j.webp")
 plant_16.photo.attach(io: file, filename: '', content_type: 'image/jpg')
@@ -310,7 +310,7 @@ plant_17 = Plant.create(
   max_baseline_hygrometry: 500,
   light_level: "Medium",
   care_level: "advanced",
-  water_need:"High"
+  water_need:"high"
 
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1654684981/development%20/Altissima_xmieyv.webp")
@@ -328,7 +328,7 @@ plant_18 = Plant.create(
   max_baseline_hygrometry: 500,
   light_level: "Medium",
   care_level: "advanced",
-  water_need:"High"
+  water_need:"high"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1654684982/development%20/Pachiraaquatiqua_l76iz4.webp")
 plant_18.photo.attach(io: file, filename: '', content_type: 'image/jpg')
@@ -343,9 +343,9 @@ plant_19 = Plant.create(
   max_baseline_temperature: 25,
   min_baseline_hygrometry: 300,
   max_baseline_hygrometry: 500,
-  light_level: "High",
+  light_level: "high",
   care_level: "advanced",
-  water_need:"High"
+  water_need:"high"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1654684981/development%20/Romarin_nrymah.webp")
 plant_19.photo.attach(io: file, filename: 'Romarin_ki6k3k', content_type: 'image/jpg')
@@ -362,7 +362,7 @@ plant_20 = Plant.create(
   max_baseline_hygrometry: 500,
   light_level: "Medium",
   care_level: "advanced",
-  water_need:"High"
+  water_need:"high"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1654684982/development%20/Pothos_ectm72.webp")
 plant_20.photo.attach(io: file, filename: '', content_type: 'image/jpg')
@@ -379,7 +379,7 @@ plant_21 = Plant.create(
   max_baseline_hygrometry: 500,
   light_level: "Low",
   care_level: "advanced",
-  water_need:"High"
+  water_need:"high"
 )
 file = URI.open("https://res.cloudinary.com/lucas-vittaz/image/upload/v1654684981/development%20/Bonnie_ofvoxt.webp")
 plant_21.photo.attach(io: file, filename: 'Bonnie_r3sf1e', content_type: 'image/jpg')
