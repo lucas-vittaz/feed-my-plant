@@ -124,7 +124,7 @@
   font-weight: bold;
 }
 .modal-body{
-  height: 100vh;
+  height: 50vh;
   margin-top: 50px;
 
   .form-check{
@@ -133,4 +133,15 @@
   .dark-btn{
     margin-top: 100px;
   }
+}
+#pairing-modal-close-btn{
+  position:absolute;
+  top: 63px;
+  right: 21px;
+
+}
+#exampleModal{
+  height: 50vh;
+  top: 210px;
+
 }

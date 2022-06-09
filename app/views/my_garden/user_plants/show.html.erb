@@ -10,18 +10,14 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
+            <a type="button" class="btn-close modal-pairing" id="pairing-modal-close-btn" data-bs-dismiss="modal" aria-label="Close"></a>
             <h5 class="modal-title" id="exampleModalLabel">Pair a sensor</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body my-5">
             <%= form_with url: pair_device_my_garden_user_plant_path(@user_plant), method: :patch, :class => 'd-flex flex-column align-items-center'  do |f| %>
               <%= f.select "device[external_id]", Device.pluck(:external_id), include_blank: false %>
               <%= f.submit :class => 'dark-btn'%>
             <% end %>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
