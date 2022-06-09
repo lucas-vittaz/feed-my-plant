@@ -8,8 +8,18 @@ class PlantsController < ApplicationController
         format.text { render partial: "plants/list", locals: { plants: @plants }, formats: [:html] }
       end
     else
-      @plants = Plant.all
-      define_plants unless define_water_level_params.empty? && define_care_level_params.empty? && define_light_level_params.empty?
+      @plants = Plant.none
+      @plants = @plants + Plant.filter_by_water_need("low") if params[:water_level_low]
+      @plants = @plants + Plant.filter_by_water_need("medium") if params[:water_level_medium]
+      @plants = @plants + Plant.filter_by_water_need("high") if params[:water_level_high]
+
+      @plants = @plants + Plant.filter_by_light_levels("low") if params[:light_level_low]
+      @plants = @plants + Plant.filter_by_light_levels("medium") if params[:light_level_medium]
+      @plants = @plants + Plant.filter_by_light_levels("high") if params[:light_level_high]
+
+      @plants = @plants + Plant.filter_by_care_levels("beginner") if params[:care_level_beginner]
+      @plants = @plants + Plant.filter_by_care_levels("intermediate") if params[:care_level_intermediate]
+      @plants = @plants + Plant.filter_by_care_levels("advanced") if params[:care_level_advanced]
     end
   end
 
