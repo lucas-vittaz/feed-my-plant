@@ -1,0 +1,5 @@
+
+meta_product_name: "Feed My Plants"
+meta_title: "Helps you keep your plants alive"
+meta_description: "An app for those who struggle to understand the subtility of good plant care"
+meta_image: "cover.jpg" # should exist in `app/assets/images/`
