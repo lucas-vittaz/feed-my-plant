@@ -3,13 +3,6 @@ handle you plants caring anywhere in real time !
 Have a look ! 👀
 > Live demo [_here_](https://www.example.com). 
 
-Group project :
-
-- Lucas Vittaz
-- Sarah Menu
-- Anthony Gouvrillon
-
-
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
@@ -21,15 +14,13 @@ Group project :
 * [Room for Improvement](#room-for-improvement)
 * [Acknowledgements](#acknowledgements)
 * [Contact](#contact)
-<!-- * [License](#license) -->
-
 
 ## General Information
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+feed my plant is an application that allows you to receive information on the maintenance of your plants by combining software and hardware.
+
+the main goal of this app is to stop letting your plants die.
+
+you can find information on the maintenance of your plants directly in the interface of the application with somes advices and you can monitor the humidity rate in the pot in real time thanks to an Arduino on-board sensor.
 
 
 ## Technologies Used
@@ -70,30 +61,18 @@ If you are intressed by this project fork it or you can contribute
 
 
 ## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
-
-Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
-
-To do:
-- Feature to be added 1
-- Feature to be added 2
+TODOs for future development :
+- undock sensor 
+- Scan a plant with google lens and add it into Feedmyplant
+- Get PUSH notification when one of your plant need water
 
 
 ## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
+Group project :
+- Lucas Vittaz
+- Sarah Menu
+- Anthony Gouvrillon
 
 
 ## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
-
-
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
+Created by [@lucasvittaz.pro@gmail.com]- feel free to contact me!
