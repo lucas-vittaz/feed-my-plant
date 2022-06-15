@@ -33,13 +33,14 @@ Group project :
 
 
 ## Technologies Used
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
+- Ruby on Rails - version 6.1.6
+- Stimulus - version 3.0.1
+- Bootstrap - version 5.1.3
+- Fontawsome - version 3.0
+- OpenWeatherMap API - version 5.15.4
 
 
 ## Features
-List the ready features here:
 - Awesome feature 1
 - Awesome feature 2
 - Awesome feature 3
@@ -64,7 +65,8 @@ Provide various use cases and code examples here.
 
 
 ## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+Project is: _in progress_
+If you are intressed by this project fork it or you can contribute
 
 
 ## Room for Improvement
