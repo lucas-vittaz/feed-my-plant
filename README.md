@@ -1,7 +1,7 @@
 # Feed my plant 🌱
 handle you plants caring anywhere in real time !
 Have a look ! 👀
-> Live demo [_here_](https://www.example.com). 
+> Live demo [http://www.feedmyplant.com](). 
 
 ## Table of Contents
 * [General Info](#general-information)
