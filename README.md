@@ -55,9 +55,16 @@ hardware :
 ![Example screenshot](./app/assets/images/alert-capture.png)
 
 ## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
 
-Proceed to describe how to install / setup one's local environment / get started with the project.
+To start to work or contribute on this project, please enter thoses commands bellow into your terminal : 
+	`git@github.com:lucas-vittaz/feed-my-plant.git
+  bundle install 
+  yarn install
+  rails db:create
+  rails db:migrate 
+  rails db:seed
+  rails s
+  `
 
 ## Project Status
 Project is: _in progress_
@@ -73,9 +80,9 @@ TODOs for future development :
 
 ## Acknowledgements
 Group project :
-- Lucas Vittaz
-- Sarah Menu
-- Anthony Gouvrillon
+- Lucas Vittaz [https://github.com/lucas-vittaz]
+- Sarah Menu: [https://github.com/sarahmenu]
+- Anthony Gouvrillon [https://github.com/AntoGoo]
 
 
 ## Contact
