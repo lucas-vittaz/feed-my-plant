@@ -56,14 +56,14 @@ hardware :
 
 ## Setup
 
-To start to work or contribute on this project, please enter thoses commands bellow into your terminal : 
-`git@github.com:lucas-vittaz/feed-my-plant.git
-bundle install
-yarn install
-rails db:create
-rails db:migrate
-rails db:seed
-rails s`
+To start to work or contribute on this project, please enter thoses commands bellow into your terminal : <br>
+ `git@github.com:lucas-vittaz/feed-my-plant.git`<br>
+ `bundle install`<br>
+ `yarn install`<br>
+ `rails db:create`<br>
+ `rails db:migrate`<br>
+ `rails db:seed`<br>
+ `rails s`
  
 Arduino setup : 
 - copy paste code of file Feed_my_plant_send_data_v2.ino into your IDE arduino and upload the code on your arduino
