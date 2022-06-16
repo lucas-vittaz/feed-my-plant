@@ -1,13 +1,12 @@
 <div class="plant-show">
   <div style="background-image: url(<%= cl_image_path(@user_plant.plant.photo.key, crop: :fill) %>);" class="plant-img">
     <a href="/my_garden/user_plants "><%= inline_svg_tag("back-dark.svg", :width=>20, :height=>20) %></a>
-
-    <% if @user_plant.device.nil? %>
-      <button type="button" class="device-pairing-btn" data-bs-toggle="modal" data-bs-target="#pairingModal">Pair a sensor</button>
-    <% else %>
-      <button type="button" class="device-pairing-btn" data-bs-toggle="modal" data-bs-target="#pairingModal" style="background-color: green">Sensor paired</button>
-    <% end %>
-
+      <% if @user_plant.device.nil? %>
+        <button type="button" class="device-pairing-btn" data-bs-toggle="modal" data-bs-target="#pairingModal">Pair a sensor</button>
+      <% else %>
+        <button type="button" class="device-pairing-btn my-5" data-bs-toggle="modal" data-bs-target="#pairingModal" style="background-color: green">Sensor paired</button>
+        <button type="button" class="device-pairing-btn " data-bs-toggle="modal" data-bs-target="#pairingModal" style="background-color: red">Unpair sensor</button>
+      <% end %>
     <div class="modal fade" id="pairingModal" tabindex="-1" aria-labelledby="pairingModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
