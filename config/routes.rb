@@ -14,6 +14,7 @@ Rails.application.routes.draw do
        member do
         get :sensor_hygrometry
         patch :pair_device
+        patch :unpair_device
       end
     end
   end

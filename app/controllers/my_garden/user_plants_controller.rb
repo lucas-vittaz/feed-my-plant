@@ -24,7 +24,16 @@ class MyGarden::UserPlantsController < ApplicationController
     else
       render :show
     end
+  end
 
+  def unpair_device
+    @user_plant = UserPlant.find(params[:id])
+    @user_plant.device_id = nil
+    if @user_plant.save
+      redirect_to my_garden_user_plant_path(@user_plant)
+    else
+      render :show
+    end
   end
 
   def show
