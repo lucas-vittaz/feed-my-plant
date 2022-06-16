@@ -54,6 +54,12 @@ hardware :
 ![Example screenshot](./app/assets/images/garden-capture.png)
 ![Example screenshot](./app/assets/images/alert-capture.png)
 
+## How to launch PWA on your phone 
+
+To launch Feedmyplant on your smartphone as a PWA (progressive web app), please follow theses two tutorials bellow : 
+- Android : https://support.google.com/chrome/answer/9658361?hl=en&co=GENIE.Platform%3DAndroid
+- IOS : https://superpwa.com/doc/test-pwa-ios-devices/
+
 ## Setup
 
 To start to work or contribute on this project, please enter thoses commands bellow into your terminal : <br>
