@@ -190,13 +190,14 @@
   position:fixed;
   bottom: 0;
   height: 64px;
-  width: 100%;
+  width: 100vw;
   background-color: $dark-green;
   display:flex;
   align-items: center;
   justify-content: space-around;
   color: transparent;
   border-radius: 20px 20px 0 0;;
+
 
   a {
     text-decoration: none;
@@ -212,7 +213,7 @@
     span {
       display: none;
       position: absolute;
-      
+
     }
   }
 
