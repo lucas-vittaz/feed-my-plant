@@ -1,20 +1,27 @@
 <div class="home-container">
   <% if user_signed_in? %>
   <div id="home-sign-in" class="container-fluid">
-    <div class="row home-bg " data-controller="meteo"  data-meteo-api-key-value="<%= ENV['METEO_KEY'] %>" style="background-image: url(https://res.cloudinary.com/lucas-vittaz/image/upload/v1654686039/development%20/home-header_i2bfrd.svg)">
-      <div class="col d-flex align-items-center">
-        <p class="meteo-degree"></p>
-        <div class="meteo-icons"></div>
+    <header class="home-bg" style="background-image: url(https://res.cloudinary.com/lucas-vittaz/image/upload/v1654686039/development%20/home-header_i2bfrd.svg)">
+      <div class="row">
+        <div class="col d-flex flex-row-reverse">
+          <%= link_to destroy_user_session_path, method: :delete, data: {:confirm => 'Are you sure you want to log out?'}, class:"link-header-right" do %>
+            <i class="fas fa-sign-out-alt"></i>
+          <% end%>
+        </div>
       </div>
-      <div class="col d-flex align-items-center">
-        <p class="text-justify meteo-value" data-meteo-target="injectMeteo"></p>
+      <div class="row" data-controller="meteo"  data-meteo-api-key-value="<%= ENV['METEO_KEY'] %>">
+        <div class="col d-flex justify-content-center align-items-center">
+          <p class="meteo-degree"></p>
+          <div class="meteo-icons"></div>
+        </div>
       </div>
-      <div class="col">
-        <%= link_to destroy_user_session_path, method: :delete, data: {:confirm => 'Are you sure you want to log out?'}, class:"link-header-right" do %>
-          <i class="fas fa-sign-out-alt"></i>
-        <% end%>
+      <div class="row">
+        <div class="col d-flex justify-content-center align-items-center">
+          <p class="text-justify meteo-value" data-meteo-target="injectMeteo"></p>
+        </div>
       </div>
-    </div>
+    </header>
+
     <div class="row py-5">
       <div class="col">
         <h1 class="text-center">Find your plants and add them to your garden</h1>
