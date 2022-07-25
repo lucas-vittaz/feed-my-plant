@@ -15,5 +15,10 @@
 
 body {
   margin-bottom: 100px;
-  background-color: $main-bg
+  background-color: $main-bg;
+  overflow-x : hidden;
+}
+.container-fluid{
+  padding: 0;
+  margin: 0;
 }
