@@ -7,8 +7,6 @@ export default class extends Controller {
     apiKey: String,
   };
   connect() {
-    console.log("stimulus connected");
-    console.log(this.apiKeyValue);
     const months = [
       "January",
       "February",
@@ -42,7 +40,7 @@ export default class extends Controller {
     const lat = 47.218102;
     const lon = -1.5528;
     const meteoKey = "aac79809d879a46349a93205ce8851d8";
-    console.log("connected");
+    
     fetch(
       `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&appid=${this.apiKeyValue}`
     )
@@ -52,7 +50,6 @@ export default class extends Controller {
       .then(function (data) {
         console.log(data);
         let temps = data.current.weather[0].description;
-        console.log(temps);
 
         let temperature = `${Math.trunc(data.current.temp)} °c`;
         document.querySelector(".meteo-degree").innerHTML = temperature;
@@ -63,11 +60,6 @@ export default class extends Controller {
         document.querySelector(
           ".meteo-icons"
         ).innerHTML = `<img src='http://openweathermap.org/img/wn/${data.current.weather[0].icon}@2x.png'/>`;
-        // let imgIcone =  `imgpath/jour/${resultatsAPI.current.weather[0].icon}.svg`
-        console.log();
-        // let imgIcone =  `imgpath/nuit/${resultatsAPI.current.weather[0].icon}.svg`
-        console.log();
-        //  let hour = new Date().getHours();
       });
   }
 }
