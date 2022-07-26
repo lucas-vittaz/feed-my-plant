@@ -35,46 +35,29 @@
 
 
 }
-.alert-container{
-
-  .g-plant-cards {
-    display: flex;
-    flex-direction: column;
-
-    .g-plant-card-single {
-      width: 100%;
-      border-radius: 10px;
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      margin: 15px auto;
-      background-color: $light-green;
-      padding: 10px;
-      height: 90px;
-    }
-    .g-plant-infos{
-      margin-left: 15px;
-      font-size: 12px;
-      height: 150px;
-      align-items: space-between;
-      p {
-        font-family: $body-font;
-        font-size: 12px;
-        transform: translate(2px, -9px);
-      }
-      h2 {
-        font-family: $body-font;
-        font-size: 16px;
-        }
-    }
-  }
+.row{
+  --bs-gutter-x: 0;
 }
 
-.gauge2 {
+.garden-plant-card {
+  width: 80vw;
+  border-radius: 10px;
+  background-color: $light-green;
+  p {
+    font-family: $body-font;
+    font-size: 12px;
+  }
+  h2 {
+    font-family: $body-font;
+    font-size: 16px;
+    }
+}
+
+
+.gauge {
   animation: fadeInAnimation ease 1.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  transform: translate(130px, -98px);
 
   svg text:last-child {
     font-size: 20px;
