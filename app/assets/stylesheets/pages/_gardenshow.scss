@@ -89,8 +89,18 @@
     fill: white;
   }
 }
-
+.plant-img{
+  position: relative;
+}
+.device-unpair-btn{
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
 .device-pairing-btn {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
   margin: 2px 7px;
   border-radius: 15px;
   background-color: white;
