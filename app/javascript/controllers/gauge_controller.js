@@ -11,7 +11,7 @@ export default class extends Controller {
   connect() {
     // console.log (this.latestHygrometryValue)
     // console.log (this.minMaxHygrometryValue)
-    const chartWidth  = 130;
+    const chartWidth  = 100;
     let needleValue = this.latestHygrometryValue / 7.5;
 
     // console.log(needleValue)
