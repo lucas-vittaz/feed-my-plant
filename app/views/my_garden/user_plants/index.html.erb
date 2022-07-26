@@ -3,7 +3,7 @@
   <h1>My Garden</h1>
 </div>
 
-<p class="text-center px-5">Look throught your rooms, and find your favorite plants </p>
+<p class="text-center">Look throught your rooms, and find your favorite plants </p>
 <hr>
 <div class="container-room-scroll" data-controller="scroll-bar" data-scroll-bar-target="container">
   <%= link_to my_garden_user_plants_path, class:"link", data: {"data-action": "click->scroll-bar#highlight"} do %>
@@ -37,27 +37,26 @@
 </div>
 
 <div>
+<div class="container-fluid">
   <% @user_plants.each do |user_plant| %>
-    <div class="container alert-container">
-      <div class="g-plant-cards">
-        <%= link_to my_garden_user_plant_path(user_plant), class: "link-dark text-decoration-none" do %>
-          <div class="g-plant-card-single" >
-            <%= cl_image_tag user_plant.plant.photo.key, width: 70, height: 70, crop: :fill, :style => "border-radius: 10px"%>
-            <div class="g-plant-infos">
-              <h2><strong><%= user_plant.plant.name %></strong></h2>
-              <p><strong><%= user_plant.room.capitalize.humanize %></strong></p>
-              <div  data-controller="gauge" data-gauge-latest-hygrometry-value="<%= user_plant.latest_hygrometry%>" data-gauge-min-max-hygrometry-value="<%= [user_plant.plant.min_baseline_hygrometry,user_plant.plant.max_baseline_hygrometry] %>">
-                <% if !user_plant.device.nil? %>
-                  <p>Updated at <i><%= user_plant.updated_at.strftime("%H:%M") %></i></p>
-                  <div class="gauge2" data-gauge-target="chart"></div>
-                <% else %>
-                  <p> <em> Awaiting sensor pairing </em></p>
-                <% end %>
-              </div>
-            </div>
-          </div>
-        <% end %>
+    <%= link_to my_garden_user_plant_path(user_plant), class: "link-dark text-decoration-none" do %>
+      <div class="row garden-plant-card d-flex align-items-center justify-content-center p-3 my-5">
+        <div class="col garden-plant-card img">
+          <%= cl_image_tag user_plant.plant.photo.key, width: 70, height: 70, crop: :fill, :style => "border-radius: 10px"%>
+        </div>
+        <div class="col garden-plant-card infos">
+          <h2><strong><%= user_plant.plant.name %></strong></h2>
+          <p><%= user_plant.room.capitalize.humanize %></p>
+        </div>
+        <div class="col" data-controller="gauge" data-gauge-latest-hygrometry-value="<%= user_plant.latest_hygrometry%>" data-gauge-min-max-hygrometry-value="<%= [user_plant.plant.min_baseline_hygrometry,user_plant.plant.max_baseline_hygrometry] %>">
+          <% if !user_plant.device.nil? %>
+            <p>Updated at <i><%= user_plant.updated_at.strftime("%H:%M") %></i></p>
+            <div class="gauge" data-gauge-target="chart"></div>
+          <% else %>
+            <p><em>Awaiting sensor pairing</em></p>
+          <% end %>
+        </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
 </div>
