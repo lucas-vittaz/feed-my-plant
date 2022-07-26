@@ -47,7 +47,6 @@
     animation: fadeInAnimation ease 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    transform: translate(145px,  -100px);
 
     svg text:last-child {
       font-size: 20px;
@@ -65,6 +64,3 @@
         opacity: 1;
     }
 }
-
-
-
