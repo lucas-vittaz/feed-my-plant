@@ -1,4 +1,7 @@
 #home-sign-in{
+  .row{
+    --bs-gutter-x: 0;
+  }
   .home-bg{
     background-size: cover;
     height: 230px;
