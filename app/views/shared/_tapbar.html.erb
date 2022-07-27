@@ -3,11 +3,11 @@
     <%= link_to needing_attention_my_garden_user_plants_path do %>
       <i class="fas fa-bell"></i>
     <% end %>
-    <%# <% if @plants_attention.length > 0 %> %>
+    <% if @plants_attention.length > 0 %>
     <div class="bullet d-flex justify-content-center">
-      <p>1</p>
+      <p><%= @plants_attention.length %></p>
     </div>
-    <%# <% end %> %>
+  <% end %>
     <span class="">My Alerts</span>
   </div>
 
