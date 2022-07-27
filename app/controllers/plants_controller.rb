@@ -41,6 +41,7 @@ class PlantsController < ApplicationController
     params[:light_level_low].present? || params[:light_level_medium].present? || params[:light_level_high].present?
   end
   def show
+    @plants_attention = UserPlant.select{|user_plant| (user_plant.latest_hygrometry < user_plant.plant.min_baseline_hygrometry ||user_plant.latest_hygrometry > user_plant.plant.max_baseline_hygrometry)}
     @plant = Plant.find(params[:id])
     @user_plant = UserPlant.new
     @user_plant = UserPlant.create

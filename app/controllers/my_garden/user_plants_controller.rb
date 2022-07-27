@@ -38,6 +38,7 @@ class MyGarden::UserPlantsController < ApplicationController
   end
 
   def show
+    @plants_attention = UserPlant.select{|user_plant| (user_plant.latest_hygrometry < user_plant.plant.min_baseline_hygrometry ||user_plant.latest_hygrometry > user_plant.plant.max_baseline_hygrometry)}
     @user_plant = UserPlant.find(params[:id])
   end
 
