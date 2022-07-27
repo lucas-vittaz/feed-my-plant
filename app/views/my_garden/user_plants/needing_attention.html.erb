@@ -3,21 +3,27 @@
   <h1>My alerts</h1>
 </div>
 
-<div class="container alert-container">
-  <p class="text-center px-5"> Check your plants health in real time </p>
-  <hr>
-  <div class="plant-cards-alert">
-    <% @plants_attention.each do |user_plant| %>
-      <%= link_to  my_garden_user_plant_path(user_plant), class: "link-dark text-decoration-none plant-card-single" do %>
-        <%= cl_image_tag user_plant.plant.photo.key, width: 70, height: 70, crop: :fill, :style => "border-radius: 10px" %>
-        <div class="plant-infos-alert">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <p class="text-center"> Check your plants health in real time </p>
+      <hr>
+    </div>
+  </div>
+  <% @plants_attention.each do |user_plant| %>
+    <%= link_to  my_garden_user_plant_path(user_plant), class: "link-dark text-decoration-none plant-card-single" do %>
+      <div class="row garden-plant-card d-flex align-items-center justify-content-center p-3 my-5"">
+        <div class="col garden-plant-card img">
+          <%= cl_image_tag user_plant.plant.photo.key, width: 70, height: 70, crop: :fill, :style => "border-radius: 10px" %>
+        </div>
+        <div class="col garden-plant-card infos">
           <h2><strong><%= user_plant.plant.name %></strong></h2>
           <p><strong><%= user_plant.room.capitalize.humanize %></strong><br><br>Updated at <i><%= user_plant.updated_at.strftime("%H:%M") %></i></p>
-          <div  data-controller="gauge" data-gauge-latest-hygrometry-value="<%= user_plant.latest_hygrometry%>" data-gauge-min-max-hygrometry-value="<%= [user_plant.plant.min_baseline_hygrometry,user_plant.plant.max_baseline_hygrometry] %>">
-            <div class="gauge"data-gauge-target="chart"></div>
-          </div>
         </div>
-      <%end%>
+        <div class="col" data-controller="gauge" data-gauge-latest-hygrometry-value="<%= user_plant.latest_hygrometry%>" data-gauge-min-max-hygrometry-value="<%= [user_plant.plant.min_baseline_hygrometry,user_plant.plant.max_baseline_hygrometry] %>">
+          <div class="gauge"data-gauge-target="chart"></div>
+        </div>
+      </div>
     <%end%>
-  </div>
+  <%end%>
 </div>
