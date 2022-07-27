@@ -1,5 +1,6 @@
 class PlantsController < ApplicationController
   def index
+    @plants_attention = UserPlant.select{|user_plant| (user_plant.latest_hygrometry < user_plant.plant.min_baseline_hygrometry ||user_plant.latest_hygrometry > user_plant.plant.max_baseline_hygrometry)}
     if params[:query].present?
       sql_query = "name ILIKE :query OR scientific_name ILIKE :query"
       @plants = Plant.where(sql_query, query: "%#{params[:query]}%")

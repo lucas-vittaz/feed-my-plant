@@ -1,6 +1,7 @@
 class MyGarden::UserPlantsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:sensor_hygrometry]
   def index
+    @plants_attention = UserPlant.select{|user_plant| (user_plant.latest_hygrometry < user_plant.plant.min_baseline_hygrometry ||user_plant.latest_hygrometry > user_plant.plant.max_baseline_hygrometry)}
     @user_plants = current_user.user_plants.order(created_at: :desc) # all plants from current user
 
     @user_plants = @user_plants.where(room: params[:room]) if params[:room].present? #filter plant by room
