@@ -9,8 +9,20 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "controllers"
 import "bootstrap"
+import { initSweetalert } from '../plugins/init_sweetalert';
 
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+initSweetalert('#sweet-alert-demo', {
+  title: "Are you sure?",
+  icon: "warning",
+  buttons: true,
+}, (value) => {
+  if (value) {
+    const link = document.querySelector('#delete-link');
+    link.click();
+  }
+});
