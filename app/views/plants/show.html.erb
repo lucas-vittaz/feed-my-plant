@@ -66,7 +66,8 @@
                   </div>
                 <% end %>
               </div>
-              <%= f.submit 'Save changes', :class => 'dark-btn edit-user-plant-btn'%>
+              <button id="add-plant" class="dark-btn edit-user-plant-btn">Save changes</button>
+              <%= f.submit '', :method => "create", :id => 'adding-plant', :class => 'visually-hidden'%>
             <% end %>
         </div>
       </div>
