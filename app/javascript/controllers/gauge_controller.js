@@ -11,6 +11,7 @@ export default class extends Controller {
   connect() {
     // console.log (this.latestHygrometryValue)
     // console.log (this.minMaxHygrometryValue)
+    const GaugeChart = require('gauge-chart')
     const chartWidth  = 100;
     let needleValue = this.latestHygrometryValue / 7.5;
 
