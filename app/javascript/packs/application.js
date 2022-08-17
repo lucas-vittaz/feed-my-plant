@@ -26,3 +26,13 @@ initSweetalert('#sweet-alert-demo', {
     link.click();
   }
 });
+
+addPlantToGarden('#edit-user-plant-btn', {
+  title: "Plant added",
+  icon: "success",
+}, (value) => {
+  if (value) {
+    const link = document.querySelector('#add-plant');
+    link.click();
+  }
+});
