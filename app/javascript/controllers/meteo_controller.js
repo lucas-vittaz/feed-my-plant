@@ -40,7 +40,7 @@ export default class extends Controller {
     const lat = 47.218102;
     const lon = -1.5528;
     const meteoKey = "aac79809d879a46349a93205ce8851d8";
-    
+
     fetch(
       `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&appid=${this.apiKeyValue}`
     )
