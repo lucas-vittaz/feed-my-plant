@@ -1,9 +1,9 @@
 # To deliver this notification:
 #
 # AlertNotification.with(post: @post).deliver_later(current_user)
-AlertNotification.with(post: @post).deliver(current_user)
 
 class AlertNotification < Noticed::Base
+  # AlertNotification.with(post: @post).deliver(current_user)
   # Add your delivery methods
   #
   # deliver_by :database
